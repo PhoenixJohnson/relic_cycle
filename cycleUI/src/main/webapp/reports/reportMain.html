@@ -1,6 +1,6 @@
 <div class="container TMWindow" ng-controller="reportCtrl" fade-in>
     <div class="page-header">
-        <div class="TMHeader">PRM - Reports</div>
+        <div class="TMHeader">归属圈</div>
     </div>
 
     <div class="row"  ng-controller="reportCtrl">
@@ -17,7 +17,7 @@
                             {{group.title}}<i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
                         </accordion-heading>
                         <div class="accordingRe" ng-repeat="item in group.subReports">
-                            <a class="HomeFont" ng-click="changeReport(item.title)">{{item.title}}</a>
+                            <a class="HomeFont" ng-click="changeReport(item.title)">无须严谨</a>
                         </div>
                     </accordion-group>
                 </accordion>
