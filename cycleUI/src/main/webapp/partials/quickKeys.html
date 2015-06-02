@@ -1,0 +1,47 @@
+<style>
+.btn{
+ cursor: pointer;
+}
+
+/* .btn-success {
+color: #ffffff;
+background-color: #158cba;
+border-color: #ccc;
+}
+
+.btn-success:hover, .btn-success:focus, .btn-success:active {
+background-color: #127ba3;
+border-color: #ccc;
+} */
+
+</style>
+<div class="modal-header">
+    <h3 class="modal-title">Quick Keys - JDTalk</h3>
+</div>
+<!-- https://github.com/angular-ui-tree/angular-ui-tree-->
+<div class="modal-body" ng-controller="quickKeysController">
+
+
+    <div ui-tree data-drag-enabled="false">
+        <ol ui-tree-nodes="" ng-model="KeyFuncs">
+            <li ng-repeat="item in KeyFuncs" ui-tree-node>
+                <div ui-tree-handle class="funcTitle" ng-show="item.enable">
+                    {{item.title}}
+                </div>
+                <ol ui-tree-nodes="" ng-model="item.subFunctions">
+                    <li ng-repeat="subItem in item.subFunctions" ui-tree-node ng-show="subItem.enable">
+                        <a class="btn btn-success funcList" ui-tree-handle ng-click="funcitonMapping(subItem.funId)">
+                            {{subItem.title}}
+                        </a>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+</div>
+<div class="row" style="height:50px"></div>
+<div class="modal-footer" ng-controller="quickKeysController">
+
+    <button class="btn btn-primary" ng-click="close()">OK</button>
+    <button class="btn btn-warning" ng-click="close()">Cancel</button>
+</div>

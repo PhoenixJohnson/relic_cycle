@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Build-Jdk: 1.7.0_45
+Built-By: yunjiang
+Created-By: Apache Maven 3.1.1
+X-Raptor-Resource-Search-Path: C:\Users\yunjiang\IdeaProjects\JDTransl
+ atorApp\jdtalkweb/src/main/webapp,C:\Users\yunjiang\IdeaProjects\JDTr
+ anslatorApp\jdtalkweb/src/main/resources,C:\Users\yunjiang\IdeaProjec
+ ts\JDTranslatorApp\jdtalkweb
+

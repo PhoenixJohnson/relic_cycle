@@ -1,0 +1,40 @@
+<script>
+    $(function () {
+        $('#container').highcharts({
+            chart: {
+                type: 'bar'
+            },
+            title: {
+                text: 'Team Member WorkLoad'
+            },
+            xAxis: {
+                categories: ["tester1","tester1","tester1","tester1","tester1","tester1","tester1","tester1","tester1","tester1"]
+            },
+            yAxis: {
+                min: 0,
+                title: {
+                    text: 'Total Action Items'
+                }
+            },
+            legend: {
+                reversed: true
+            },
+            plotOptions: {
+                series: {
+                    stacking: 'normal'
+                }
+            },
+            series: [{
+                name: 'Working in Progress',
+                data: [5, 3, 4, 7, 2,5, 3, 4, 7, 2]
+            }, {
+                name: 'Completed',
+                data: [2, 2, 3, 2, 1,5, 3, 4, 7, 2]
+            }]
+        });
+    });
+</script>
+
+<div class="highcharts-container">
+    <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+</div>
