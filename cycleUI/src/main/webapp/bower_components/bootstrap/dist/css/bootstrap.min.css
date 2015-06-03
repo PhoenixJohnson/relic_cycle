@@ -3885,6 +3885,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     position: relative;
     display: block;
     padding: 10px 15px;
+    color: rgba(8, 8, 8, 1);
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -4398,7 +4399,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     border-color: #dddddd;
 }
 .navbar-default .navbar-brand {
-    color: #777777;
+    color: black;
 }
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
@@ -6589,6 +6590,7 @@ button.close {
     filter: none;
     border: 1px solid #d5d5d5;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+    background: rgba(50, 47, 47, 0.34);
 }
 .navbar-inverse {
     background-image: -webkit-linear-gradient(#6d94bf, #446e9b 50%, #3e648d);

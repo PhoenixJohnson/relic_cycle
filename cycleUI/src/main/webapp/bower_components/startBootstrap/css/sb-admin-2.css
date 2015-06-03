@@ -21,7 +21,7 @@ body {
 @media(min-width:768px) {
     #page-wrapper {
         position: inherit;
-        margin: 0 0 0 250px;
+        margin: 0 0 0 150px;
         padding: 0 30px;
         border-left: 1px solid #e7e7e7;
     }
@@ -88,6 +88,7 @@ body {
 .sidebar .sidebar-nav.navbar-collapse {
     padding-right: 0;
     padding-left: 0;
+    /*background: rgba(177, 173, 183, 0.74);*/
 }
 
 .sidebar .sidebar-search {
@@ -131,7 +132,7 @@ body {
     .sidebar {
         z-index: 1;
         position: absolute;
-        width: 250px;
+        width: 150px;
         margin-top: 51px;
     }
 
@@ -207,6 +208,7 @@ body {
 
 .chat-panel .panel-body {
     height: 350px;
+    font-size: 9px;
     overflow-y: scroll;
 }
 
