@@ -1,4 +1,4 @@
-PRM.directive('fadeIn', function () {
+RCycle.directive('fadeIn', function () {
     return {
         compile: function (elm) {
             $(elm).css('opacity', 0.0);
@@ -9,7 +9,7 @@ PRM.directive('fadeIn', function () {
     };
 });
 
-PRM.directive('loadingContainer', function () {
+RCycle.directive('loadingContainer', function () {
     return {
         restrict: 'A',
         scope: false,
@@ -25,7 +25,7 @@ PRM.directive('loadingContainer', function () {
 });
 
 
-PRM.directive('noty', function () {
+RCycle.directive('noty', function () {
 
     return {
         restrict:'A',

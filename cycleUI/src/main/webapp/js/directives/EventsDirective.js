@@ -1,5 +1,5 @@
 // this is the angular way to stop even propagation
-PRM.directive('stopEvent', function () {
+RCycle.directive('stopEvent', function () {
     return {
         restrict: 'A',
         link: function (scope, element, attr) {
@@ -10,7 +10,7 @@ PRM.directive('stopEvent', function () {
     }
 });
 
-PRM.directive('ngEnter', function () {
+RCycle.directive('ngEnter', function () {
     return function (scope, element, attrs) {
         element.bind("keydown keypress", function (event) {
             if(event.which === 13) {

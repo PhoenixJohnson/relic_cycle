@@ -1,5 +1,5 @@
 // declare top-level module which depends on filters,and services
-var PRM = angular.module('PRM',
+var RCycle = angular.module('RCycle',
     [
 		'ngTableExport',
 		'ngAnimate',
@@ -15,10 +15,10 @@ var PRM = angular.module('PRM',
 		'ngAside',
 		'ui.tree'
     ]);
-PRM.value('BrandRefreshData',[]);
+RCycle.value('BrandRefreshData',[]);
 
 // bootstrap angular
-PRM.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($routeProvider, $locationProvider, $httpProvider) {
+RCycle.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($routeProvider, $locationProvider, $httpProvider) {
 
 	//$httpProvider.responseInterceptors.push('AuthInterceptor');
     $locationProvider.html5Mode(true);
@@ -29,9 +29,9 @@ PRM.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($r
         controller:'HomeController'
     });
 
-    $routeProvider.when('/Reports', {
-        templateUrl: 'reports/reportMain.html',
-        controller: 'reportCtrl'
+    $routeProvider.when('/belongs', {
+        templateUrl: 'partials/BelongsMain.html',
+        controller: 'BelongsController'
     });
     $routeProvider.otherwise({
         redirectTo: '/'
@@ -40,7 +40,7 @@ PRM.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($r
 }]);
 
 // this is run after angular is instantiated and bootstrapped
-PRM.run(function ($rootScope, $location, $http, $timeout, AuthService, PRMconf) {
+RCycle.run(function ($rootScope, $location, $http, $timeout, AuthService, PRMconf) {
 
 
     // *****

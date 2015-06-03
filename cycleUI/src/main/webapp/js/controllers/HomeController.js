@@ -1,4 +1,4 @@
-PRM.controller('HomeController', ['$scope', '$filter', '$rootScope', '$aside','$timeout', function ($scope,$filter,$rootScope, $aside,$timeout) {
+RCycle.controller('HomeController', ['$scope', '$filter', '$rootScope', '$aside','$timeout', function ($scope,$filter,$rootScope, $aside,$timeout) {
 
 
     $scope.newComes = 99;
