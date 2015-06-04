@@ -41,7 +41,7 @@ Cycle.run(function ($rootScope, $location, $http, $timeout, AuthService, conf) {
     // Initialize authentication
     // *****
 
-    $rootScope.myTheme="skin-blur-violate";
+    $rootScope.myTheme="skin-blur-city";
     $rootScope.authService = AuthService;
     $rootScope.postBoardNotifier = new NotificationManager($rootScope);
     $rootScope.ProjcetName = conf.PROJECT_NAME;

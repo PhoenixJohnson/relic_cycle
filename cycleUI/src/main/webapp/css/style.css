@@ -1841,60 +1841,73 @@ a.list-group-item.active > .badge,
         Template Blur Skins for Desktop
     -----------------------------------------------------------*/
     [class^="skin-blur-"] {
-        background-size: 100% 100%;
+        background-size: cover;
         background-attachment: fixed;
     }
 
     .skin-blur-violate {
-        background-image: url(../img/body/violate.jpg);
+        background-size: cover;
+        background: url(../img/body/violate.jpg) fixed;
     }
 
     .skin-blur-lights {
-        background-image: url(../img/body/lights.jpg);
+        background: url(../img/body/lights.jpg) fixed;
+        background-size: cover;
     }
 
     .skin-blur-city {
-        background-image: url(../img/body/city.jpg);
+        background: url(../img/body/city.jpg) fixed;
+        background-size: cover;
     }
 
     .skin-blur-greenish {
-        background-image: url(../img/body/greenish.jpg);
+        background: url(../img/body/greenish.jpg) fixed;
+        background-size: cover;
     }
 
     .skin-blur-night {
-        background-image: url(../img/body/night.jpg);
+        background: url(../img/body/night.jpg) fixed;
+        background-size: cover;
     }
     
     .skin-blur-sunny {
-        background-image: url(../img/body/sunny.jpg);
+        background: url(../img/body/sunny.jpg) fixed;
+        background-size: cover;
     }
     
     .kin-blur-blue {
-        background-image: url(../img/body/blue.jpg);
+        background: url(../img/body/blue.jpg) fixed;
+        background-size: cover;
     }
     
     .skin-blur-chrome {
-        background-image: url(../img/body/chrome.jpg);
+        background: url(../img/body/chrome.jpg) fixed;
+        background-size: cover;
     }
     
     .skin-blur-ocean {
-        background-image: url(../img/body/ocean.jpg);
+        background: url(../img/body/ocean.jpg) fixed;
+        background-size: cover;
     }
     
     .skin-blur-sunset {
-        background-image: url(../img/body/sunset.jpg);
+        background: url(../img/body/sunset.jpg) fixed;
+        background-size: cover;
     }
     
     .skin-blur-yellow {
-        background-image: url(../img/body/yellow.jpg);
+        background: url(../img/body/yellow.jpg) fixed;
+        background-size: cover;
     }
 
     .skin-blur-kiwi {
-        background-image: url(../img/body/kiwi.jpg);
+        background: url(../img/body/kiwi.jpg) fixed;
+        background-size: cover;
     }
     
     .skin-blur-nexus {
-        background-image: url(../img/body/nexus.jpg);
+        background: url(../img/body/nexus.jpg) fixed;
+        background-size: cover;
     }
     
     /* Sidebar */
