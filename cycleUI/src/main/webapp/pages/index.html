@@ -1,681 +1,922 @@
 <!DOCTYPE html>
-<html>
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta name="format-detection" content="telephone=no">
+        <meta charset="UTF-8">
 
-<head lang="zh-CN" xml:lang="zh-CN">
+        <meta name="description" content="Violate Responsive Admin Template">
+        <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+        <title>修讯 - 获取你的归属信息</title>
+            
+        <!-- CSS -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/animate.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/form.css" rel="stylesheet">
+        <link href="../css/calendar.css" rel="stylesheet">
+        <link href="../css/style.css" rel="stylesheet">
+        <link href="../css/icons.css" rel="stylesheet">
+        <link href="../css/generics.css" rel="stylesheet">
+    </head>
+    <body id="skin-blur-ocean">
 
-    <title>归属 - 可以让你赚钱的社交资讯软件</title>
-
-    <!-- Bootstrap Core CSS -->
-    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Timeline CSS -->
-    <link href="../bower_components/startBootstrap/css/timeline.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="../bower_components/startBootstrap/css/sb-admin-2.css" rel="stylesheet">
-
-
-    <!-- Custom Fonts -->
-    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
-</head>
-
-<body>
-
-<div id="wrapper">
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="index.html">信闻</a>
-        </div>
-        <!-- /.navbar-header -->
-
-        <ul class="nav navbar-top-links navbar-right">
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-envelope fa-fw"></i> <i class="fa fa-caret-down"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-messages">
-                    <li>
-                        <a href="#">
-                            <div>
-                                <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>昨天</em>
-                                    </span>
-                            </div>
-                            <div>为什么看不到信息！</div>
+        <header id="header" class="media">
+            <a href="" id="menu-toggle"></a> 
+            <a class="logo pull-left" href="index.html">修讯 | 把信息塞进钱包</a>
+            
+            <div class="media-body">
+                <div class="media" id="top-menu">
+                    <div class="pull-left tm-icon">
+                        <a data-drawer="messages" class="drawer-toggle" href="">
+                            <i class="sa-top-message"></i>
+                            <i class="n-count animated">5</i>
+                            <span>Messages</span>
                         </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>昨天</em>
-                                    </span>
-                            </div>
-                            <div>为什么还是看不到信息！！.</div>
+                    </div>
+                    <div class="pull-left tm-icon">
+                        <a data-drawer="notifications" class="drawer-toggle" href="">
+                            <i class="sa-top-updates"></i>
+                            <i class="n-count animated">9</i>
+                            <span>Updates</span>
                         </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <strong>John Smith</strong>
-                                    <span class="pull-right text-muted">
-                                        <em>昨天</em>
-                                    </span>
-                            </div>
-                            <div>我要发飙了！！！！</div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a class="text-center" href="#">
-                            <strong>全部已读</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                    </li>
-                </ul>
-                <!-- /.dropdown-messages -->
-            </li>
-            <!-- /.dropdown -->
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-tasks fa-fw"></i> <i class="fa fa-caret-down"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-tasks">
-                    <li>
-                        <a href="#">
-                            <div>
-                                <p>
-                                    <strong>Task 1</strong>
-                                    <span class="pull-right text-muted">40% 进度</span>
-                                </p>
+                    </div>
 
-                                <div class="progress progress-striped active">
-                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40"
-                                         aria-valuemin="0" aria-valuemax="100" style="width: 40%">
-                                        <span class="sr-only">40% 进度</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <p>
-                                    <strong>Task 2</strong>
-                                    <span class="pull-right text-muted">20% 进度</span>
-                                </p>
+                    
 
-                                <div class="progress progress-striped active">
-                                    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20"
-                                         aria-valuemin="0" aria-valuemax="100" style="width: 20%">
-                                        <span class="sr-only">20% 进度</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <p>
-                                    <strong>Task 3</strong>
-                                    <span class="pull-right text-muted">60% 进度</span>
-                                </p>
-
-                                <div class="progress progress-striped active">
-                                    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60"
-                                         aria-valuemin="0" aria-valuemax="100" style="width: 60%">
-                                        <span class="sr-only">60% 进度</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <p>
-                                    <strong>Task 4</strong>
-                                    <span class="pull-right text-muted">80% 进度</span>
-                                </p>
-
-                                <div class="progress progress-striped active">
-                                    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80"
-                                         aria-valuemin="0" aria-valuemax="100" style="width: 80%">
-                                        <span class="sr-only">80% 进度</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a class="text-center" href="#">
-                            <strong>查看所有审核</strong>
-                            <i class="fa fa-angle-right"></i>
-                        </a>
-                    </li>
-                </ul>
-                <!-- /.dropdown-tasks -->
-            </li>
-            <!-- /.dropdown -->
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-bell fa-fw"></i> <i class="fa fa-caret-down"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-alerts">
-                    <li>
-                        <a href="#">
-                            <div>
-                                <i class="fa fa-comment fa-fw"></i> 新的回复
-                                <span class="pull-right text-muted small">4 分钟前</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li class="divider"></li>
-                    <li>
-                        <a href="#">
-                            <div>
-                                <i class="fa fa-twitter fa-fw"></i> 3 个新的关注
-                                <span class="pull-right text-muted small">12 分钟前</span>
-                            </div>
-                        </a>
-                    </li>
-
-                </ul>
-                <!-- /.dropdown-alerts -->
-            </li>
-            <!-- /.dropdown -->
-            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
-                </a>
-                <ul class="dropdown-menu dropdown-user">
-                    <li><a href="#"><i class="fa fa-user fa-fw"></i>用户信息</a>
-                    </li>
-                    <li><a href="#"><i class="fa fa-gear fa-fw"></i> 设置</a>
-                    </li>
-                    <li class="divider"></li>
-                    <li><a href="login.html"><i class="fa fa-sign-out fa-fw"></i>登出</a>
-                    </li>
-                </ul>
-                <!-- /.dropdown-user -->
-            </li>
-            <!-- /.dropdown -->
-        </ul>
-        <!-- /.navbar-top-links -->
-        <!-- side navigation bar -->
-        <div class="navbar-default sidebar" role="navigation">
-            <div class="sidebar-nav navbar-collapse">
-                <ul class="nav" id="side-menu">
-                    <li class="sidebar-search">
-                        <div class="input-group custom-search-form">
-                            <input type="text" class="form-control" placeholder="搜索...">
-                                <span class="input-group-btn">
-                                <button class="btn btn-default" type="button">
-                                    <i class="fa fa-search"></i>
-                                </button>
-                            </span>
-                        </div>
-                        <!-- /input-group -->
-                    </li>
-                    <li>
-                        <a href="#"><i class="fa fa-bars fa-fw"></i>分类</a>
-                    </li>
-                    <li>
-                        <a href="#">头条</span></a>
-                        <!--<ul class="nav nav-second-level">-->
-                        <!--<li>-->
-                        <!--<a href="#">头条</a>-->
-                        <!--</li>-->
-                        <!--<li>-->
-                        <!--<a href="morris.html">Morris.js Charts</a>-->
-                        <!--</li>-->
-                        <!--</ul>-->
-                        <!-- /.nav-second-level -->
-                    </li>
-                    <li>
-                        <a href="#">财经</a>
-                    </li>
-                    <li>
-                        <a href="#">科技</a>
-                    </li>
-
+                    <div id="time" class="pull-right">
+                        <span id="hours"></span>
+                        :
+                        <span id="min"></span>
+                        :
+                        <span id="sec"></span>
+                    </div>
+                    
+                    <div class="media-body">
+                        <input type="text" class="main-search">
+                    </div>
+                </div>
             </div>
-            <!-- /.sidebar-collapse -->
-        </div>
-        <!-- /.navbar-static-side -->
-    </nav>
-
-    <div id="page-wrapper" style="margin-top:65px">
-
-        <!-- /.row -->
-        <div class="row">
-            <a href="#">
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-primary">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-users fa-5x"></i>
+        </header>
+        
+        <div class="clearfix"></div>
+        
+        <section id="main" class="p-relative" role="main">
+            
+            <!-- Sidebar -->
+            <aside id="sidebar">
+                
+                <!-- Sidbar Widgets -->
+                <div class="side-widgets overflow">
+                    <!-- Profile Menu -->
+                    <div class="text-center s-widget m-b-25 dropdown" id="profile-menu">
+                        <a href="" data-toggle="dropdown">
+                            <img class="profile-pic animated" src="../img/phoenix.png" alt="">
+                        </a>
+                        <ul class="dropdown-menu profile-menu">
+                            <li><a href="">个人信息</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                            <li><a href="">私信</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                            <li><a href="">设置</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                            <li><a href="">登出</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                        </ul>
+                        <h4 class="m-0">Phoenix Johnson</h4>
+                        @Relic.com
+                    </div>
+                    
+                    <!-- Calendar -->
+                    <!--<div class="s-widget m-b-25">-->
+                        <!--<div id="sidebar-calendar"></div>-->
+                    <!--</div>-->
+                    
+                    <!-- Feeds -->
+                    <div class="s-widget m-b-25">
+                        <h2 class="tile-title">
+                           焦点
+                        </h2>
+                        
+                        <div class="s-widget-body">
+                            <div id="news-feed"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- info sell -->
+                    <div class="s-widget m-b-25">
+                        <h2 class="tile-title">
+                            您的审核信息
+                        </h2>
+                        
+                        <div class="s-widget-body">
+                            <div class="side-border">
+                                <small>网络经典神剧 - 信息站</small>
+                                <div class="progress progress-small">
+                                     <a href="#" data-toggle="tooltip" title="" class="progress-bar tooltips progress-bar-danger" style="width: 60%;" data-original-title="60%">
+                                          <span class="sr-only">60% Complete</span>
+                                     </a>
                                 </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">26</div>
-                                    <div>归属圈</div>
+                            </div>
+                            <div class="side-border">
+                                <small>男士试衣 - 信息站</small>
+                                <div class="progress progress-small">
+                                     <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-info" style="width: 43%;" data-original-title="43%">
+                                          <span class="sr-only">43% Complete</span>
+                                     </a>
+                                </div>
+                            </div>
+                            <div class="side-border">
+                                <small>火星人出现地球 - 信闻头条</small>
+                                <div class="progress progress-small">
+                                     <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-warning" style="width: 81%;" data-original-title="81%">
+                                          <span class="sr-only">81% Complete</span>
+                                     </a>
+                                </div>
+                            </div>
+                            <div class="side-border">
+                                <small>天上掉下个弼马温 - 信闻头条</small>
+                                <div class="progress progress-small">
+                                     <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-success" style="width: 10%;" data-original-title="10%">
+                                          <span class="sr-only">10% Complete</span>
+                                     </a>
+                                </div>
+                            </div>
+                            <div class="side-border">
+                                <small>你懂得 - 信息站</small>
+                                <div class="progress progress-small">
+                                     <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-success" style="width: 95%;" data-original-title="95%">
+                                          <span class="sr-only">95% Complete</span>
+                                     </a>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
-            </a>
-            <a href="#">
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-red">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-newspaper-o fa-5x"></i>
+                
+                <!-- Side Menu -->
+                <ul class="list-unstyled side-menu">
+                    <li class="active">
+                        <a class="sa-side-home" href="index.html">
+                            <span class="menu-item">修讯</span>
+                        </a>
+                    </li>
+                    <!--<li>-->
+                        <!--<a class="sa-side-typography" href="../pages/typography.html">-->
+                            <!--<span class="menu-item">Typography</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a class="sa-side-widget" href="../pages/content-widgets.html">-->
+                            <!--<span class="menu-item">Widgets</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a class="sa-side-table" href="../pages/tables.html">-->
+                            <!--<span class="menu-item">Tables</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li class="dropdown">-->
+                        <!--<a class="sa-side-form" href="">-->
+                            <!--<span class="menu-item">Form</span>-->
+                        <!--</a>-->
+                        <!--<ul class="list-unstyled menu-item">-->
+                            <!--<li><a href="../pages/form-elements.html">Basic Form Elements</a></li>-->
+                            <!--<li><a href="../pages/form-components.html">Form Components</a></li>-->
+                            <!--<li><a href="../pages/form-examples.html">Form Examples</a></li>-->
+                            <!--<li><a href="../pages/form-validation.html">Form Validation</a></li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                    <!--<li class="dropdown">-->
+                        <!--<a class="sa-side-ui" href="">-->
+                            <!--<span class="menu-item">User Interface</span>-->
+                        <!--</a>-->
+                        <!--<ul class="list-unstyled menu-item">-->
+                            <!--<li><a href="../pages/buttons.html">Buttons</a></li>-->
+                            <!--<li><a href="../pages/labels.html">Labels</a></li>-->
+                            <!--<li><a href="../pages/images-icons.html">Images &amp; Icons</a></li>-->
+                            <!--<li><a href="../pages/alerts.html">Alerts</a></li>-->
+                            <!--<li><a href="../pages/media.html">Media</a></li>-->
+                            <!--<li><a href="../pages/components.html">Components</a></li>-->
+                            <!--<li><a href="../pages/other-components.html">Others</a></li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                    <!--<li class="dropdown">-->
+                        <!--<a class="sa-side-photos" href="">-->
+                            <!--<span class="menu-item">PHOTO GALLERY</span>-->
+                        <!--</a>-->
+                        <!--<ul class="list-unstyled menu-item">-->
+                            <!--<li><a href="../pages/photo-gallery.html">Google Images like</a></li>-->
+                            <!--<li><a href="../pages/photo-gallery-alt.html">Photo Gallery - 2</a></li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a class="sa-side-chart" href="../pages/charts.html">-->
+                            <!--<span class="menu-item">Charts</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a class="sa-side-folder" href="../pages/file-manager.html">-->
+                            <!--<span class="menu-item">File Manager</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a class="sa-side-calendar" href="../pages/calendar.html">-->
+                            <!--<span class="menu-item">Calendar</span>-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li class="dropdown">-->
+                        <!--<a class="sa-side-page" href="">-->
+                            <!--<span class="menu-item">Pages</span>-->
+                        <!--</a>-->
+                        <!--<ul class="list-unstyled menu-item">-->
+                            <!--<li><a href="../pages/list-view.html">List View</a></li>-->
+                            <!--<li><a href="../pages/profile-page.html">Profile Page</a></li>-->
+                            <!--<li><a href="../pages/messages.html">Messages</a></li>-->
+                            <!--<li><a href="../pages/login.html">Login</a></li>-->
+                            <!--<li><a href="../pages/404.html">404 Error</a></li>-->
+                        <!--</ul>-->
+                    <!--</li>-->
+                </ul>
+
+            </aside>
+        
+            <!-- Content -->
+            <section id="content" class="container">
+            
+                <!-- Messages Drawer -->
+                <div id="messages" class="tile drawer animated">
+                    <div class="listview narrow">
+                        <div class="media">
+                            <a href="">Send a New Message</a>
+                            <span class="drawer-close">&times;</span>
+                            
+                        </div>
+                        <div class="overflow" style="height: 254px">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="../img/profile-pics/1.jpg" alt="">
                                 </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">12</div>
-                                    <div>资讯</div>
+                                <div class="media-body">
+                                    <small class="text-muted">Nadin Jackson - 2 Hours ago</small><br>
+                                    <a class="t-overflow" href="">Mauris consectetur urna nec tempor adipiscing. Proin sit amet nisi ligula. Sed eu adipiscing lectus</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="../img/profile-pics/2.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">David Villa - 5 Hours ago</small><br>
+                                    <a class="t-overflow" href="">Suspendisse in purus ut nibh placerat Cras pulvinar euismod nunc quis gravida. Suspendisse pharetra</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="../img/profile-pics/3.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">Harris worgon - On 15/12/2013</small><br>
+                                    <a class="t-overflow" href="">Maecenas venenatis enim condimentum ultrices fringilla. Nulla eget libero rhoncus, bibendum diam eleifend, vulputate mi. Fusce non nibh pulvinar, ornare turpis id</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="../img/profile-pics/4.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">Mitch Bradberry - On 14/12/2013</small><br>
+                                    <a class="t-overflow" href="">Phasellus interdum felis enim, eu bibendum ipsum tristique vitae. Phasellus feugiat massa orci, sed viverra felis aliquet quis. Curabitur vel blandit odio. Vestibulum sagittis quis sem sit amet tristique.</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="../img/profile-pics/1.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">Nadin Jackson - On 15/12/2013</small><br>
+                                    <a class="t-overflow" href="">Ipsum wintoo consectetur urna nec tempor adipiscing. Proin sit amet nisi ligula. Sed eu adipiscing lectus</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="../img/profile-pics/2.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">David Villa - On 16/12/2013</small><br>
+                                    <a class="t-overflow" href="">Suspendisse in purus ut nibh placerat Cras pulvinar euismod nunc quis gravida. Suspendisse pharetra</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="../img/profile-pics/3.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">Harris worgon - On 17/12/2013</small><br>
+                                    <a class="t-overflow" href="">Maecenas venenatis enim condimentum ultrices fringilla. Nulla eget libero rhoncus, bibendum diam eleifend, vulputate mi. Fusce non nibh pulvinar, ornare turpis id</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="../img/profile-pics/4.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">Mitch Bradberry - On 18/12/2013</small><br>
+                                    <a class="t-overflow" href="">Phasellus interdum felis enim, eu bibendum ipsum tristique vitae. Phasellus feugiat massa orci, sed viverra felis aliquet quis. Curabitur vel blandit odio. Vestibulum sagittis quis sem sit amet tristique.</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="../img/profile-pics/5.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">Wendy Mitchell - On 19/12/2013</small><br>
+                                    <a class="t-overflow" href="">Integer a eros dapibus, vehicula quam accumsan, tincidunt purus</a>
                                 </div>
                             </div>
                         </div>
-
-
+                        <div class="media text-center whiter l-100">
+                            <a href=""><small>VIEW ALL</small></a>
+                        </div>
                     </div>
                 </div>
-            </a>
-            <a href="#">
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-yellow">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-comment fa-5x"></i>
+                
+                <!-- Notification Drawer -->
+                <div id="notifications" class="tile drawer animated">
+                    <div class="listview narrow">
+                        <div class="media">
+                            <a href="">Notification Settings</a>
+                            <span class="drawer-close">&times;</span>
+                        </div>
+                        <div class="overflow" style="height: 254px">
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="../img/profile-pics/1.jpg" alt="">
                                 </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">124</div>
-                                    <div>朋友圈</div>
+                                <div class="media-body">
+                                    <small class="text-muted">Nadin Jackson - 2 Hours ago</small><br>
+                                    <a class="t-overflow" href="">Mauris consectetur urna nec tempor adipiscing. Proin sit amet nisi ligula. Sed eu adipiscing lectus</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="../img/profile-pics/2.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">David Villa - 5 Hours ago</small><br>
+                                    <a class="t-overflow" href="">Suspendisse in purus ut nibh placerat Cras pulvinar euismod nunc quis gravida. Suspendisse pharetra</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="../img/profile-pics/3.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">Harris worgon - On 15/12/2013</small><br>
+                                    <a class="t-overflow" href="">Maecenas venenatis enim condimentum ultrices fringilla. Nulla eget libero rhoncus, bibendum diam eleifend, vulputate mi. Fusce non nibh pulvinar, ornare turpis id</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="../img/profile-pics/4.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">Mitch Bradberry - On 14/12/2013</small><br>
+                                    <a class="t-overflow" href="">Phasellus interdum felis enim, eu bibendum ipsum tristique vitae. Phasellus feugiat massa orci, sed viverra felis aliquet quis. Curabitur vel blandit odio. Vestibulum sagittis quis sem sit amet tristique.</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="../img/profile-pics/1.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">Nadin Jackson - On 15/12/2013</small><br>
+                                    <a class="t-overflow" href="">Ipsum wintoo consectetur urna nec tempor adipiscing. Proin sit amet nisi ligula. Sed eu adipiscing lectus</a>
+                                </div>
+                            </div>
+                            <div class="media">
+                                <div class="pull-left">
+                                    <img width="40" src="../img/profile-pics/2.jpg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <small class="text-muted">David Villa - On 16/12/2013</small><br>
+                                    <a class="t-overflow" href="">Suspendisse in purus ut nibh placerat Cras pulvinar euismod nunc quis gravida. Suspendisse pharetra</a>
                                 </div>
                             </div>
                         </div>
-
-
-                    </div>
-                </div>
-            </a>
-            <a href="#">
-                <div class="col-lg-3 col-md-6">
-                    <div class="panel panel-green">
-                        <div class="panel-heading">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <i class="fa fa-plus fa-5x"></i>
-                                </div>
-                                <div class="col-xs-9 text-right">
-                                    <div class="huge">13</div>
-                                    <div>发表</div>
-                                </div>
-                            </div>
+                        <div class="media text-center whiter l-100">
+                            <a href=""><small>VIEW ALL</small></a>
                         </div>
-
-
                     </div>
                 </div>
-            </a>
-        </div>
-        <!-- /.row -->
-        <div class="row">
-            <div class="col-lg-9">
 
-                <!-- /.panel -->
+                
+                <h4 class="page-title">修讯</h4>
+                                
+                <!-- Shortcuts -->
+                <div class="block-area shortcut-area">
+                    <a class="shortcut tile" href="">
+                        <img src="../img/icon/Newspaper_32.png" alt="">
+                        <!--<i class="fa fa-info-circle fa-4x"></i>-->
+                        <small class="t-overflow">资讯</small>
+                    </a>
+                    <a class="shortcut tile" href="">
+                        <img src="../img/icon/gittip.png" class="invertPNGColor" alt="">
+                        <!--<i class="fa fa-globe fa-4x"></i>-->
+                        <small class="t-overflow">归属圈</small>
 
-                <!-- /.panel -->
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <i class="fa fa-clock-o fa-fw"></i> 时间线
-                    </div>
-                    <!-- /.panel-heading -->
-                    <div class="panel-body">
-                        <ul class="timeline">
-                            <li>
-                                <div class="timeline-badge"><i class="fa fa-check"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">某某人</h4>
+                    </a>
+                    <a class="shortcut tile" href="">
+                        <img src="../img/icon/information35.png" class="invertPNGColor" alt="">
+                        <!--<i class="fa fa-info-circle fa-4x"></i>-->
+                        <small class="t-overflow">信息站</small>
+                    </a>
+                    <a class="shortcut tile" href="">
+                        <img src="../img/icon/group41.png" class="invertPNGColor" alt="">
+                        <!--<i class="fa fa-users fa-4x"></i>-->
+                        <small class="t-overflow">朋友圈</small>
+                    </a>
+                    <a class="shortcut tile" href="">
+                        <img src="../img/icon/share15.png" class="invertPNGColor" alt="">
+                        <!--<i class="fa fa-plus-square fa-4x"></i>-->
+                        <small class="t-overflow">发表</small>
+                    </a>
+                </div>
 
-                                        <p>
-                                            <small class="text-muted"><i class="fa fa-clock-o"></i>11小时前 - 发布在A归属圈
-                                            </small>
-                                        </p>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>此处省略x字</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="timeline-inverted">
-                                <div class="timeline-badge warning"><i class="fa fa-credit-card"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">某某人</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>此处省略x字</p>
+                <hr class="whiter" />
 
-                                        <p>此处省略x字</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="timeline-badge danger"><i class="fa fa-bomb"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">某某人</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>此处省略x字</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="timeline-inverted">
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">某某人</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>此处省略x字</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="timeline-badge info"><i class="fa fa-save"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">某某人</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>此处省略x字</p>
-                                        <hr>
-                                        <div class="btn-group">
-                                            <button type="button" class="btn btn-primary btn-sm dropdown-toggle"
-                                                    data-toggle="dropdown">
-                                                <i class="fa fa-gear"></i> <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu" role="menu">
-                                                <li><a href="#">添加记录</a>
-                                                </li>
-                                                <li><a href="#">删除</a>
-                                                </li>
-                                                <li><a href="#">转发</a>
-                                                </li>
-                                                <li class="divider"></li>
+                <!-- Main Widgets -->
 
-                                            </ul>
+                <div class="block-area">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="listview list-container">
+                                <header class="listview-header media">
+                                    <input type="checkbox" class="pull-left list-parent-check" value="">
+
+                                    <ul class="list-inline pull-right m-t-5 m-b-0">
+                                        <li class="pagin-value hidden-xs">35-70</li>
+                                        <li>
+                                            <a href="" title="Previous" class="tooltips">
+                                                <i class="sa-list-back"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="" title="Next" class="tooltips">
+                                                <i class="sa-list-forwad"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                    <ul class="list-inline list-mass-actions pull-left">
+                                        <li>
+                                            <a data-toggle="modal" href="#compose-message" title="Add" class="tooltips">
+                                                <i class="sa-list-add"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="" title="Refresh" class="tooltips">
+                                                <i class="sa-list-refresh"></i>
+                                            </a>
+                                        </li>
+                                        <li class="show-on" style="display: none;">
+                                            <a href="" title="Move" class="tooltips">
+                                                <i class="sa-list-move"></i>
+                                            </a>
+                                        </li>
+                                        <li class="show-on" style="display: none;">
+                                            <a href="" title="Delete" class="tooltips">
+                                                <i class="sa-list-delete"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                    <input class="input-sm col-md-4 pull-right message-search" type="text" placeholder="Search....">
+
+                                    <div class="clearfix"></div>
+                                </header>
+
+                                <div class="media">
+                                    <input type="checkbox" class="pull-left list-check" value="">
+                                    <div class="media-body">
+                                        Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam
+                                        <div class="list-options">
+                                            <button class="btn btn-sm">View</button>
+                                            <button class="btn btn-sm">Delete</button>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">某某人</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>此处省略x字</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="timeline-inverted">
-                                <div class="timeline-badge success"><i class="fa fa-graduation-cap"></i>
-                                </div>
-                                <div class="timeline-panel">
-                                    <div class="timeline-heading">
-                                        <h4 class="timeline-title">某某人</h4>
-                                    </div>
-                                    <div class="timeline-body">
-                                        <p>此处省略x字</p>
+
+                                <div class="media">
+                                    <input type="checkbox" class="pull-left list-check" value="">
+                                    <div class="media-body">
+                                        Nulla vel metus scelerisque ante sollicitudin commodo purus odio
+                                        <div class="clearfix"></div>
+                                        <div class="attrs">Date Created: 09/06/1988</div>
+                                        <div class="block attrs">Members: 78954</div>
+                                        <div class="block attrs">Published: No</div>
+
+                                        <div class="list-options">
+                                            <button class="btn btn-sm">View</button>
+                                            <button class="btn btn-sm">Delete</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </li>
-                        </ul>
+
+                                <div class="media">
+                                    <input type="checkbox" class="pull-left list-check" value="">
+                                    <div class="media-body">
+                                        Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam
+                                        <div class="clearfix"></div>
+                                        <small> An erant explicari salutatus duo, sumo doming delicata in cum. Eos at augue viderer principes</small><br>
+                                        <div class="block attrs">
+                                            Date Created: 25/12/2012
+                                        </div>
+                                        <div class="block attrs">
+                                            Members: 3978
+                                        </div>
+                                        <div class="block attrs">
+                                            Published: Yes
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="media">
+                                    <input type="checkbox" class="pull-left list-check" value="">
+                                    <div class="media-body">
+                                        Inermis patrioque temporibus at ius, eos ei case partem blandit<br>
+                                        <small> An erant explicari salutatus duo, sumo doming delicata in cum. Eos at augue viderer principes</small>
+                                    </div>
+                                    <div class="list-options">
+                                        <button class="btn btn-sm">View</button>
+                                        <button class="btn btn-sm">Delete</button>
+                                    </div>
+                                </div>
+
+                                <div class="media">
+                                    <input type="checkbox" class="pull-left list-check" value="">
+                                    <div class="media-body">
+                                        Eam utamur ceteros ei, per no feugiat saperet omittantur. Qui et erant nonumes abhorreant, eirmod omnium.
+                                        <div class="clearfix"></div>
+                                        <small>Lorem ipsum dolor sit amet, per cu solet docendi</small>
+                                    </div>
+                                    <div class="list-options">
+                                        <button class="btn btn-sm">View</button>
+                                        <button class="btn btn-sm">Delete</button>
+                                    </div>
+                                </div>
+
+                                <div class="media">
+                                    <input type="checkbox" class="pull-left list-check" value="">
+                                    <img class="media-object pull-left" src="../img/profile-pics/1.jpg" alt="" width="45">
+                                    <div class="media-body">
+                                        Nulla vel metus scelerisque ante sollicitudin commodo purus odio.
+                                        <div class="clearfix"></div>
+                                        <small>Lorem ipsum dolor sit amet, per cu solet docendi</small>
+                                    </div>
+                                    <div class="list-options">
+                                        <button class="btn btn-sm">View</button>
+                                        <button class="btn btn-sm">Delete</button>
+                                    </div>
+                                </div>
+
+                                <div class="media">
+                                    <input type="checkbox" class="pull-left list-check" value="">
+                                    <img class="media-object pull-left" src="../img/profile-pics/5.jpg" alt="" width="45">
+                                    <div class="media-body">
+                                        Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam, te vix ipsum quando facilisis, admodum eleifend quaerendum sed cu. Sale aperiam oportere has an, mea et commodo alterum perpetua fierent fastidii recteque ad pro. Mei id brute intellegam, vim ea invidunt efficiendi. Copiosae definitiones est ex, no oportere urbanitas elaboraret qui, et dicit sadipscing vel.
+                                    </div>
+                                    <div class="list-options">
+                                        <button class="btn btn-sm">View</button>
+                                        <button class="btn btn-sm">Delete</button>
+                                    </div>
+                                </div>
+
+                                <div class="media">
+                                    <input type="checkbox" class="pull-left list-check" value="">
+                                    <img class="media-object pull-left" src="../img/profile-pics/2.jpg" alt="" width="45">
+                                    <div class="media-body">
+                                        Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam
+                                        <div class="clearfix"></div>
+                                        <small> An erant explicari salutatus duo, sumo doming delicata in cum. Eos at augue viderer principes</small><br>
+                                        <div class="block attrs">
+                                            Date Created: 01/01/2013
+                                        </div>
+                                        <div class="block attrs">
+                                            Members: 17580
+                                        </div>
+                                        <div class="block attrs">
+                                            Published: Yes
+                                        </div>
+                                    </div>
+                                    <div class="list-options">
+                                        <button class="btn btn-sm">View</button>
+                                        <button class="btn btn-sm">Delete</button>
+                                    </div>
+                                </div>
+
+                                <div class="media">
+                                    <input type="checkbox" class="pull-left list-check" value="">
+                                    <div class="media-body">
+                                        Wel ea elit iuvaret. Mea labitur definitiones ex, id atqui accusata vix, vim nibh mandamus ad
+                                        <div class="clearfix"></div>
+                                        <small>Wendy create ipsum dolor sit amet, per cu solet docendi ntoenstion</small>
+                                    </div>
+                                    <div class="list-options">
+                                        <button class="btn btn-sm">View</button>
+                                        <button class="btn btn-sm">Delete</button>
+                                    </div>
+                                </div>
+
+                                <div class="media">
+                                    <input type="checkbox" class="pull-left list-check" value="">
+                                    <div class="media-body">
+                                        Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam
+                                        <div class="clearfix"></div>
+                                        <small> An erant explicari salutatus duo, sumo doming delicata in cum. Eos at augue viderer principes</small><br>
+                                        <div class="block attrs">
+                                            Date Created: 18/06/2013
+                                        </div>
+                                        <div class="block attrs">
+                                            Members: 610
+                                        </div>
+                                        <div class="block attrs">
+                                            Published: No
+                                        </div>
+                                    </div>
+                                    <div class="list-options">
+                                        <button class="btn btn-sm">View</button>
+                                        <button class="btn btn-sm">Delete</button>
+                                    </div>
+                                </div>
+
+                                <div class="media">
+                                    <input type="checkbox" class="pull-left list-check" value="">
+                                    <div class="media-body">
+                                        Per an error perpetua, fierent fastidii recteque ad pro. Mei id brute intellegam
+                                        <div class="list-options">
+                                            <button class="btn btn-sm">View</button>
+                                            <button class="btn btn-sm">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="media">
+                                    <input type="checkbox" class="pull-left list-check" value="">
+                                    <div class="media-body">
+                                        Nulla vel metus scelerisque ante sollicitudin commodo purus odio
+                                        <div class="clearfix"></div>
+                                        <div class="attrs">Date Created: 09/06/1988</div>
+                                        <div class="block attrs">Members: 78954</div>
+                                        <div class="block attrs">Published: No</div>
+
+                                        <div class="list-options">
+                                            <button class="btn btn-sm">View</button>
+                                            <button class="btn btn-sm">Delete</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="media text-center">
+                                    <ul class="pagination">
+                                        <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--  Recent Postings -->
+                            <!--<div class="row">-->
+                                <!--<div class="col-md-2">-->
+
+                                <!--</div>-->
+                                <!--<div class="col-md-8">-->
+
+
+                                <!--</div>-->
+                            <!--</div>-->
+                            <div class="clearfix"></div>
+                        </div>
+
+                        <!-- right navigation area for ads or other notifications -->
+                        <div class="col-md-2">
+                            <div class="tile">
+                                <h2 class="tile-title">最新</h2>
+                                <div class="tile-config dropdown">
+                                    <a data-toggle="dropdown" href="" class="tile-menu"></a>
+                                    <ul class="dropdown-menu animated pull-right text-right">
+                                        <li><a href="">简易</a></li>
+                                        <li><a href="">详细</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="listview narrow">
+                                    <div class="media p-l-5">
+                                        <div class="pull-left">
+                                            <img width="40" src="../img/profile-pics/1.jpg" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <small class="text-muted">Alisa 发表于 2小时前</small><br/>
+                                            <a class="t-overflow" href="">明天下大雨，心情有点慌</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="media p-l-5">
+                                        <div class="pull-left">
+                                            <img width="40" src="../img/profile-pics/2.jpg" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <small class="text-muted">Phoenix 发表于 5小时前</small><br/>
+                                            <a class="t-overflow" href="">天天一看，包你发财</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="media p-l-5">
+                                        <div class="pull-left">
+                                            <img width="40" src="../img/profile-pics/3.jpg" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <small class="text-muted">Mitch 发表于 15/12/2017</small><br/>
+                                            <a class="t-overflow" href="">Great to meet new Chinese friend</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="media p-l-5">
+                                        <div class="pull-left">
+                                            <img width="40" src="../img/profile-pics/4.jpg" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <small class="text-muted">Berry 发表于 14/12/2017</small><br/>
+                                            <a class="t-overflow" href="">Cras pulvinar euismod nunc quis gravida. </a>
+
+                                        </div>
+                                    </div>
+                                    <div class="media p-l-5">
+                                        <div class="pull-left">
+                                            <img width="40" src="../img/profile-pics/5.jpg" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <small class="text-muted">Jason 发表于 13/12/2017</small><br/>
+                                            <a class="t-overflow" href="">Integer a eros dapibus, vehicula quam accumsan, tincidunt purus</a>
+
+                                        </div>
+                                    </div>
+                                    <div class="media p-5 text-center l-100">
+                                        <a href=""><small>查看全部</small></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tile">
+                                <h2 class="tile-title">通知</h2>
+                                <div class="tile-config dropdown">
+                                    <a data-toggle="dropdown" href="" class="tile-menu"></a>
+                                    <ul class="dropdown-menu pull-right text-right">
+                                        <li><a href="">Refresh</a></li>
+                                        <li><a href="">Settings</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                            <div class="tile">
+                                <h2 class="tile-title">即时通信</h2>
+                                <div class="tile-config dropdown">
+                                    <a data-toggle="dropdown" href="" class="tile-menu"></a>
+                                    <ul class="dropdown-menu pull-right text-right">
+                                        <li><a href="">Refresh</a></li>
+                                        <li><a href="">Settings</a></li>
+                                    </ul>
+                                </div>
+
+
+                            </div>
+
+                            <!-- Activity -->
+                            <div class="tile">
+                                <h2 class="tile-title">审核列表</h2>
+                                <div class="tile-config dropdown">
+                                    <a data-toggle="dropdown" href="" class="tile-menu"></a>
+                                    <ul class="dropdown-menu pull-right text-right">
+                                        <li><a href="">Refresh</a></li>
+                                        <li><a href="">Settings</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="listview narrow">
+
+                                    <div class="media">
+                                        <div class="pull-right">
+                                            <div class="counts">￥60</div>
+                                        </div>
+
+                                        <div class="media-body">
+                                            <h6>信息A <b>(审核中)</b></h6>
+                                        </div>
+                                    </div>
+
+                                    <div class="media">
+                                        <div class="pull-right">
+                                            <div class="counts">￥200</div>
+                                        </div>
+                                        <div class="media-body">
+                                            <h6>信息B <b>(审核中)</b></h6>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
                     </div>
-                    <!-- /.panel-body -->
                 </div>
-                <!-- /.panel -->
+
+            </section>
+
+            <!-- Older IE Message -->
+            <!--[if lt IE 9]>
+            <div class="ie-block">
+                <h1 class="Ops">Ooops!</h1>
+
+                <p>You are using an outdated version of Internet Explorer, upgrade to any of the following web browser
+                    in order to access the maximum functionality of this website. </p>
+                <ul class="browsers">
+                    <li>
+                        <a href="https://www.google.com/intl/en/chrome/browser/">
+                            <img src="../img/browsers/chrome.png" alt="">
+
+                            <div>Google Chrome</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.mozilla.org/en-US/firefox/new/">
+                            <img src="../img/browsers/firefox.png" alt="">
+
+                            <div>Mozilla Firefox</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.opera.com/computer/windows">
+                            <img src="../img/browsers/opera.png" alt="">
+
+                            <div>Opera</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://safari.en.softonic.com/">
+                            <img src="../img/browsers/safari.png" alt="">
+
+                            <div>Safari</div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://windows.microsoft.com/en-us/internet-explorer/downloads/ie-10/worldwide-languages">
+                            <img src="../img/browsers/ie.png" alt="">
+
+                            <div>Internet Explorer(New)</div>
+                        </a>
+                    </li>
+                </ul>
+                <p>Upgrade your browser for a Safer and Faster web experience. <br/>Thank you for your patience...</p>
             </div>
-            <!-- /.col-lg-8 -->
-            <div class="col-lg-3">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <i class="fa fa-bell fa-fw"></i> 通知栏
-                    </div>
-                    <!-- /.panel-heading -->
-                    <div class="panel-body">
-                        <div class="list-group">
-                            <a href="#" class="list-group-item">
-                                <i class="fa fa-comment fa-fw"></i> 新的回复
-                                    <span class="pull-right text-muted small"><em>4分钟前</em>
-                                    </span>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <i class="fa fa-twitter fa-fw"></i> 3个新的关注
-                                    <span class="pull-right text-muted small"><em>12分钟前</em>
-                                    </span>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <i class="fa fa-envelope fa-fw"></i> 私信
-                                    <span class="pull-right text-muted small"><em>27分钟前</em>
-                                    </span>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <i class="fa fa-tasks fa-fw"></i> 新的审核
-                                    <span class="pull-right text-muted small"><em>43分钟前</em>
-                                    </span>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <i class="fa fa-shopping-cart fa-fw"></i> 新的收购
-                                    <span class="pull-right text-muted small"><em>上午9:49</em>
-                                    </span>
-                            </a>
-                            <a href="#" class="list-group-item">
-                                <i class="fa fa-money fa-fw"></i> 收入账单
-                                    <span class="pull-right text-muted small"><em>昨天</em>
-                                    </span>
-                            </a>
-                        </div>
-                        <!-- /.list-group -->
-                        <a href="#" class="btn btn-default btn-block">查看所有通知</a>
-                    </div>
-                    <!-- /.panel-body -->
-                </div>
+            <![endif]-->
+        </section>
+        
+        <!-- Javascript Libraries -->
+        <!-- jQuery -->
+        <script src="../js/jquery.min.js"></script> <!-- jQuery Library -->
+        <script src="../js/jquery-ui.min.js"></script> <!-- jQuery UI -->
+        <script src="../js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
 
-                <div class="chat-panel panel panel-default">
-                    <div class="panel-heading">
-                        <i class="fa fa-comments fa-fw"></i>
-                        聊天室 - 归属圈
-                        <div class="btn-group pull-right">
-                            <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
-                                <i class="fa fa-chevron-down"></i>
-                            </button>
-                            <ul class="dropdown-menu slidedown">
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-refresh fa-fw"></i> 切换归属圈
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-check-circle fa-fw"></i> 转到朋友圈
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-times fa-fw"></i> 静音
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-clock-o fa-fw"></i> 离开
-                                    </a>
-                                </li>
-                                <li class="divider"></li>
-                                <li>
-                                    <a href="#">
-                                        <i class="fa fa-sign-out fa-fw"></i> 退出归属圈
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- /.panel-heading -->
-                    <div class="panel-body">
-                        <ul class="chat">
-                            <li class="left clearfix">
-                                    <span class="chat-img pull-left">
-                                        <img src="../resources/pictures/checked.png" height="50" width="50"
-                                             alt="User Avatar" class="img-circle"/>
-                                    </span>
+        <!-- Bootstrap -->
+        <script src="../js/bootstrap.min.js"></script>
 
-                                <div class="chat-body clearfix">
-                                    <div class="header">
-                                        <strong class="primary-font">Jason</strong>
-                                        <small class="pull-right text-muted">
-                                            <i class="fa fa-clock-o fa-fw"></i> 12 分钟前
-                                        </small>
-                                    </div>
-                                    <p>
-                                        此处省略100字
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="right clearfix">
-                                    <span class="chat-img pull-right">
-                                        <img src="../resources/pictures/checked.png" height="50" width="50"
-                                             alt="User Avatar" class="img-circle"/>
-                                    </span>
+        <!-- Charts -->
+        <script src="../js/charts/jquery.flot.js"></script> <!-- Flot Main -->
+        <script src="../js/charts/jquery.flot.time.js"></script> <!-- Flot sub -->
+        <script src="../js/charts/jquery.flot.animator.min.js"></script> <!-- Flot sub -->
+        <script src="../js/charts/jquery.flot.resize.min.js"></script> <!-- Flot sub - for repaint when resizing the screen -->
 
-                                <div class="chat-body clearfix">
-                                    <div class="header">
-                                        <small class=" text-muted">
-                                            <i class="fa fa-clock-o fa-fw"></i> 13 分钟前
-                                        </small>
-                                        <strong class="pull-right primary-font">Phoenix</strong>
-                                    </div>
-                                    <p>
-                                        :)
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="left clearfix">
-                                    <span class="chat-img pull-left">
-                                        <img src="../resources/pictures/checked.png" height="50" width="50"
-                                             alt="User Avatar" class="img-circle"/>
-                                    </span>
+        <script src="../js/sparkline.min.js"></script> <!-- Sparkline - Tiny charts -->
+        <script src="../js/easypiechart.js"></script> <!-- EasyPieChart - Animated Pie Charts -->
+        <script src="../js/charts.js"></script> <!-- All the above chart related functions -->
 
-                                <div class="chat-body clearfix">
-                                    <div class="header">
-                                        <strong class="primary-font">Jason</strong>
-                                        <small class="pull-right text-muted">
-                                            <i class="fa fa-clock-o fa-fw"></i> 14 分钟前
-                                        </small>
-                                    </div>
-                                    <p>
-                                        为什么我还是看不到你的信息
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="right clearfix">
-                                    <span class="chat-img pull-right">
-                                        <img src="../resources/pictures/checked.png" height="50" width="50"
-                                             alt="User Avatar" class="img-circle"/>
-                                    </span>
+        <!-- Map -->
+        <script src="../js/maps/jvectormap.min.js"></script> <!-- jVectorMap main library -->
+        <script src="../js/maps/usa.js"></script> <!-- USA Map for jVectorMap -->
 
-                                <div class="chat-body clearfix">
-                                    <div class="header">
-                                        <small class=" text-muted">
-                                            <i class="fa fa-clock-o fa-fw"></i> 15 分钟前
-                                        </small>
-                                        <strong class="pull-right primary-font">Phoenix</strong>
-                                    </div>
-                                    <p>
-                                        我说省略了别查看了
-                                    </p>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /.panel-body -->
-                    <div class="panel-footer">
-                        <div class="input-group">
-                            <input id="btn-input" type="text" class="form-control input-sm" placeholder="请输入信息"/>
-                                <span class="input-group-btn">
-                                    <button class="btn btn-warning btn-sm" id="btn-chat">
-                                        发送
-                                    </button>
-                                </span>
-                        </div>
-                    </div>
-                    <!-- /.panel-footer -->
-                </div>
-                <!-- /.panel .chat-panel -->
-            </div>
-            <!-- /.col-lg-4 -->
-        </div>
-        <!-- /.row -->
-    </div>
-    <!-- /#page-wrapper -->
+        <!--  Form Related -->
+        <script src="../js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
 
-</div>
-<!-- /#wrapper -->
+        <!-- UX -->
+        <script src="../js/scroll.min.js"></script> <!-- Custom Scrollbar -->
 
-<!-- jQuery -->
-<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- Other -->
+        <script src="../js/calendar.min.js"></script> <!-- Calendar -->
+        <script src="../js/feeds.min.js"></script> <!-- News Feeds -->
+        
 
-<!-- Bootstrap Core JavaScript -->
-<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-
-
-<!-- Custom Theme JavaScript -->
-<script src="../bower_components/startBootstrap/js/sb-admin-2.js"></script>
-
-</body>
-
+        <!-- All JS functions -->
+        <script src="../js/functions.js"></script>
+    </body>
 </html>
