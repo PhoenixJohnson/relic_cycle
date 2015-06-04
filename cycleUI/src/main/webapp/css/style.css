@@ -1840,9 +1840,13 @@ a.list-group-item.active > .badge,
     /* --------------------------------------------------------
         Template Blur Skins for Desktop
     -----------------------------------------------------------*/
-    [class^="skin-blur-"] {
-        background-size: cover;
+    [id^="skin-blur-"] {
+        background-size: 100% 100%;
         background-attachment: fixed;
+    }
+
+    #skin-blur-city{
+        background-image: url(../img/body/city.jpg);
     }
 
     .skin-blur-violate {
