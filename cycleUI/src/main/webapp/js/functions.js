@@ -212,17 +212,17 @@ $(document).ready(function(){
     /* --------------------------------------------------------
 	RSS Feed widget
     -----------------------------------------------------------*/
-    (function(){
-	if($('#news-feed')[0]){
-	    $('#news-feed').FeedEk({
-		FeedUrl: 'http://www.people.com.cn/rss/media.xml',
-		MaxCount: 5,
-		ShowDesc: false,
-		ShowPubDate: true,
-		DescCharacterLimit: 0
-	    });
-	}
-    })();
+    //(function(){
+    //if($('#news-feed')[0]){
+	 //   $('#news-feed').FeedEk({
+		//FeedUrl: 'http://www.people.com.cn/rss/media.xml',
+		//MaxCount: 5,
+		//ShowDesc: false,
+		//ShowPubDate: true,
+		//DescCharacterLimit: 0
+	 //   });
+    //}
+    //})();
 
     /* --------------------------------------------------------
 	Chat

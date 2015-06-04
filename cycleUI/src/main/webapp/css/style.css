@@ -1840,60 +1840,60 @@ a.list-group-item.active > .badge,
     /* --------------------------------------------------------
         Template Blur Skins for Desktop
     -----------------------------------------------------------*/
-    [id^="skin-blur-"] {
+    [class^="skin-blur-"] {
         background-size: 100% 100%;
         background-attachment: fixed;
     }
 
-    #skin-blur-violate {
+    .skin-blur-violate {
         background-image: url(../img/body/violate.jpg);
     }
 
-    #skin-blur-lights {
+    .skin-blur-lights {
         background-image: url(../img/body/lights.jpg);
     }
 
-    #skin-blur-city {
+    .skin-blur-city {
         background-image: url(../img/body/city.jpg);
     }
 
-    #skin-blur-greenish {
+    .skin-blur-greenish {
         background-image: url(../img/body/greenish.jpg);
     }
 
-    #skin-blur-night {
+    .skin-blur-night {
         background-image: url(../img/body/night.jpg);
     }
     
-    #skin-blur-sunny {
+    .skin-blur-sunny {
         background-image: url(../img/body/sunny.jpg);
     }
     
-    #skin-blur-blue {
+    .kin-blur-blue {
         background-image: url(../img/body/blue.jpg);
     }
     
-    #skin-blur-chrome {
+    .skin-blur-chrome {
         background-image: url(../img/body/chrome.jpg);
     }
     
-    #skin-blur-ocean {
+    .skin-blur-ocean {
         background-image: url(../img/body/ocean.jpg);
     }
     
-    #skin-blur-sunset {
+    .skin-blur-sunset {
         background-image: url(../img/body/sunset.jpg);
     }
     
-    #skin-blur-yellow {
+    .skin-blur-yellow {
         background-image: url(../img/body/yellow.jpg);
     }
 
-    #skin-blur-kiwi {
+    .skin-blur-kiwi {
         background-image: url(../img/body/kiwi.jpg);
     }
     
-    #skin-blur-nexus {
+    .skin-blur-nexus {
         background-image: url(../img/body/nexus.jpg);
     }
     

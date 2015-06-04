@@ -20,7 +20,7 @@
         <link href="../css/icons.css" rel="stylesheet">
         <link href="../css/generics.css" rel="stylesheet">
     </head>
-    <body id="skin-blur-ocean">
+    <body ng-class="$root.myTheme" ng-app="Cycle">
 
         <header id="header" class="media">
             <a href="" id="menu-toggle"></a> 
@@ -32,18 +32,17 @@
                         <a data-drawer="messages" class="drawer-toggle" href="">
                             <i class="sa-top-message"></i>
                             <i class="n-count animated">5</i>
-                            <span>Messages</span>
+                            <span>消息</span>
                         </a>
                     </div>
                     <div class="pull-left tm-icon">
                         <a data-drawer="notifications" class="drawer-toggle" href="">
                             <i class="sa-top-updates"></i>
                             <i class="n-count animated">9</i>
-                            <span>Updates</span>
+                            <span>更新</span>
                         </a>
                     </div>
 
-                    
 
                     <div id="time" class="pull-right">
                         <span id="hours"></span>
@@ -51,6 +50,31 @@
                         <span id="min"></span>
                         :
                         <span id="sec"></span>
+                    </div>
+                    <div class="pull-right" ng-controller="HomeController">
+                        <div href="" data-toggle="dropdown" style="font-size: 20px;padding-top: 10px;margin-right: 15px;">
+                            主题
+                            <b class="caret"></b>
+                        </div>
+
+                        <ul class="dropdown-menu" style="background: rgba(0, 0, 139, 0.68);">
+
+                            <li><a ng-click="ThemeChange('violate')" style="color:white">violate</a></li>
+                            <li><a ng-click="ThemeChange('lights')" style="color:white">lights</a></li>
+                            <li><a ng-click="ThemeChange('city')" style="color:white">city</a></li>
+                            <li><a ng-click="ThemeChange('greenish')" style="color:white">greenish</a></li>
+                            <li><a ng-click="ThemeChange('night')" style="color:white">night</a></li>
+                            <li><a ng-click="ThemeChange('sunny')" style="color:white">sunny</a></li>
+                            <li><a ng-click="ThemeChange('blue')" style="color:white">blue</a></li>
+                            <li><a ng-click="ThemeChange('chrome')" style="color:white">chrome</a></li>
+                            <li><a ng-click="ThemeChange('ocean')" style="color:white">ocean</a></li>
+                            <li><a ng-click="ThemeChange('sunset')" style="color:white">sunset</a></li>
+                            <li><a ng-click="ThemeChange('yellow')" style="color:white">yellow</a></li>
+                            <li><a ng-click="ThemeChange('kiwi')" style="color:white">kiwi</a></li>
+                            <li><a ng-click="ThemeChange('nexus')" style="color:white">nexus</a></li>
+
+                        </ul>
+
                     </div>
                     
                     <div class="media-body">
@@ -446,7 +470,7 @@
 
                 <div class="block-area">
                     <div class="row">
-                        <div class="col-md-10">
+                        <div class="col-md-9">
                             <div class="listview list-container">
                                 <header class="listview-header media">
                                     <input type="checkbox" class="pull-left list-parent-check" value="">
@@ -488,7 +512,7 @@
                                         </li>
                                     </ul>
 
-                                    <input class="input-sm col-md-4 pull-right message-search" type="text" placeholder="Search....">
+                                    <input class="input-sm col-md-4 pull-right message-search" type="text" placeholder="搜索....">
 
                                     <div class="clearfix"></div>
                                 </header>
@@ -700,7 +724,7 @@
                         </div>
 
                         <!-- right navigation area for ads or other notifications -->
-                        <div class="col-md-2">
+                        <div class="col-md-3">
                             <div class="tile">
                                 <h2 class="tile-title">最新</h2>
                                 <div class="tile-config dropdown">
@@ -918,5 +942,27 @@
 
         <!-- All JS functions -->
         <script src="../js/functions.js"></script>
+
+        <script src="../app/vendor/angular/angular.js"></script>
+        <script src="../app/vendor/angular/angular-resource.js"></script>
+        <script src="../app/vendor/angular/angular-route.js"></script>
+
+        <script src="../app/app.js"></script>
+        <script src="../app/config.js"></script>
+        <script src="../app/services/services.js"></script>
+
+        <!--Filter -->
+        <script src="../app/filters/filters.js"></script>
+
+        <!--Directives -->
+        <script src="../app/directives/EventsDirective.js"></script>
+        <script src="../app/directives/effectiveDirective.js"></script>
+        <script src="../app/notificationManager.js"></script>
+
+
+        <!--Controllers -->
+
+        <script src="../app/controllers/HomeController.js"></script>
+
     </body>
 </html>
