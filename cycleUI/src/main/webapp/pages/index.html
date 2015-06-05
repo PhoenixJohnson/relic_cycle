@@ -1,810 +1,738 @@
 <!DOCTYPE html>
-<!--[if IE 9 ]><html class="ie9"><![endif]-->
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-        <meta name="format-detection" content="telephone=no">
-        <meta charset="UTF-8">
+<!--[if IE 9 ]>
+<html class="ie9"><![endif]-->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="UTF-8">
 
-        <meta name="description" content="Violate Responsive Admin Template">
-        <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
+    <meta name="description" content="Violate Responsive Admin Template">
+    <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
 
-        <title>修讯 - 获取你的归属信息</title>
-            
-        <!-- CSS -->
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/animate.min.css" rel="stylesheet">
-        <link href="../css/font-awesome.min.css" rel="stylesheet">
-        <link href="../css/form.css" rel="stylesheet">
-        <link href="../css/calendar.css" rel="stylesheet">
-        <link href="../css/style.css" rel="stylesheet">
-        <link href="../css/icons.css" rel="stylesheet">
-        <link href="../css/generics.css" rel="stylesheet">
-    </head>
-    <body id="skin-blur-city" ng-class="$root.myTheme" ng-app="Cycle">
+    <title>修讯 - 获取你的归属信息</title>
 
-        <header id="header" class="media">
-            <a href="" id="menu-toggle"></a> 
-            <a class="logo pull-left" href="index.html">修讯 | 把信息塞进钱包</a>
-            
-            <div class="media-body">
-                <div class="media" id="top-menu">
-                    <div class="pull-left tm-icon">
-                        <a data-drawer="messages" class="drawer-toggle" href="">
-                            <i class="sa-top-message"></i>
-                            <i class="n-count animated">5</i>
-                            <span>消息</span>
-                        </a>
-                    </div>
-                    <div class="pull-left tm-icon">
-                        <a data-drawer="notifications" class="drawer-toggle" href="">
-                            <i class="sa-top-updates"></i>
-                            <i class="n-count animated">9</i>
-                            <span>更新</span>
-                        </a>
-                    </div>
+    <!-- CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/form.css" rel="stylesheet">
+    <link href="../css/calendar.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/icons.css" rel="stylesheet">
+    <link href="../css/generics.css" rel="stylesheet">
+</head>
+<body id="skin-blur-city" ng-class="$root.myTheme" ng-app="Cycle" ng-controller="HomeController">
+
+<header id="header" class="media">
+    <a href="" id="menu-toggle"></a>
+    <a class="logo pull-left" href="index.html">小讯闻</a>
+
+    <div class="media-body">
+        <div class="media navbar-fixed-top" id="top-menu">
+            <div class="pull-right tm-icon">
+                <a data-drawer="messages" class="drawer-toggle" href="">
+                    <i class="sa-top-message"></i>
+                    <i class="n-count animated">5</i>
+                    <span>消息</span>
+                </a>
+            </div>
+            <div class="pull-right tm-icon">
+                <a data-drawer="notifications" class="drawer-toggle" href="">
+                    <i class="sa-top-updates"></i>
+                    <i class="n-count animated">9</i>
+                    <span>更新</span>
+                </a>
+            </div>
+            <div class="pull-right tm-icon">
+                <a data-drawer="reviews" class="drawer-toggle" href="">
+                    <i class="sa-top-money"></i>
+                    <i class="n-count animated">9</i>
+                    <span>钱包</span>
+                </a>
+            </div>
 
 
-                    <div id="time" class="pull-right">
-                        <span id="hours"></span>
-                        :
-                        <span id="min"></span>
-                        :
-                        <span id="sec"></span>
-                    </div>
-                    <div class="pull-right" ng-controller="HomeController">
-                        <div href="" data-toggle="dropdown" style="font-size: 20px;padding-top: 10px;margin-right: 15px;">
-                            主题
-                            <b class="caret"></b>
+            <div id="time" class="pull-right">
+                <span id="hours"></span>
+                :
+                <span id="min"></span>
+                :
+                <span id="sec"></span>
+            </div>
+
+
+        </div>
+
+    </div>
+    </div>
+</header>
+
+<div class="clearfix"></div>
+
+<section id="main" class="p-relative" role="main">
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+
+        <!-- Sidbar Widgets -->
+        <div class="side-widgets overflow">
+            <!-- Profile Menu -->
+            <div class="text-center s-widget m-b-25 dropdown" id="profile-menu">
+                <a href="" data-toggle="dropdown">
+                    <img class="profile-pic animated" src="../img/phoenix.png" alt="">
+                </a>
+                <ul class="dropdown-menu profile-menu">
+                    <li><a href="">个人信息</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                    <li><a href="">私信</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                    <li><a href="">设置</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                    <li><a href="">登出</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
+                </ul>
+                <h4 class="m-0">Phoenix Johnson</h4>
+                @Relic.com
+            </div>
+
+            <!-- Calendar -->
+            <!--<div class="s-widget m-b-25">-->
+            <!--<div id="sidebar-calendar"></div>-->
+            <!--</div>-->
+
+            <!-- Feeds -->
+            <div class="s-widget m-b-25">
+                <h2 class="tile-title">
+                    焦点
+                </h2>
+
+                <div class="s-widget-body">
+                    <div id="news-feed"></div>
+                </div>
+            </div>
+
+            <!-- info sell -->
+            <div class="s-widget m-b-25">
+                <h2 class="tile-title">
+                    您的审核信息
+                </h2>
+
+                <div class="s-widget-body">
+                    <div class="side-border">
+                        <small>网络经典神剧 - 信息站</small>
+                        <div class="progress progress-small">
+                            <a href="#" data-toggle="tooltip" title="" class="progress-bar tooltips progress-bar-danger"
+                               style="width: 60%;" data-original-title="60%">
+                                <span class="sr-only">60% Complete</span>
+                            </a>
                         </div>
-
-                        <ul class="dropdown-menu" style="background: rgba(0, 0, 139, 0.68);">
-
-                            <li><a ng-click="ThemeChange('violate')" style="color:white">暴力红</a></li>
-                            <li><a ng-click="ThemeChange('lights')" style="color:white">炫光</a></li>
-                            <li><a ng-click="ThemeChange('city')" style="color:white">都市</a></li>
-                            <li><a ng-click="ThemeChange('greenish')" style="color:white">绿霓</a></li>
-                            <li><a ng-click="ThemeChange('night')" style="color:white">夜景</a></li>
-                            <li><a ng-click="ThemeChange('sunny')" style="color:white">阳光</a></li>
-                            <li><a ng-click="ThemeChange('blue')" style="color:white">蓝调</a></li>
-                            <li><a ng-click="ThemeChange('chrome')" style="color:white">镀铬</a></li>
-                            <li><a ng-click="ThemeChange('ocean')" style="color:white">海洋</a></li>
-                            <li><a ng-click="ThemeChange('sunset')" style="color:white">日落</a></li>
-                            <li><a ng-click="ThemeChange('yellow')" style="color:white">玄黄</a></li>
-                            <li><a ng-click="ThemeChange('kiwi')" style="color:white">鹬鸵</a></li>
-                            <li><a ng-click="ThemeChange('nexus')" style="color:white">恋香</a></li>
-
-                        </ul>
-
                     </div>
-                    
-                    <div class="media-body">
-                        <input type="text" class="main-search">
+                    <div class="side-border">
+                        <small>男士试衣 - 信息站</small>
+                        <div class="progress progress-small">
+                            <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-info"
+                               style="width: 43%;" data-original-title="43%">
+                                <span class="sr-only">43% Complete</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="side-border">
+                        <small>火星人出现地球 - 信闻头条</small>
+                        <div class="progress progress-small">
+                            <a href="#" data-toggle="tooltip" title=""
+                               class="tooltips progress-bar progress-bar-warning" style="width: 81%;"
+                               data-original-title="81%">
+                                <span class="sr-only">81% Complete</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="side-border">
+                        <small>天上掉下个弼马温 - 信闻头条</small>
+                        <div class="progress progress-small">
+                            <a href="#" data-toggle="tooltip" title=""
+                               class="tooltips progress-bar progress-bar-success" style="width: 10%;"
+                               data-original-title="10%">
+                                <span class="sr-only">10% Complete</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="side-border">
+                        <small>你懂得 - 信息站</small>
+                        <div class="progress progress-small">
+                            <a href="#" data-toggle="tooltip" title=""
+                               class="tooltips progress-bar progress-bar-success" style="width: 95%;"
+                               data-original-title="95%">
+                                <span class="sr-only">95% Complete</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </header>
-        
-        <div class="clearfix"></div>
-        
-        <section id="main" class="p-relative" role="main">
-            
-            <!-- Sidebar -->
-            <aside id="sidebar">
-                
-                <!-- Sidbar Widgets -->
-                <div class="side-widgets overflow">
-                    <!-- Profile Menu -->
-                    <div class="text-center s-widget m-b-25 dropdown" id="profile-menu">
-                        <a href="" data-toggle="dropdown">
-                            <img class="profile-pic animated" src="../img/phoenix.png" alt="">
-                        </a>
-                        <ul class="dropdown-menu profile-menu">
-                            <li><a href="">个人信息</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
-                            <li><a href="">私信</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
-                            <li><a href="">设置</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
-                            <li><a href="">登出</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i></li>
-                        </ul>
-                        <h4 class="m-0">Phoenix Johnson</h4>
-                        @Relic.com
-                    </div>
-                    
-                    <!-- Calendar -->
-                    <!--<div class="s-widget m-b-25">-->
-                        <!--<div id="sidebar-calendar"></div>-->
-                    <!--</div>-->
-                    
-                    <!-- Feeds -->
-                    <div class="s-widget m-b-25">
-                        <h2 class="tile-title">
-                           焦点
-                        </h2>
-                        
-                        <div class="s-widget-body">
-                            <div id="news-feed"></div>
+        </div>
+
+        <!-- Side Menu -->
+        <ul class="list-unstyled side-menu">
+            <li class="active">
+                <a class="sa-side-home" href="index.html">
+                    <span class="menu-item">修讯</span>
+                </a>
+            </li>
+            <li class="dropdown">
+                <a class="sa-side-theme" href="">
+                    <span class="menu-item">主题</span>
+                </a>
+                <ul class="list-unstyled menu-item">
+                    <li><a ng-click="ThemeChange('violate')" style="color:white">暴力红</a></li>
+                    <li><a ng-click="ThemeChange('lights')" style="color:white">炫光</a></li>
+                    <li><a ng-click="ThemeChange('city')" style="color:white">都市</a></li>
+                    <li><a ng-click="ThemeChange('greenish')" style="color:white">绿霓</a></li>
+                    <li><a ng-click="ThemeChange('night')" style="color:white">夜景</a></li>
+                    <li><a ng-click="ThemeChange('sunny')" style="color:white">阳光</a></li>
+                    <li><a ng-click="ThemeChange('blue')" style="color:white">蓝调</a></li>
+                    <li><a ng-click="ThemeChange('chrome')" style="color:white">镀铬</a></li>
+                    <li><a ng-click="ThemeChange('ocean')" style="color:white">海洋</a></li>
+                    <li><a ng-click="ThemeChange('sunset')" style="color:white">日落</a></li>
+                    <li><a ng-click="ThemeChange('yellow')" style="color:white">玄黄</a></li>
+                    <li><a ng-click="ThemeChange('kiwi')" style="color:white">鹬鸵</a></li>
+                    <li><a ng-click="ThemeChange('nexus')" style="color:white">恋香</a></li>
+                </ul>
+            </li>
+            <!--<li>-->
+            <!--<a class="sa-side-typography" href="../pages/typography.html">-->
+            <!--<span class="menu-item">Typography</span>-->
+            <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<a class="sa-side-widget" href="../pages/content-widgets.html">-->
+            <!--<span class="menu-item">Widgets</span>-->
+            <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<a class="sa-side-table" href="../pages/tables.html">-->
+            <!--<span class="menu-item">Tables</span>-->
+            <!--</a>-->
+            <!--</li>-->
+            <!--<li class="dropdown">-->
+            <!--<a class="sa-side-form" href="">-->
+            <!--<span class="menu-item">Form</span>-->
+            <!--</a>-->
+            <!--<ul class="list-unstyled menu-item">-->
+            <!--<li><a href="../pages/form-elements.html">Basic Form Elements</a></li>-->
+            <!--<li><a href="../pages/form-components.html">Form Components</a></li>-->
+            <!--<li><a href="../pages/form-examples.html">Form Examples</a></li>-->
+            <!--<li><a href="../pages/form-validation.html">Form Validation</a></li>-->
+            <!--</ul>-->
+            <!--</li>-->
+            <!--<li class="dropdown">-->
+            <!--<a class="sa-side-ui" href="">-->
+            <!--<span class="menu-item">User Interface</span>-->
+            <!--</a>-->
+            <!--<ul class="list-unstyled menu-item">-->
+            <!--<li><a href="../pages/buttons.html">Buttons</a></li>-->
+            <!--<li><a href="../pages/labels.html">Labels</a></li>-->
+            <!--<li><a href="../pages/images-icons.html">Images &amp; Icons</a></li>-->
+            <!--<li><a href="../pages/alerts.html">Alerts</a></li>-->
+            <!--<li><a href="../pages/media.html">Media</a></li>-->
+            <!--<li><a href="../pages/components.html">Components</a></li>-->
+            <!--<li><a href="../pages/other-components.html">Others</a></li>-->
+            <!--</ul>-->
+            <!--</li>-->
+            <!--<li class="dropdown">-->
+            <!--<a class="sa-side-photos" href="">-->
+            <!--<span class="menu-item">PHOTO GALLERY</span>-->
+            <!--</a>-->
+            <!--<ul class="list-unstyled menu-item">-->
+            <!--<li><a href="../pages/photo-gallery.html">Google Images like</a></li>-->
+            <!--<li><a href="../pages/photo-gallery-alt.html">Photo Gallery - 2</a></li>-->
+            <!--</ul>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<a class="sa-side-chart" href="../pages/charts.html">-->
+            <!--<span class="menu-item">Charts</span>-->
+            <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<a class="sa-side-folder" href="../pages/file-manager.html">-->
+            <!--<span class="menu-item">File Manager</span>-->
+            <!--</a>-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--<a class="sa-side-calendar" href="../pages/calendar.html">-->
+            <!--<span class="menu-item">Calendar</span>-->
+            <!--</a>-->
+            <!--</li>-->
+            <!--<li class="dropdown">-->
+            <!--<a class="sa-side-page" href="">-->
+            <!--<span class="menu-item">Pages</span>-->
+            <!--</a>-->
+            <!--<ul class="list-unstyled menu-item">-->
+            <!--<li><a href="../pages/list-view.html">List View</a></li>-->
+            <!--<li><a href="../pages/profile-page.html">Profile Page</a></li>-->
+            <!--<li><a href="../pages/messages.html">Messages</a></li>-->
+            <!--<li><a href="../pages/login.html">Login</a></li>-->
+            <!--<li><a href="../pages/404.html">404 Error</a></li>-->
+            <!--</ul>-->
+            <!--</li>-->
+        </ul>
+
+    </aside>
+
+    <!-- Content -->
+    <section id="content" class="container">
+
+        <!-- Messages Drawer -->
+        <div id="reviews" class="tile drawer animated">
+            <div class="listview narrow">
+                <div class="media">
+                    <a href="">查看钱包</a>
+                    <span class="drawer-close">&times;</span>
+
+                </div>
+                <div class="listview narrow">
+
+                    <div class="media">
+                        <div class="pull-right">
+                            <div class="counts">￥60</div>
+                        </div>
+
+                        <div class="media-body">
+                            <h6>信息A <b>(审核中)</b></h6>
                         </div>
                     </div>
-                    
-                    <!-- info sell -->
-                    <div class="s-widget m-b-25">
-                        <h2 class="tile-title">
-                            您的审核信息
-                        </h2>
-                        
-                        <div class="s-widget-body">
-                            <div class="side-border">
-                                <small>网络经典神剧 - 信息站</small>
-                                <div class="progress progress-small">
-                                     <a href="#" data-toggle="tooltip" title="" class="progress-bar tooltips progress-bar-danger" style="width: 60%;" data-original-title="60%">
-                                          <span class="sr-only">60% Complete</span>
-                                     </a>
-                                </div>
-                            </div>
-                            <div class="side-border">
-                                <small>男士试衣 - 信息站</small>
-                                <div class="progress progress-small">
-                                     <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-info" style="width: 43%;" data-original-title="43%">
-                                          <span class="sr-only">43% Complete</span>
-                                     </a>
-                                </div>
-                            </div>
-                            <div class="side-border">
-                                <small>火星人出现地球 - 信闻头条</small>
-                                <div class="progress progress-small">
-                                     <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-warning" style="width: 81%;" data-original-title="81%">
-                                          <span class="sr-only">81% Complete</span>
-                                     </a>
-                                </div>
-                            </div>
-                            <div class="side-border">
-                                <small>天上掉下个弼马温 - 信闻头条</small>
-                                <div class="progress progress-small">
-                                     <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-success" style="width: 10%;" data-original-title="10%">
-                                          <span class="sr-only">10% Complete</span>
-                                     </a>
-                                </div>
-                            </div>
-                            <div class="side-border">
-                                <small>你懂得 - 信息站</small>
-                                <div class="progress progress-small">
-                                     <a href="#" data-toggle="tooltip" title="" class="tooltips progress-bar progress-bar-success" style="width: 95%;" data-original-title="95%">
-                                          <span class="sr-only">95% Complete</span>
-                                     </a>
-                                </div>
-                            </div>
+
+                    <div class="media">
+                        <div class="pull-right">
+                            <div class="counts">￥200</div>
+                        </div>
+                        <div class="media-body">
+                            <h6>信息B <b>(审核中)</b></h6>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="media text-center whiter l-100">
+                    <a href="">
+                        <small>查看全部</small>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Messages Drawer -->
+        <div id="messages" class="tile drawer animated">
+            <div class="listview narrow">
+                <div class="media">
+                    <a href="">发送新信息</a>
+                    <span class="drawer-close">&times;</span>
+
+                </div>
+                <div class="overflow" style="height: 254px">
+                    <div class="media" ng-repeat="message in msgs">
+                        <div class="pull-left">
+                            <img width="40" src="../img/profile-pics/1.jpg" alt="">
+                        </div>
+                        <div class="media-body">
+                            <small class="text-muted">{{message.publishTime}}</small>
+                            <br>
+
+                            <div class="block-title">来自： {{message.from}}</div>
+                            <a class="t-overflow" href="">{{message.shortContent}}</a>
                         </div>
                     </div>
                 </div>
-                
-                <!-- Side Menu -->
-                <ul class="list-unstyled side-menu">
-                    <li class="active">
-                        <a class="sa-side-home" href="index.html">
-                            <span class="menu-item">修讯</span>
-                        </a>
-                    </li>
-                    <!--<li>-->
-                        <!--<a class="sa-side-typography" href="../pages/typography.html">-->
-                            <!--<span class="menu-item">Typography</span>-->
-                        <!--</a>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<a class="sa-side-widget" href="../pages/content-widgets.html">-->
-                            <!--<span class="menu-item">Widgets</span>-->
-                        <!--</a>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<a class="sa-side-table" href="../pages/tables.html">-->
-                            <!--<span class="menu-item">Tables</span>-->
-                        <!--</a>-->
-                    <!--</li>-->
-                    <!--<li class="dropdown">-->
-                        <!--<a class="sa-side-form" href="">-->
-                            <!--<span class="menu-item">Form</span>-->
-                        <!--</a>-->
-                        <!--<ul class="list-unstyled menu-item">-->
-                            <!--<li><a href="../pages/form-elements.html">Basic Form Elements</a></li>-->
-                            <!--<li><a href="../pages/form-components.html">Form Components</a></li>-->
-                            <!--<li><a href="../pages/form-examples.html">Form Examples</a></li>-->
-                            <!--<li><a href="../pages/form-validation.html">Form Validation</a></li>-->
-                        <!--</ul>-->
-                    <!--</li>-->
-                    <!--<li class="dropdown">-->
-                        <!--<a class="sa-side-ui" href="">-->
-                            <!--<span class="menu-item">User Interface</span>-->
-                        <!--</a>-->
-                        <!--<ul class="list-unstyled menu-item">-->
-                            <!--<li><a href="../pages/buttons.html">Buttons</a></li>-->
-                            <!--<li><a href="../pages/labels.html">Labels</a></li>-->
-                            <!--<li><a href="../pages/images-icons.html">Images &amp; Icons</a></li>-->
-                            <!--<li><a href="../pages/alerts.html">Alerts</a></li>-->
-                            <!--<li><a href="../pages/media.html">Media</a></li>-->
-                            <!--<li><a href="../pages/components.html">Components</a></li>-->
-                            <!--<li><a href="../pages/other-components.html">Others</a></li>-->
-                        <!--</ul>-->
-                    <!--</li>-->
-                    <!--<li class="dropdown">-->
-                        <!--<a class="sa-side-photos" href="">-->
-                            <!--<span class="menu-item">PHOTO GALLERY</span>-->
-                        <!--</a>-->
-                        <!--<ul class="list-unstyled menu-item">-->
-                            <!--<li><a href="../pages/photo-gallery.html">Google Images like</a></li>-->
-                            <!--<li><a href="../pages/photo-gallery-alt.html">Photo Gallery - 2</a></li>-->
-                        <!--</ul>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<a class="sa-side-chart" href="../pages/charts.html">-->
-                            <!--<span class="menu-item">Charts</span>-->
-                        <!--</a>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<a class="sa-side-folder" href="../pages/file-manager.html">-->
-                            <!--<span class="menu-item">File Manager</span>-->
-                        <!--</a>-->
-                    <!--</li>-->
-                    <!--<li>-->
-                        <!--<a class="sa-side-calendar" href="../pages/calendar.html">-->
-                            <!--<span class="menu-item">Calendar</span>-->
-                        <!--</a>-->
-                    <!--</li>-->
-                    <!--<li class="dropdown">-->
-                        <!--<a class="sa-side-page" href="">-->
-                            <!--<span class="menu-item">Pages</span>-->
-                        <!--</a>-->
-                        <!--<ul class="list-unstyled menu-item">-->
-                            <!--<li><a href="../pages/list-view.html">List View</a></li>-->
-                            <!--<li><a href="../pages/profile-page.html">Profile Page</a></li>-->
-                            <!--<li><a href="../pages/messages.html">Messages</a></li>-->
-                            <!--<li><a href="../pages/login.html">Login</a></li>-->
-                            <!--<li><a href="../pages/404.html">404 Error</a></li>-->
-                        <!--</ul>-->
-                    <!--</li>-->
-                </ul>
 
-            </aside>
-        
-            <!-- Content -->
-            <section id="content" class="container">
-            
-                <!-- Messages Drawer -->
-                <div id="messages" class="tile drawer animated">
-                    <div class="listview narrow">
-                        <div class="media">
-                            <a href="">Send a New Message</a>
-                            <span class="drawer-close">&times;</span>
-                            
+                <div class="media text-center whiter l-100">
+                    <a href="">
+                        <small>查看全部</small>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Notification Drawer -->
+        <div id="notifications" class="tile drawer animated">
+            <div class="listview narrow">
+                <div class="media">
+                    <a href="">通知设定</a>
+                    <span class="drawer-close">&times;</span>
+                </div>
+                <div class="overflow" style="height: 254px">
+                    <div class="media" ng-repeat="noti in notis">
+                        <div class="pull-left">
+                            <img width="40" src="../img/profile-pics/1.jpg" alt="">
                         </div>
-                        <div class="overflow" style="height: 254px">
-                            <div class="media">
+                        <div class="media-body">
+                            <small class="text-muted">{{noti.publishTime}}</small>
+                            <br>
+
+                            <div class="block-title">{{noti.type}}</div>
+                            <br>
+                            <a>{{noti.title}}</a><br>
+                            <small class="t-overflow text-muted" href="">{{noti.content}}</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="media text-center whiter l-100">
+                    <a href="">
+                        <small>查看全部</small>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+        <h4 class="page-title">修讯</h4>
+
+        <!-- Shortcuts -->
+        <div class="block-area shortcut-area">
+            <a class="shortcut tile" href="">
+                <img src="../img/icon/Newspaper_32.png" alt="">
+                <!--<i class="fa fa-info-circle fa-4x"></i>-->
+                <small class="t-overflow">资讯</small>
+            </a>
+            <a class="shortcut tile" href="">
+                <img src="../img/icon/gittip.png" class="invertPNGColor" alt="">
+                <!--<i class="fa fa-globe fa-4x"></i>-->
+                <small class="t-overflow">归属圈</small>
+
+            </a>
+            <a class="shortcut tile" href="">
+                <img src="../img/icon/information35.png" class="invertPNGColor" alt="">
+                <!--<i class="fa fa-info-circle fa-4x"></i>-->
+                <small class="t-overflow">信息站</small>
+            </a>
+            <a class="shortcut tile" href="">
+                <img src="../img/icon/group41.png" class="invertPNGColor" alt="">
+                <!--<i class="fa fa-users fa-4x"></i>-->
+                <small class="t-overflow">朋友圈</small>
+            </a>
+            <a class="shortcut tile" href="">
+                <img src="../img/icon/share15.png" class="invertPNGColor" alt="">
+                <!--<i class="fa fa-plus-square fa-4x"></i>-->
+                <small class="t-overflow">发表</small>
+            </a>
+        </div>
+
+        <hr class="whiter"/>
+
+        <!-- Main Widgets -->
+
+        <div class="block-area t-overflow">
+            <div class="row">
+                <div class="col-md-9">
+                    <div class="listview list-container">
+                        <header class="listview-header media">
+                            <!--<input type="checkbox" class="pull-left list-parent-check" value="">-->
+
+                            <ul class="list-inline pull-right m-t-5 m-b-0">
+                                <li class="pagin-value hidden-xs">35-70</li>
+                                <li>
+                                    <a href="" title="上一页" class="tooltips">
+                                        <i class="sa-list-back"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" title="下一页" class="tooltips">
+                                        <i class="sa-list-forwad"></i>
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <ul class="list-inline list-mass-actions pull-left">
+                                <li>
+                                    <a data-toggle="modal" href="#compose-message" title="发布" class="tooltips">
+                                        <i class="sa-list-add"></i>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="" title="刷新" class="tooltips">
+                                        <i class="sa-list-refresh"></i>
+                                    </a>
+                                </li>
+
+                            </ul>
+
+                            <input class="input-sm col-md-4 pull-right message-search" type="text" placeholder="搜索....">
+
+                            <div class="clearfix"></div>
+                        </header>
+
+
+                        <div class="media" ng-repeat="record in records">
+                            <!--<input type="checkbox" class="pull-left list-check" checked={{record.checked}}>-->
+                            <img class="media-object pull-left" src="../img/profile-pics/2.jpg" alt="" width="45">
+
+                            <div class="media-body">
+                                {{record.messageTitle}}
+                                <div class="clearfix"></div>
+                                <small>{{record.messageContent}}</small>
+                                <br>
+
+                                <div class="block attrs">
+                                    创建日期: {{record.createdDate}}
+                                </div>
+                                <div class="block attrs">
+                                    评论: {{record.comments}}
+                                </div>
+                                <div class="block attrs">
+                                    版权: {{record.copyRight}}
+                                </div>
+                                <div class="block attrs">
+                                    类型: {{record.messageType}}
+                                </div>
+                            </div>
+                            <div class="list-options">
+                                <button class="btn btn-sm">详细</button>
+                                <button class="btn btn-sm">归属</button>
+                            </div>
+                        </div>
+
+
+                        <div class="media text-center">
+                            <ul class="pagination">
+                                <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                <li><a href="#">1</a></li>
+                                <li><a href="#">2</a></li>
+                                <li><a href="#">3</a></li>
+                                <li><a href="#">4</a></li>
+                                <li><a href="#">5</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!--  Recent Postings -->
+                    <!--<div class="row">-->
+                    <!--<div class="col-md-2">-->
+
+                    <!--</div>-->
+                    <!--<div class="col-md-8">-->
+
+
+                    <!--</div>-->
+                    <!--</div>-->
+                    <div class="clearfix"></div>
+                </div>
+
+                <!-- right navigation area for ads or other notifications -->
+                <div class="col-md-3">
+                    <div class="tile">
+                        <h2 class="tile-title">最新</h2>
+
+                        <div class="tile-config dropdown">
+                            <a data-toggle="dropdown" href="" class="tile-menu"></a>
+                            <ul class="dropdown-menu animated pull-right text-right">
+                                <li><a href="">简易</a></li>
+                                <li><a href="">详细</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="listview narrow">
+                            <div class="media p-l-5">
                                 <div class="pull-left">
                                     <img width="40" src="../img/profile-pics/1.jpg" alt="">
                                 </div>
                                 <div class="media-body">
-                                    <small class="text-muted">Nadin Jackson - 2 Hours ago</small><br>
-                                    <a class="t-overflow" href="">Mauris consectetur urna nec tempor adipiscing. Proin sit amet nisi ligula. Sed eu adipiscing lectus</a>
+                                    <small class="text-muted">Alisa 发表于 2小时前</small>
+                                    <br/>
+                                    <a class="t-overflow" href="">明天下大雨，心情有点慌</a>
+
                                 </div>
                             </div>
-                            <div class="media">
+                            <div class="media p-l-5">
                                 <div class="pull-left">
                                     <img width="40" src="../img/profile-pics/2.jpg" alt="">
                                 </div>
                                 <div class="media-body">
-                                    <small class="text-muted">David Villa - 5 Hours ago</small><br>
-                                    <a class="t-overflow" href="">Suspendisse in purus ut nibh placerat Cras pulvinar euismod nunc quis gravida. Suspendisse pharetra</a>
+                                    <small class="text-muted">Phoenix 发表于 5小时前</small>
+                                    <br/>
+                                    <a class="t-overflow" href="">天天一看，包你发财</a>
+
                                 </div>
                             </div>
-                            <div class="media">
+                            <div class="media p-l-5">
                                 <div class="pull-left">
                                     <img width="40" src="../img/profile-pics/3.jpg" alt="">
                                 </div>
                                 <div class="media-body">
-                                    <small class="text-muted">Harris worgon - On 15/12/2013</small><br>
-                                    <a class="t-overflow" href="">Maecenas venenatis enim condimentum ultrices fringilla. Nulla eget libero rhoncus, bibendum diam eleifend, vulputate mi. Fusce non nibh pulvinar, ornare turpis id</a>
+                                    <small class="text-muted">Mitch 发表于 15/12/2017</small>
+                                    <br/>
+                                    <a class="t-overflow" href="">Great to meet new Chinese friend</a>
+
                                 </div>
                             </div>
-                            <div class="media">
+                            <div class="media p-l-5">
                                 <div class="pull-left">
                                     <img width="40" src="../img/profile-pics/4.jpg" alt="">
                                 </div>
                                 <div class="media-body">
-                                    <small class="text-muted">Mitch Bradberry - On 14/12/2013</small><br>
-                                    <a class="t-overflow" href="">Phasellus interdum felis enim, eu bibendum ipsum tristique vitae. Phasellus feugiat massa orci, sed viverra felis aliquet quis. Curabitur vel blandit odio. Vestibulum sagittis quis sem sit amet tristique.</a>
+                                    <small class="text-muted">Berry 发表于 14/12/2017</small>
+                                    <br/>
+                                    <a class="t-overflow" href="">Cras pulvinar euismod nunc quis gravida. </a>
+
                                 </div>
                             </div>
-                            <div class="media">
-                                <div class="pull-left">
-                                    <img width="40" src="../img/profile-pics/1.jpg" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <small class="text-muted">Nadin Jackson - On 15/12/2013</small><br>
-                                    <a class="t-overflow" href="">Ipsum wintoo consectetur urna nec tempor adipiscing. Proin sit amet nisi ligula. Sed eu adipiscing lectus</a>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="pull-left">
-                                    <img width="40" src="../img/profile-pics/2.jpg" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <small class="text-muted">David Villa - On 16/12/2013</small><br>
-                                    <a class="t-overflow" href="">Suspendisse in purus ut nibh placerat Cras pulvinar euismod nunc quis gravida. Suspendisse pharetra</a>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="pull-left">
-                                    <img width="40" src="../img/profile-pics/3.jpg" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <small class="text-muted">Harris worgon - On 17/12/2013</small><br>
-                                    <a class="t-overflow" href="">Maecenas venenatis enim condimentum ultrices fringilla. Nulla eget libero rhoncus, bibendum diam eleifend, vulputate mi. Fusce non nibh pulvinar, ornare turpis id</a>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="pull-left">
-                                    <img width="40" src="../img/profile-pics/4.jpg" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <small class="text-muted">Mitch Bradberry - On 18/12/2013</small><br>
-                                    <a class="t-overflow" href="">Phasellus interdum felis enim, eu bibendum ipsum tristique vitae. Phasellus feugiat massa orci, sed viverra felis aliquet quis. Curabitur vel blandit odio. Vestibulum sagittis quis sem sit amet tristique.</a>
-                                </div>
-                            </div>
-                            <div class="media">
+                            <div class="media p-l-5">
                                 <div class="pull-left">
                                     <img width="40" src="../img/profile-pics/5.jpg" alt="">
                                 </div>
                                 <div class="media-body">
-                                    <small class="text-muted">Wendy Mitchell - On 19/12/2013</small><br>
-                                    <a class="t-overflow" href="">Integer a eros dapibus, vehicula quam accumsan, tincidunt purus</a>
+                                    <small class="text-muted">Jason 发表于 13/12/2017</small>
+                                    <br/>
+                                    <a class="t-overflow" href="">Integer a eros dapibus, vehicula quam accumsan,
+                                        tincidunt purus</a>
+
                                 </div>
                             </div>
-                        </div>
-                        <div class="media text-center whiter l-100">
-                            <a href=""><small>VIEW ALL</small></a>
+                            <div class="media p-5 text-center l-100">
+                                <a href="">
+                                    <small>查看全部</small>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <!-- Notification Drawer -->
-                <div id="notifications" class="tile drawer animated">
-                    <div class="listview narrow">
-                        <div class="media">
-                            <a href="">Notification Settings</a>
-                            <span class="drawer-close">&times;</span>
+
+                    <div class="tile">
+                        <h2 class="tile-title">即时通信</h2>
+
+                        <div class="tile-config dropdown">
+                            <a data-toggle="dropdown" href="" class="tile-menu"></a>
+                            <ul class="dropdown-menu pull-right text-right">
+                                <li><a href="">Refresh</a></li>
+                                <li><a href="">Settings</a></li>
+                            </ul>
                         </div>
-                        <div class="overflow" style="height: 254px">
-                            <div class="media">
-                                <div class="pull-left">
-                                    <img width="40" src="../img/profile-pics/1.jpg" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <small class="text-muted">Nadin Jackson - 2 Hours ago</small><br>
-                                    <a class="t-overflow" href="">Mauris consectetur urna nec tempor adipiscing. Proin sit amet nisi ligula. Sed eu adipiscing lectus</a>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="pull-left">
-                                    <img width="40" src="../img/profile-pics/2.jpg" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <small class="text-muted">David Villa - 5 Hours ago</small><br>
-                                    <a class="t-overflow" href="">Suspendisse in purus ut nibh placerat Cras pulvinar euismod nunc quis gravida. Suspendisse pharetra</a>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="pull-left">
-                                    <img width="40" src="../img/profile-pics/3.jpg" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <small class="text-muted">Harris worgon - On 15/12/2013</small><br>
-                                    <a class="t-overflow" href="">Maecenas venenatis enim condimentum ultrices fringilla. Nulla eget libero rhoncus, bibendum diam eleifend, vulputate mi. Fusce non nibh pulvinar, ornare turpis id</a>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="pull-left">
-                                    <img width="40" src="../img/profile-pics/4.jpg" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <small class="text-muted">Mitch Bradberry - On 14/12/2013</small><br>
-                                    <a class="t-overflow" href="">Phasellus interdum felis enim, eu bibendum ipsum tristique vitae. Phasellus feugiat massa orci, sed viverra felis aliquet quis. Curabitur vel blandit odio. Vestibulum sagittis quis sem sit amet tristique.</a>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="pull-left">
-                                    <img width="40" src="../img/profile-pics/1.jpg" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <small class="text-muted">Nadin Jackson - On 15/12/2013</small><br>
-                                    <a class="t-overflow" href="">Ipsum wintoo consectetur urna nec tempor adipiscing. Proin sit amet nisi ligula. Sed eu adipiscing lectus</a>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="pull-left">
-                                    <img width="40" src="../img/profile-pics/2.jpg" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <small class="text-muted">David Villa - On 16/12/2013</small><br>
-                                    <a class="t-overflow" href="">Suspendisse in purus ut nibh placerat Cras pulvinar euismod nunc quis gravida. Suspendisse pharetra</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="media text-center whiter l-100">
-                            <a href=""><small>VIEW ALL</small></a>
-                        </div>
+
+
                     </div>
+
+
                 </div>
-
-                
-                <h4 class="page-title">修讯</h4>
-                                
-                <!-- Shortcuts -->
-                <div class="block-area shortcut-area">
-                    <a class="shortcut tile" href="">
-                        <img src="../img/icon/Newspaper_32.png" alt="">
-                        <!--<i class="fa fa-info-circle fa-4x"></i>-->
-                        <small class="t-overflow">资讯</small>
-                    </a>
-                    <a class="shortcut tile" href="">
-                        <img src="../img/icon/gittip.png" class="invertPNGColor" alt="">
-                        <!--<i class="fa fa-globe fa-4x"></i>-->
-                        <small class="t-overflow">归属圈</small>
-
-                    </a>
-                    <a class="shortcut tile" href="">
-                        <img src="../img/icon/information35.png" class="invertPNGColor" alt="">
-                        <!--<i class="fa fa-info-circle fa-4x"></i>-->
-                        <small class="t-overflow">信息站</small>
-                    </a>
-                    <a class="shortcut tile" href="">
-                        <img src="../img/icon/group41.png" class="invertPNGColor" alt="">
-                        <!--<i class="fa fa-users fa-4x"></i>-->
-                        <small class="t-overflow">朋友圈</small>
-                    </a>
-                    <a class="shortcut tile" href="">
-                        <img src="../img/icon/share15.png" class="invertPNGColor" alt="">
-                        <!--<i class="fa fa-plus-square fa-4x"></i>-->
-                        <small class="t-overflow">发表</small>
-                    </a>
-                </div>
-
-                <hr class="whiter" />
-
-                <!-- Main Widgets -->
-
-                <div class="block-area t-overflow" ng-controller="HomeController">
-                    <div class="row">
-                        <div class="col-md-9">
-                            <div class="listview list-container">
-                                <header class="listview-header media">
-                                    <!--<input type="checkbox" class="pull-left list-parent-check" value="">-->
-
-                                    <ul class="list-inline pull-right m-t-5 m-b-0">
-                                        <li class="pagin-value hidden-xs">35-70</li>
-                                        <li>
-                                            <a href="" title="上一页" class="tooltips">
-                                                <i class="sa-list-back"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="" title="下一页" class="tooltips">
-                                                <i class="sa-list-forwad"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
-
-                                    <ul class="list-inline list-mass-actions pull-left">
-                                        <li>
-                                            <a data-toggle="modal" href="#compose-message" title="发布" class="tooltips">
-                                                <i class="sa-list-add"></i>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="" title="刷新" class="tooltips">
-                                                <i class="sa-list-refresh"></i>
-                                            </a>
-                                        </li>
-
-                                    </ul>
-
-                                    <input class="input-sm col-md-4 pull-right message-search" type="text" placeholder="搜索....">
-
-                                    <div class="clearfix"></div>
-                                </header>
-
-
-
-                                <div class="media" ng-repeat="record in messages">
-                                    <!--<input type="checkbox" class="pull-left list-check" checked={{record.checked}}>-->
-                                    <img class="media-object pull-left" src="../img/profile-pics/2.jpg" alt="" width="45">
-                                    <div class="media-body">
-                                        {{record.messageTitle}}
-                                        <div class="clearfix"></div>
-                                        <small>{{record.messageContent}}</small><br>
-                                        <div class="block attrs">
-                                            创建日期: {{record.createdDate}}
-                                        </div>
-                                        <div class="block attrs">
-                                            评论: {{record.comments}}
-                                        </div>
-                                        <div class="block attrs">
-                                            版权: {{record.copyRight}}
-                                        </div>
-                                        <div class="block attrs">
-                                            类型: {{record.messageType}}
-                                        </div>
-                                    </div>
-                                    <div class="list-options">
-                                        <button class="btn btn-sm">详细</button>
-                                        <button class="btn btn-sm">归属</button>
-                                    </div>
-                                </div>
-
-
-
-
-
-                                <div class="media text-center">
-                                    <ul class="pagination">
-                                        <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
-                                        <li><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
-                                        <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <!--  Recent Postings -->
-                            <!--<div class="row">-->
-                                <!--<div class="col-md-2">-->
-
-                                <!--</div>-->
-                                <!--<div class="col-md-8">-->
-
-
-                                <!--</div>-->
-                            <!--</div>-->
-                            <div class="clearfix"></div>
-                        </div>
-
-                        <!-- right navigation area for ads or other notifications -->
-                        <div class="col-md-3">
-                            <div class="tile">
-                                <h2 class="tile-title">最新</h2>
-                                <div class="tile-config dropdown">
-                                    <a data-toggle="dropdown" href="" class="tile-menu"></a>
-                                    <ul class="dropdown-menu animated pull-right text-right">
-                                        <li><a href="">简易</a></li>
-                                        <li><a href="">详细</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="listview narrow">
-                                    <div class="media p-l-5">
-                                        <div class="pull-left">
-                                            <img width="40" src="../img/profile-pics/1.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <small class="text-muted">Alisa 发表于 2小时前</small><br/>
-                                            <a class="t-overflow" href="">明天下大雨，心情有点慌</a>
-
-                                        </div>
-                                    </div>
-                                    <div class="media p-l-5">
-                                        <div class="pull-left">
-                                            <img width="40" src="../img/profile-pics/2.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <small class="text-muted">Phoenix 发表于 5小时前</small><br/>
-                                            <a class="t-overflow" href="">天天一看，包你发财</a>
-
-                                        </div>
-                                    </div>
-                                    <div class="media p-l-5">
-                                        <div class="pull-left">
-                                            <img width="40" src="../img/profile-pics/3.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <small class="text-muted">Mitch 发表于 15/12/2017</small><br/>
-                                            <a class="t-overflow" href="">Great to meet new Chinese friend</a>
-
-                                        </div>
-                                    </div>
-                                    <div class="media p-l-5">
-                                        <div class="pull-left">
-                                            <img width="40" src="../img/profile-pics/4.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <small class="text-muted">Berry 发表于 14/12/2017</small><br/>
-                                            <a class="t-overflow" href="">Cras pulvinar euismod nunc quis gravida. </a>
-
-                                        </div>
-                                    </div>
-                                    <div class="media p-l-5">
-                                        <div class="pull-left">
-                                            <img width="40" src="../img/profile-pics/5.jpg" alt="">
-                                        </div>
-                                        <div class="media-body">
-                                            <small class="text-muted">Jason 发表于 13/12/2017</small><br/>
-                                            <a class="t-overflow" href="">Integer a eros dapibus, vehicula quam accumsan, tincidunt purus</a>
-
-                                        </div>
-                                    </div>
-                                    <div class="media p-5 text-center l-100">
-                                        <a href=""><small>查看全部</small></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="tile">
-                                <h2 class="tile-title">通知</h2>
-                                <div class="tile-config dropdown">
-                                    <a data-toggle="dropdown" href="" class="tile-menu"></a>
-                                    <ul class="dropdown-menu pull-right text-right">
-                                        <li><a href="">Refresh</a></li>
-                                        <li><a href="">Settings</a></li>
-                                    </ul>
-                                </div>
-
-                            </div>
-
-                            <div class="tile">
-                                <h2 class="tile-title">即时通信</h2>
-                                <div class="tile-config dropdown">
-                                    <a data-toggle="dropdown" href="" class="tile-menu"></a>
-                                    <ul class="dropdown-menu pull-right text-right">
-                                        <li><a href="">Refresh</a></li>
-                                        <li><a href="">Settings</a></li>
-                                    </ul>
-                                </div>
-
-
-                            </div>
-
-                            <!-- Activity -->
-                            <div class="tile">
-                                <h2 class="tile-title">审核列表</h2>
-                                <div class="tile-config dropdown">
-                                    <a data-toggle="dropdown" href="" class="tile-menu"></a>
-                                    <ul class="dropdown-menu pull-right text-right">
-                                        <li><a href="">Refresh</a></li>
-                                        <li><a href="">Settings</a></li>
-                                    </ul>
-                                </div>
-
-                                <div class="listview narrow">
-
-                                    <div class="media">
-                                        <div class="pull-right">
-                                            <div class="counts">￥60</div>
-                                        </div>
-
-                                        <div class="media-body">
-                                            <h6>信息A <b>(审核中)</b></h6>
-                                        </div>
-                                    </div>
-
-                                    <div class="media">
-                                        <div class="pull-right">
-                                            <div class="counts">￥200</div>
-                                        </div>
-                                        <div class="media-body">
-                                            <h6>信息B <b>(审核中)</b></h6>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-
-            </section>
-
-            <!-- Older IE Message -->
-            <!--[if lt IE 9]>
-            <div class="ie-block">
-                <h1 class="Ops">Ooops!</h1>
-
-                <p>You are using an outdated version of Internet Explorer, upgrade to any of the following web browser
-                    in order to access the maximum functionality of this website. </p>
-                <ul class="browsers">
-                    <li>
-                        <a href="https://www.google.com/intl/en/chrome/browser/">
-                            <img src="../img/browsers/chrome.png" alt="">
-
-                            <div>Google Chrome</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.mozilla.org/en-US/firefox/new/">
-                            <img src="../img/browsers/firefox.png" alt="">
-
-                            <div>Mozilla Firefox</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://www.opera.com/computer/windows">
-                            <img src="../img/browsers/opera.png" alt="">
-
-                            <div>Opera</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://safari.en.softonic.com/">
-                            <img src="../img/browsers/safari.png" alt="">
-
-                            <div>Safari</div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://windows.microsoft.com/en-us/internet-explorer/downloads/ie-10/worldwide-languages">
-                            <img src="../img/browsers/ie.png" alt="">
-
-                            <div>Internet Explorer(New)</div>
-                        </a>
-                    </li>
-                </ul>
-                <p>Upgrade your browser for a Safer and Faster web experience. <br/>Thank you for your patience...</p>
+                <div class="clearfix"></div>
             </div>
-            <![endif]-->
-        </section>
-        
-        <!-- Javascript Libraries -->
-        <!-- jQuery -->
-        <script src="../js/jquery.min.js"></script> <!-- jQuery Library -->
-        <script src="../js/jquery-ui.min.js"></script> <!-- jQuery UI -->
-        <script src="../js/jquery.easing.1.3.js"></script> <!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
+        </div>
 
-        <!-- Bootstrap -->
-        <script src="../js/bootstrap.min.js"></script>
+    </section>
 
-        <!-- Charts -->
-        <script src="../js/charts/jquery.flot.js"></script> <!-- Flot Main -->
-        <script src="../js/charts/jquery.flot.time.js"></script> <!-- Flot sub -->
-        <script src="../js/charts/jquery.flot.animator.min.js"></script> <!-- Flot sub -->
-        <script src="../js/charts/jquery.flot.resize.min.js"></script> <!-- Flot sub - for repaint when resizing the screen -->
+    <!-- Older IE Message -->
+    <!--[if lt IE 9]>
+    <div class="ie-block">
+        <h1 class="Ops">Ooops!</h1>
 
-        <script src="../js/sparkline.min.js"></script> <!-- Sparkline - Tiny charts -->
-        <script src="../js/easypiechart.js"></script> <!-- EasyPieChart - Animated Pie Charts -->
-        <script src="../js/charts.js"></script> <!-- All the above chart related functions -->
+        <p>You are using an outdated version of Internet Explorer, upgrade to any of the following web browser
+            in order to access the maximum functionality of this website. </p>
+        <ul class="browsers">
+            <li>
+                <a href="https://www.google.com/intl/en/chrome/browser/">
+                    <img src="../img/browsers/chrome.png" alt="">
 
-        <!-- Map -->
-        <script src="../js/maps/jvectormap.min.js"></script> <!-- jVectorMap main library -->
-        <script src="../js/maps/usa.js"></script> <!-- USA Map for jVectorMap -->
+                    <div>Google Chrome</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.mozilla.org/en-US/firefox/new/">
+                    <img src="../img/browsers/firefox.png" alt="">
 
-        <!--  Form Related -->
-        <script src="../js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
+                    <div>Mozilla Firefox</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://www.opera.com/computer/windows">
+                    <img src="../img/browsers/opera.png" alt="">
 
-        <!-- UX -->
-        <script src="../js/scroll.min.js"></script> <!-- Custom Scrollbar -->
+                    <div>Opera</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://safari.en.softonic.com/">
+                    <img src="../img/browsers/safari.png" alt="">
 
-        <!-- Other -->
-        <script src="../js/calendar.min.js"></script> <!-- Calendar -->
-        <script src="../js/feeds.min.js"></script> <!-- News Feeds -->
-        
+                    <div>Safari</div>
+                </a>
+            </li>
+            <li>
+                <a href="http://windows.microsoft.com/en-us/internet-explorer/downloads/ie-10/worldwide-languages">
+                    <img src="../img/browsers/ie.png" alt="">
 
-        <!-- All JS functions -->
-        <script src="../js/functions.js"></script>
+                    <div>Internet Explorer(New)</div>
+                </a>
+            </li>
+        </ul>
+        <p>Upgrade your browser for a Safer and Faster web experience. <br/>Thank you for your patience...</p>
+    </div>
+    <![endif]-->
+</section>
 
-        <script src="../app/vendor/angular/angular.js"></script>
-        <script src="../app/vendor/angular/angular-resource.js"></script>
-        <script src="../app/vendor/angular/angular-route.js"></script>
+<!-- Javascript Libraries -->
+<!-- jQuery -->
+<script src="../js/jquery.min.js"></script>
+<!-- jQuery Library -->
+<script src="../js/jquery-ui.min.js"></script>
+<!-- jQuery UI -->
+<script src="../js/jquery.easing.1.3.js"></script>
+<!-- jQuery Easing - Requirred for Lightbox + Pie Charts-->
 
-        <script src="../app/app.js"></script>
-        <script src="../app/config.js"></script>
-        <script src="../app/services/services.js"></script>
+<!-- Bootstrap -->
+<script src="../js/bootstrap.min.js"></script>
 
-        <!--Filter -->
-        <script src="../app/filters/filters.js"></script>
+<!-- Charts -->
+<script src="../js/charts/jquery.flot.js"></script>
+<!-- Flot Main -->
+<script src="../js/charts/jquery.flot.time.js"></script>
+<!-- Flot sub -->
+<script src="../js/charts/jquery.flot.animator.min.js"></script>
+<!-- Flot sub -->
+<script src="../js/charts/jquery.flot.resize.min.js"></script>
+<!-- Flot sub - for repaint when resizing the screen -->
 
-        <!--Directives -->
-        <script src="../app/directives/EventsDirective.js"></script>
-        <script src="../app/directives/effectiveDirective.js"></script>
-        <script src="../app/notificationManager.js"></script>
+<script src="../js/sparkline.min.js"></script>
+<!-- Sparkline - Tiny charts -->
+<script src="../js/easypiechart.js"></script>
+<!-- EasyPieChart - Animated Pie Charts -->
+<script src="../js/charts.js"></script>
+<!-- All the above chart related functions -->
+
+<!-- Map -->
+<script src="../js/maps/jvectormap.min.js"></script>
+<!-- jVectorMap main library -->
+<script src="../js/maps/usa.js"></script>
+<!-- USA Map for jVectorMap -->
+
+<!--  Form Related -->
+<script src="../js/icheck.js"></script>
+<!-- Custom Checkbox + Radio -->
+
+<!-- UX -->
+<script src="../js/scroll.min.js"></script>
+<!-- Custom Scrollbar -->
+
+<!-- Other -->
+<script src="../js/calendar.min.js"></script>
+<!-- Calendar -->
+<script src="../js/feeds.min.js"></script>
+<!-- News Feeds -->
 
 
-        <!--Controllers -->
+<!-- All JS functions -->
+<script src="../js/functions.js"></script>
 
-        <script src="../app/controllers/HomeController.js"></script>
+<script src="../app/vendor/angular/angular.js"></script>
+<script src="../app/vendor/angular/angular-resource.js"></script>
+<script src="../app/vendor/angular/angular-route.js"></script>
 
-    </body>
+<script src="../app/app.js"></script>
+<script src="../app/config.js"></script>
+<script src="../app/services/services.js"></script>
+
+<!--Filter -->
+<script src="../app/filters/filters.js"></script>
+
+<!--Directives -->
+<script src="../app/directives/EventsDirective.js"></script>
+<script src="../app/directives/effectiveDirective.js"></script>
+<script src="../app/notificationManager.js"></script>
+
+
+<!--Controllers -->
+
+<script src="../app/controllers/HomeController.js"></script>
+
+</body>
 </html>

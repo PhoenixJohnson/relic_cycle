@@ -16,7 +16,69 @@ Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout'
      */
 
 //dummy data
-    $scope.messages=[
+    $scope.notis=[
+        {
+            picture:"",
+            title:"A新闻中友人评论了你",
+            type:"新闻",
+            publishTime:"5 秒钟前",
+            content:"和谐就是力量，和谐就是社会的发展动力。"
+        },
+        {
+            picture:"",
+            title:"信息站B发表了新的分享",
+            type:"信息站",
+            publishTime:"5 秒钟前",
+            content:"和谐就是力量，和谐就是社会的发展动力。"
+        }
+        ,
+        {
+            picture:"",
+            title:"你的朋友圈开始躁动了",
+            type:"朋友圈",
+            publishTime:"5 秒钟前",
+            content:"和谐就是力量，和谐就是社会的发展动力。"
+        }
+        ,
+        {
+            picture:"",
+            title:"归属圈B有人更新了新的动态",
+            type:"归属圈",
+            publishTime:"5 秒钟前",
+            content:"和谐就是力量，和谐就是社会的发展动力。"
+        }
+    ];
+
+    $scope.msgs=[
+        {
+            picture:"",
+            title:"虚假信息，测试使用",
+            shortContent:"你号你好你浩！阿里款到即发；流口水的减肥；阿里看的就是发斯蒂芬；垃圾可是对方； 阿斯蒂芬；进口拉丝的；法律框架阿斯顿；理发速度发来；卡就是的；分了就卡死地方",
+            publishTime:"2 小时前",
+            from:"Melania"
+
+        },
+        {
+            picture:"",
+            title:"你问我时谁，我问你是谁",
+            shortContent:"你号你好你浩！",
+            publishTime:"一天 2 小时前",
+            from:"Melania"
+
+        },
+        {
+            picture:"",
+            title:"虚假信息，不要看太多哦",
+            shortContent:"你号你好你浩！",
+            publishTime:"2 小时前",
+            from:"Melania"
+
+        }
+    ];
+
+
+
+    $scope.records=[
         {
             checked:false,
             picture:"../img/profile-pics/2.jpg",
