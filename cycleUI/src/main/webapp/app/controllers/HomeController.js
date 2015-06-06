@@ -391,6 +391,8 @@ Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout'
 
     ];
 
+    $scope.pageName = "朋友圈";
+
     $scope.pageControl = function(pageName){
         switch(pageName){
             case "infoStation":

@@ -7,8 +7,8 @@ angular.element(document).ready(function () {
     $(document).off('click', '.fullPage-slidesNav a');
     $('#fullpage').fullpage({
         anchors: ['cyclePage'],
-        //menu:"#fullMenu",
-        //sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+        autoScrolling: false,
+        fitToSection: false,
         css3: true,
         //Navigation
 //                menu: false,

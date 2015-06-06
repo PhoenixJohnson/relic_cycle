@@ -78,7 +78,7 @@ body {
 }
 
 body, button, input, textarea, select, .btn {
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: subpixel-antialiased;
 }
 
 body, a, input, .help-block {
