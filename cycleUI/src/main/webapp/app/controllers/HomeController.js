@@ -1,3 +1,17 @@
+function fullpageChange(pageName){
+    switch(pageName){
+        case "friends":
+            $.fn.fullpage.moveTo('cyclePage', 0);
+            break;
+        case "infoStation":
+            $.fn.fullpage.moveTo('cyclePage', 1);
+            break;
+        default :
+            $.fn.fullpage.moveTo('cyclePage', 0);
+    }
+}
+
+
 Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout', function ($scope,$filter,$rootScope) {
 
 
@@ -75,8 +89,6 @@ Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout'
 
         }
     ];
-
-
 
     $scope.records=[
         {
@@ -379,6 +391,19 @@ Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout'
 
     ];
 
+    $scope.pageControl = function(pageName){
+        switch(pageName){
+            case "infoStation":
+                $scope.pageName="信息站";
+                break;
+            case "friends":
+                $scope.pageName = "朋友圈";
+                break;
+            default:
+                $scope.pageName = "";
+        }
+        fullpageChange(pageName);
+    };
 
     $scope.ThemeChange = function(theme){
 

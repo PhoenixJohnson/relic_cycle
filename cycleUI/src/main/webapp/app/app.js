@@ -1,4 +1,53 @@
 // declare top-level module which depends on filters,and services
+angular.element(document).ready(function () {
+
+    $(window).off('hashchange');
+    $(document).off('click', '#fullPage-nav a');
+    $('.section').off('click', '.toSlide');
+    $(document).off('click', '.fullPage-slidesNav a');
+    $('#fullpage').fullpage({
+        anchors: ['cyclePage'],
+        //menu:"#fullMenu",
+        //sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C'],
+        css3: true,
+        //Navigation
+//                menu: false,
+//                anchors:['firstPage', 'secondPage'],
+//                navigation: false,
+//                navigationPosition: 'right',
+//                navigationTooltips: ['firstSlide', 'secondSlide'],
+//                showActiveTooltips: false,
+//                slidesNavigation: true,
+//                slidesNavPosition: 'bottom',
+//                //Accessibility
+//                keyboardScrolling: true,
+//                animateAnchor: true,
+//                recordHistory: true,
+//
+//                //Design
+                controlArrows: false
+//                verticalCentered: true,
+//                resize : false,
+//                sectionsColor : ['#ccc', '#fff'],
+//                paddingTop: '3em',
+//                paddingBottom: '10px',
+//                fixedElements: '#header, .footer',
+//                responsive: 0
+
+        //Custom selectors
+//                sectionSelector: '.section',
+//                slideSelector: '.slide',
+//
+//                //events
+//                onLeave: function(index, nextIndex, direction){},
+//                afterLoad: function(anchorLink, index){},
+//                afterRender: function(){},
+//                afterResize: function(){},
+//                afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+//                onSlideLeave: function(anchorLink, index, slideIndex, direction){}
+    });
+
+});
 var Cycle = angular.module('Cycle',
     [
         'ngRoute',
