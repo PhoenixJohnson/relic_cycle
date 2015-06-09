@@ -16,7 +16,9 @@ Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout'
 
 
 
+    $scope.widgetPage = "../sections/Friends.html";
 
+    $scope.pageName = "朋友圈";
     /*
      ******************************    Side bar controller     ***********************
      */
@@ -391,7 +393,19 @@ Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout'
 
     ];
 
-    $scope.pageName = "朋友圈";
+    //$scope.changeWidgetPage = function(pageName){
+    //    switch(pageName){
+    //        case "infoStation":
+    //            $scope.widgetPage="../sections/InfoStation.html";$scope.pageName="信息站";
+    //            break;
+    //        case "friends":
+    //            $scope.widgetPage = "../sections/Friends.html";$scope.pageName = "朋友圈";
+    //            break;
+    //        default:
+    //            $scope.widgetPage = "../sections/Friends.html";$scope.pageName = "朋友圈";
+    //    }
+    //
+    //};
 
     $scope.pageControl = function(pageName){
         switch(pageName){
@@ -401,10 +415,13 @@ Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout'
             case "friends":
                 $scope.pageName = "朋友圈";
                 break;
+            case "weiNews":
+                $scope.pageName = "微新闻";
+                break;
             default:
                 $scope.pageName = "";
         }
-        fullpageChange(pageName);
+        //fullpageChange(pageName);
     };
 
     $scope.ThemeChange = function(theme){

@@ -52,7 +52,8 @@ var Cycle = angular.module('Cycle',
     [
         'ngRoute',
         'ngResource',
-		'ngResource'
+		'ngResource',
+        'ngAnimate'
 
     ]);
 
@@ -63,21 +64,21 @@ Cycle.config(['$routeProvider', '$locationProvider', '$httpProvider', function (
     //$locationProvider.html5Mode(true);
 //	$locationProvider.html5Mode(true).hashPrefix('!');
 
-    $routeProvider.when('/ui/', {
-        templateUrl: 'partials/home.html',
-        controller:'HomeController'
+    $routeProvider.when('/', {
+        templateUrl: '../sections/Friends.html'
+    });
+    $routeProvider.when('/friends', {
+        templateUrl: '../sections/Friends.html'
+    });
+    $routeProvider.when('/infoStation', {
+        templateUrl: '../sections/InfoStation.html'
+    });
+    $routeProvider.when('/weiNews', {
+        templateUrl: '../sections/News.html'
     });
 
-    $routeProvider.when('/ui/Reports', {
-        templateUrl: 'reports/reportMain.html',
-        controller: 'reportCtrl'
-    });
-    $routeProvider.when('/ui/XMLMapping',{
-        templateUrl:'partials/xml-mapping.html',
-        controller:'xmlMappingCtrl'
-    })
     $routeProvider.otherwise({
-        redirectTo: '/ui/'
+        redirectTo: '/'
     });
 
 }]);

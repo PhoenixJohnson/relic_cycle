@@ -38,65 +38,65 @@
             </div>
         </div>
 
-        <!-- info sell -->
-        <div class="s-widget m-b-25">
-            <h2 class="tile-title">
-                您的审核信息
-            </h2>
+        <!--&lt;!&ndash; info sell &ndash;&gt;-->
+        <!--<div class="s-widget m-b-25">-->
+            <!--<h2 class="tile-title">-->
+                <!--您的审核信息-->
+            <!--</h2>-->
 
-            <div class="s-widget-body">
-                <div class="side-border">
-                    <small>网络经典神剧 - 信息站</small>
-                    <div class="progress progress-small">
-                        <a href="#" data-toggle="tooltip" title=""
-                           class="progress-bar tooltips progress-bar-danger"
-                           style="width: 60%;" data-original-title="60%">
-                            <span class="sr-only">60% Complete</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="side-border">
-                    <small>男士试衣 - 信息站</small>
-                    <div class="progress progress-small">
-                        <a href="#" data-toggle="tooltip" title=""
-                           class="tooltips progress-bar progress-bar-info"
-                           style="width: 43%;" data-original-title="43%">
-                            <span class="sr-only">43% Complete</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="side-border">
-                    <small>火星人出现地球 - 信闻头条</small>
-                    <div class="progress progress-small">
-                        <a href="#" data-toggle="tooltip" title=""
-                           class="tooltips progress-bar progress-bar-warning" style="width: 81%;"
-                           data-original-title="81%">
-                            <span class="sr-only">81% Complete</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="side-border">
-                    <small>天上掉下个弼马温 - 信闻头条</small>
-                    <div class="progress progress-small">
-                        <a href="#" data-toggle="tooltip" title=""
-                           class="tooltips progress-bar progress-bar-success" style="width: 10%;"
-                           data-original-title="10%">
-                            <span class="sr-only">10% Complete</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="side-border">
-                    <small>你懂得 - 信息站</small>
-                    <div class="progress progress-small">
-                        <a href="#" data-toggle="tooltip" title=""
-                           class="tooltips progress-bar progress-bar-success" style="width: 95%;"
-                           data-original-title="95%">
-                            <span class="sr-only">95% Complete</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <!--<div class="s-widget-body">-->
+                <!--<div class="side-border">-->
+                    <!--<small>网络经典神剧 - 信息站</small>-->
+                    <!--<div class="progress progress-small">-->
+                        <!--<a href="#" data-toggle="tooltip" title=""-->
+                           <!--class="progress-bar tooltips progress-bar-danger"-->
+                           <!--style="width: 60%;" data-original-title="60%">-->
+                            <!--<span class="sr-only">60% Complete</span>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="side-border">-->
+                    <!--<small>男士试衣 - 信息站</small>-->
+                    <!--<div class="progress progress-small">-->
+                        <!--<a href="#" data-toggle="tooltip" title=""-->
+                           <!--class="tooltips progress-bar progress-bar-info"-->
+                           <!--style="width: 43%;" data-original-title="43%">-->
+                            <!--<span class="sr-only">43% Complete</span>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="side-border">-->
+                    <!--<small>火星人出现地球 - 信闻头条</small>-->
+                    <!--<div class="progress progress-small">-->
+                        <!--<a href="#" data-toggle="tooltip" title=""-->
+                           <!--class="tooltips progress-bar progress-bar-warning" style="width: 81%;"-->
+                           <!--data-original-title="81%">-->
+                            <!--<span class="sr-only">81% Complete</span>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="side-border">-->
+                    <!--<small>天上掉下个弼马温 - 信闻头条</small>-->
+                    <!--<div class="progress progress-small">-->
+                        <!--<a href="#" data-toggle="tooltip" title=""-->
+                           <!--class="tooltips progress-bar progress-bar-success" style="width: 10%;"-->
+                           <!--data-original-title="10%">-->
+                            <!--<span class="sr-only">10% Complete</span>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="side-border">-->
+                    <!--<small>你懂得 - 信息站</small>-->
+                    <!--<div class="progress progress-small">-->
+                        <!--<a href="#" data-toggle="tooltip" title=""-->
+                           <!--class="tooltips progress-bar progress-bar-success" style="width: 95%;"-->
+                           <!--data-original-title="95%">-->
+                            <!--<span class="sr-only">95% Complete</span>-->
+                        <!--</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
     </div>
 
     <!-- Side Menu -->
@@ -126,15 +126,16 @@
                 <li><a ng-click="ThemeChange('nexus')" style="color:white">恋香</a></li>
             </ul>
         </li>
-        <li>
-            <a class="sa-side-typography" href="../pages/typography.html">
-                <span class="menu-item">Typography</span>
+        <li class="dropdown">
+            <a class="sa-side-widget" href="">
+                <span class="menu-item">快捷键</span>
             </a>
-        </li>
-        <li>
-            <a class="sa-side-widget" href="../pages/content-widgets.html">
-                <span class="menu-item">Widgets</span>
-            </a>
+            <ul class="list-unstyled menu-item">
+                <li><a href="#/weiNews" ng-click="pageControl('weiNews')">微新闻</a></li>
+                <li><a href="#/infoStation" ng-click="pageControl('infoStation')">信息站</a></li>
+                <li><a href="#/friends" ng-click="pageControl('friends')">朋友圈</a></li>
+                <li><a href="">归属圈</a></li>
+            </ul>
         </li>
         <li>
             <a class="sa-side-table" href="../pages/tables.html">
