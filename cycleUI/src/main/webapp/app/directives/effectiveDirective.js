@@ -9,6 +9,7 @@ Cycle.directive('fadeIn', function () {
     };
 });
 
+
 Cycle.directive('noty', function () {
 
     return {

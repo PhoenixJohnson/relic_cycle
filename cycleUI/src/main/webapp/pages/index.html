@@ -9,7 +9,7 @@
     <meta name="description" content="Violate Responsive Admin Template">
     <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
 
-    <title>小讯闻 - 获取你的归属信息</title>
+    <title>消息圈 - 资讯由你而定</title>
 
     <!-- CSS -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -66,14 +66,14 @@
     <p>为了您的安全和浏览的良好体验，请更新您的浏览器<br/>感谢您的参与...</p>
 </div>
 <![endif]-->
-<header id="header" class="media">
+<header id="header" class="media" >
 
 
-    <div class="media-body navbar-fixed-top">
+    <div class="media-body navbar-fixed-top" style="background: rgba(16, 16, 16, 0.44);">
         <div class="media" id="top-menu">
 
-            <a href="" id="menu-toggle"></a>
-            <a class="logo pull-left" href="index.html">小讯闻</a>
+            <!--<a href="" id="menu-toggle"></a>-->
+            <a class="logo pull-left" href="index.html">消息圈</a>
 
             <div class="pull-right tm-icon">
                 <a data-drawer="messages" class="drawer-toggle" href="">
@@ -118,7 +118,7 @@
 
     <div ng-include="'../sections/SideMenu.html'"></div>
 
-
+<button class="btn btn-alt" style="margin-left:68px;" ng-click="openLightboxModal()">test Modal</button>
     <!-- Content -->
     <section id="content" class="container">
 
@@ -177,6 +177,8 @@
 <script src="../app/vendor/angular/angular-resource.js"></script>
 <script src="../app/vendor/angular/angular-route.js"></script>
 <script src="../app/vendor/angular/ngAnimate.js"></script>
+<script src="../app/vendor/bootstrap/ui-bootstrap-0.12.0.tpl.min.js"></script>
+<script src="../app/vendor/angular/angular-bootstrap-lightbox.js"></script>
 
 <!-- UX -->
 <script src="../js/scroll.min.js"></script>

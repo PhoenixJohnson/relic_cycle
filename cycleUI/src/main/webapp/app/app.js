@@ -53,17 +53,20 @@ var Cycle = angular.module('Cycle',
         'ngRoute',
         'ngResource',
 		'ngResource',
-        'ngAnimate'
+        'ngAnimate',
+        'ui.bootstrap',
+        'bootstrapLightbox'
 
     ]);
 
 // bootstrap angular
-Cycle.config(['$routeProvider', '$locationProvider', '$httpProvider', function ($routeProvider, $locationProvider, $httpProvider) {
+Cycle.config(['$routeProvider', '$locationProvider', '$httpProvider','LightboxProvider', function ($routeProvider, $locationProvider, $httpProvider,LightboxProvider) {
 
 	//$httpProvider.responseInterceptors.push('AuthInterceptor');
     //$locationProvider.html5Mode(true);
 //	$locationProvider.html5Mode(true).hashPrefix('!');
-
+    // set a custom template
+    LightboxProvider.templateUrl = '../sections/NewsModal.html';
     $routeProvider.when('/', {
         templateUrl: '../sections/Friends.html'
     });
@@ -76,10 +79,15 @@ Cycle.config(['$routeProvider', '$locationProvider', '$httpProvider', function (
     $routeProvider.when('/weiNews', {
         templateUrl: '../sections/News.html'
     });
+    $routeProvider.when('/belongs', {
+        templateUrl: '../sections/Belongs.html'
+    });
 
     $routeProvider.otherwise({
         redirectTo: '/'
     });
+
+
 
 }]);
 
@@ -91,7 +99,9 @@ Cycle.run(function ($rootScope, $location, $http, $timeout, AuthService, conf) {
     // Initialize authentication
     // *****
 
-    $rootScope.myTheme="skin-blur-city";
+    $rootScope.myTheme="skin-blur-lights";
+    $rootScope.myAnimate="animated fadeInDown";
+    $rootScope.subAnimate = "animated rotateInUpRight";
     $rootScope.authService = AuthService;
     $rootScope.postBoardNotifier = new NotificationManager($rootScope);
     $rootScope.ProjcetName = conf.PROJECT_NAME;

@@ -4,7 +4,7 @@
 <!--<div ng-include="'../sections/QuickKeys.html'"></div>-->
 
 <hr class="whiter"/>
-<div class="container" fade-in>
+<div class="container" ng-class="$root.myAnimate">
     <div class="row">
         <div class="col-md-9">
             <div class="listview list-container">
@@ -62,7 +62,10 @@
                             创建日期: {{record.createdDate}}
                         </div>
                         <div class="block attrs">
-                            评论: {{record.comments}}
+                            赞: {{record.like}}
+                        </div>
+                        <div class="block attrs">
+                            踩: {{record.disLike}}
                         </div>
                         <div class="block attrs">
                             版权: {{record.copyRight}}
@@ -72,8 +75,9 @@
                         </div>
                     </div>
                     <div class="list-options">
-                        <button class="btn btn-sm">详细</button>
-                        <button class="btn btn-sm">归属</button>
+                        <button class="btn btn-alt btn-sm">评论({{record.comments}})</button>
+                        <button class="btn btn-alt btn-sm">关注</button>
+                        <button class="btn btn-alt btn-sm">转发</button>
                     </div>
                 </div>
 
