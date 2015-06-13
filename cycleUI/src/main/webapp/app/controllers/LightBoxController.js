@@ -1,6 +1,6 @@
-Cycle.controller('LightboxCtrl', ['$scope', '$filter', '$rootScope','Lightbox', function ($scope,$filter,$rootScope,Lightbox) {
+Cycle.controller('LightboxCtrl',function ($scope,$window) {
     $scope.alert = function (message) {
         $window.alert(message);
     };
 
-}]);
+});

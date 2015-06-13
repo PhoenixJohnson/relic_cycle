@@ -2,6 +2,16 @@
 .w-100 {
     width: 100%;
 }
+.w-50 {
+    width: 50%;
+}
+.h-100 {
+    height: 100%;
+}
+
+.center-align{
+    text-align:center;
+}
 
 /* Position */
 .p-relative { position: relative; }
@@ -94,3 +104,25 @@
 .m-r-10 { margin-right: 10px !important; }
 .m-r-15 { margin-right: 15px !important; }
 .m-r-20 { margin-right: 20px !important; }
+
+body{
+    font-family:Tahoma, Arial, Helvetica, "Microsoft YaHei New", "Microsoft Yahei", "微软雅黑", 宋体, SimSun, STXihei, "华文细黑", sans-serif;
+    /*color:black;*/
+    /*text-shadow:1px 1px 1px rgba(249, 255, 249, 0.53);*/
+}
+/*small{*/
+    /*color:black;*/
+/*}*/
+/*a{*/
+    /*color:black;*/
+/*}*/
+/*.text-muted{*/
+    /*color:black;*/
+/*}*/
+/*.btn-alt{*/
+    /*color:black;*/
+    /*border:1px solid rgba(13, 13, 13, 1) !important;*/
+/*}*/
+/*.btn:not(.form-control){*/
+    /*color:black;*/
+/*}*/

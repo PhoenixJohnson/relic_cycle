@@ -73,7 +73,7 @@
         <div class="media" id="top-menu">
 
             <!--<a href="" id="menu-toggle"></a>-->
-            <a class="logo pull-left" href="index.html">消息圈</a>
+            <a class="logo pull-left" href="index.html">{{$root.ProjectName}}</a>
 
             <div class="pull-right tm-icon">
                 <a data-drawer="messages" class="drawer-toggle" href="">
@@ -98,6 +98,7 @@
             </div>
 
 
+
             <div id="time" class="pull-right">
                 <span id="hours"></span>
                 :
@@ -108,7 +109,28 @@
 
 
         </div>
+        <div class="pull-left top-text-content">
+            {{userName}}
+        </div>
+        <div class="pull-left">
+            <div class="text-center s-widget dropdown" id="profile-menu">
+                <a href="" data-toggle="dropdown">
+                    <!--<i class="sa-top-profile"></i>-->
+                    <img class="profile-pic animated" src={{userPic}} alt="">
+                </a>
 
+                <ul class="dropdown-menu profile-menu">
+                    <li><a href="">详细资料</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i>
+                    </li>
+                    <li><a href="">私信</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i>
+                    </li>
+                    <li><a href="">设置</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i>
+                    </li>
+                    <li><a href="">登出</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </div>
     </div>
 </header>
@@ -118,7 +140,6 @@
 
     <div ng-include="'../sections/SideMenu.html'"></div>
 
-<button class="btn btn-alt" style="margin-left:68px;" ng-click="openLightboxModal()">test Modal</button>
     <!-- Content -->
     <section id="content" class="container">
 
@@ -155,11 +176,6 @@
 
 <!-- Bootstrap -->
 <script src="../js/bootstrap.min.js"></script>
-<!-- Charts -->
-
-<script src="../js/sparkline.min.js"></script>
-<!-- Sparkline - Tiny charts -->
-
 
 <!-- Map -->
 <script src="../js/maps/jvectormap.min.js"></script>
@@ -211,6 +227,7 @@
 
 <script src="../app/controllers/HomeController.js"></script>
 <script src="../app/controllers/NewsController.js"></script>
+<script src="../app/controllers/LightBoxController.js"></script>
 
 </body>
 </html>

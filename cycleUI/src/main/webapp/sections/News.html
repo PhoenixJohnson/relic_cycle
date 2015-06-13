@@ -1,6 +1,6 @@
 <!-- 微新闻-->
 
-<h4 class="page-title">微新闻</h4>
+<h4 class="CHeader pull-left">微新闻</h4>
 
 <hr class="whiter"/>
 
@@ -9,15 +9,9 @@
     <div class="photo-gallery tile clearfix">
 
         <div class="superbox-list" ng-repeat="news in NewsList">
-            <img src={{news.thumbPic}} data-img={{news.orgPic}} alt="" class="superbox-img"/>
+            <img src={{news.thumbPic}} data-img={{news.orgPic}} alt="" class="superbox-img" ng-click="openLightboxModal($index)"/>
             <h5 class="m-t-20">{{news.title}}</h5>
-            <div class="superbox-info">
-                <h4 class="m-t-20">{{news.title}}</h4>
-                <p class="m-b-20">{{news.shortDescription}}</p>
 
-                <a href="" class="btn btn-alt" title="">赞</a>
-                <a href="" class="btn btn-alt">评论</a>
-            </div>
         </div>
         <div class="superbox-float"></div>
     </div>

@@ -5486,7 +5486,7 @@ button.close {
 }
 
 .modal-open {
-    overflow: hidden
+    /*overflow: hidden*/
 }
 
 .modal {
@@ -5574,7 +5574,8 @@ button.close {
 
 .modal-body {
     position: relative;
-    padding: 20px
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.78);
 }
 
 .modal-footer {

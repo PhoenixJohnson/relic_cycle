@@ -12,9 +12,13 @@ function fullpageChange(pageName){
 }
 
 
-Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout','Lightbox', function ($scope,$filter,$rootScope,Lightbox) {
+Cycle.controller('HomeController',function ($scope,$filter,$rootScope,Lightbox) {
 
 
+    //personal informations
+
+    $scope.userPic = "../img/phoenix.png";
+    $scope.userName = "Phoenix Jiang";
 
     $scope.widgetPage = "../sections/Friends.html";
 
@@ -95,7 +99,7 @@ Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout'
     $scope.records=[
         {
             checked:false,
-            picture:"../img/profile-pics/2.jpg",
+            picture:"../img/NewsPics/news.jpg",
             messageTitle:"提示1",
             messageContent:"当点赞按钮和点踩按钮比例超过90%，并且总量达到50000以上时，原始作者愿意提供更多信息或者管理这个平台是，归属按钮出现，此信息变为信息站类型。同事赞和踩按钮消失",
             createdDate:"2017-9-5",
@@ -108,7 +112,7 @@ Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout'
         },
         {
             checked:false,
-            picture:"../img/profile-pics/2.jpg",
+            picture:"../img/NewsPics/news.jpg",
             messageTitle:"提示2",
             messageContent:"当您的信息被人点赞+点踩总和大于10000以上时（赞的比例必须大于等于40%），热点按钮即被打开，该信息可能被直接推送至其他用户主页概率提高",
             createdDate:"2017-9-5",
@@ -121,7 +125,7 @@ Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout'
         },
         {
             checked:true,
-            picture:"../img/profile-pics/2.jpg",
+            picture:"../img/NewsPics/news.jpg",
             messageTitle:"提示3",
             messageContent:"一人对同一条信息只能点一次赞或者一次踩，多点无效。",
             createdDate:"2017-9-5",
@@ -134,7 +138,7 @@ Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout'
         },
         {
             checked:false,
-            picture:"../img/profile-pics/2.jpg",
+            picture:"../img/NewsPics/news.jpg",
             messageTitle:"提示1",
             messageContent:"当点赞按钮和点踩按钮比例超过90%，并且总量达到50000以上时，原始作者愿意提供更多信息或者管理这个平台是，归属按钮出现，此信息变为信息站类型。同事赞和踩按钮消失",
             createdDate:"2017-9-5",
@@ -147,7 +151,7 @@ Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout'
         },
         {
             checked:false,
-            picture:"../img/profile-pics/2.jpg",
+            picture:"../img/NewsPics/news.jpg",
             messageTitle:"提示2",
             messageContent:"当您的信息被人点赞+点踩总和大于10000以上时（赞的比例必须大于等于40%），热点按钮即被打开，该信息可能被直接推送至其他用户主页概率提高",
             createdDate:"2017-9-5",
@@ -160,7 +164,7 @@ Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout'
         },
         {
             checked:true,
-            picture:"../img/profile-pics/2.jpg",
+            picture:"../img/NewsPics/news.jpg",
             messageTitle:"提示3",
             messageContent:"一人对同一条信息只能点一次赞或者一次踩，多点无效。",
             createdDate:"2017-9-5",
@@ -173,7 +177,7 @@ Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout'
         },
         {
             checked:false,
-            picture:"../img/profile-pics/2.jpg",
+            picture:"../img/NewsPics/news.jpg",
             messageTitle:"提示1",
             messageContent:"当点赞按钮和点踩按钮比例超过90%，并且总量达到50000以上时，原始作者愿意提供更多信息或者管理这个平台是，归属按钮出现，此信息变为信息站类型。同事赞和踩按钮消失",
             createdDate:"2017-9-5",
@@ -186,7 +190,7 @@ Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout'
         },
         {
             checked:false,
-            picture:"../img/profile-pics/2.jpg",
+            picture:"../img/NewsPics/news.jpg",
             messageTitle:"提示2",
             messageContent:"当您的信息被人点赞+点踩总和大于10000以上时（赞的比例必须大于等于40%），热点按钮即被打开，该信息可能被直接推送至其他用户主页概率提高",
             createdDate:"2017-9-5",
@@ -199,7 +203,7 @@ Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout'
         },
         {
             checked:true,
-            picture:"../img/profile-pics/2.jpg",
+            picture:"../img/NewsPics/news.jpg",
             messageTitle:"提示3",
             messageContent:"一人对同一条信息只能点一次赞或者一次踩，多点无效。",
             createdDate:"2017-9-5",
@@ -212,7 +216,7 @@ Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout'
         },
         {
             checked:false,
-            picture:"../img/profile-pics/2.jpg",
+            picture:"../img/NewsPics/news.jpg",
             messageTitle:"提示1",
             messageContent:"当点赞按钮和点踩按钮比例超过90%，并且总量达到50000以上时，原始作者愿意提供更多信息或者管理这个平台是，归属按钮出现，此信息变为信息站类型。同事赞和踩按钮消失",
             createdDate:"2017-9-5",
@@ -225,7 +229,7 @@ Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout'
         },
         {
             checked:false,
-            picture:"../img/profile-pics/2.jpg",
+            picture:"../img/NewsPics/news.jpg",
             messageTitle:"提示2",
             messageContent:"当您的信息被人点赞+点踩总和大于10000以上时（赞的比例必须大于等于40%），热点按钮即被打开，该信息可能被直接推送至其他用户主页概率提高",
             createdDate:"2017-9-5",
@@ -238,7 +242,7 @@ Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout'
         },
         {
             checked:true,
-            picture:"../img/profile-pics/2.jpg",
+            picture:"../img/NewsPics/news.jpg",
             messageTitle:"提示3",
             messageContent:"一人对同一条信息只能点一次赞或者一次踩，多点无效。",
             createdDate:"2017-9-5",
@@ -251,6 +255,20 @@ Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout'
         }
 
     ];
+
+    $scope.infoStations=[];
+
+    for(var i=0;i<63;i++){
+
+        $scope.infoStations.push({
+            picture:"../img/projects/1.png",
+            stationName:"医疗知识信息站"+(i+1),
+            members:Math.floor(Math.random() * (100000 - 50) + 50),
+            feeOrNot:"￥50每年",
+            description:"每日提供各种医务急救信息",
+            samples:"多读书多看报，少打游戏多睡觉！"
+        });
+    }
 
     //$scope.changeWidgetPage = function(pageName){
     //    switch(pageName){
@@ -334,39 +352,9 @@ Cycle.controller('HomeController', ['$scope', '$filter', '$rootScope','$timeout'
 
     };
 
-    $scope.images = [
-        {
-            'url': 'http://36.media.tumblr.com/e6e96416615c042dbb05557e2553e727/tumblr_nh09woLkmb1sfie3io1_1280.jpg'
-        },
-        {
-            'url': 'http://41.media.tumblr.com/bdcdc7cfcd7ec9615056f2bc6917a797/tumblr_nh09wjQHwu1sfie3io1_1280.jpg'
-        },
-        {
-            'url': 'http://40.media.tumblr.com/ea6f19f50cc563c29a6596cc2e247e8c/tumblr_ngt0z90G0L1sfie3io1_1280.jpg'
-        },
-        {
-            'url': 'http://41.media.tumblr.com/33434e6b27e36033cdcc8fd1fda5cfad/tumblr_ngt0yotJNk1sfie3io1_1280.jpg'
-        },
-        {
-            'url': 'http://40.media.tumblr.com/665d08fd73c3e5749a031d2aacf089a2/tumblr_ngotbehUG41sfie3io1_1280.jpg'
-        },
-        {
-            'url': 'http://40.media.tumblr.com/e364a90450ef6559bfcd6a18fbb38d02/tumblr_ngotb4IY8v1sfie3io1_1280.jpg'
-        },
-        {
-            'url': 'http://41.media.tumblr.com/e16c7dc453a76c5df1df6284f8d56858/tumblr_ngotb0IzPM1sfie3io1_1280.jpg'
-        },
-        {
-            'url': 'http://40.media.tumblr.com/59ca3529cadfcfbbcf8de154ffd613c8/tumblr_ngotatAiLG1sfie3io1_1280.jpg'
-        }
-    ];
-
-    $scope.openLightboxModal = function () {
-        Lightbox.openModal($scope.images, 0);
-    };
 
 
-}]);
+});
 Array.prototype.remove = function(from, to) {
     var rest = this.slice((to || from) + 1 || this.length);
     this.length = from < 0 ? this.length + from : from;

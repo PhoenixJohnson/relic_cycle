@@ -160,7 +160,7 @@ angular.module('bootstrapLightbox').provider('Lightbox', function () {
     // 200px = arbitrary min height
     // 66px = 32px as above
     //        + 34px outer height of .lightbox-nav
-    var height = Math.max(200, dimensions.imageDisplayHeight + 66);
+    var height = "100%";
 
     // first case:  the modal width cannot be larger than the window width
     //              20px = arbitrary value larger than the vertical scrollbar

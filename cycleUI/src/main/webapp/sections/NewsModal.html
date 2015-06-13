@@ -1,18 +1,30 @@
 <div class="modal-body" ng-controller="LightboxCtrl"
      ng-swipe-left="Lightbox.nextImage()"
      ng-swipe-right="Lightbox.prevImage()">
+    <div class="row">
+        <div class="pull-right" style="display:flex;">
+            <a class="sa-extra-share" href=""></a>
+        </div>
+    </div>
 
-    <!-- button -->
+    <!-- title -->
     <div style="text-align: center;">
-        <a ng-click="alert('Image URL: ' + Lightbox.image.url)"
-           class="btn btn-danger">
-            Alert (this calls a lightbox controller method)
-        </a>
+        <h4>{{Lightbox.image.title}}</h4>
+    </div>
+    <div  style="text-align: center;">
+        <small>{{Lightbox.image.publishTime}}</small>
     </div>
 
     <!-- image -->
     <div class="lightbox-image-container">
         <img lightbox-src="{{Lightbox.imageUrl}}" alt="">
+    </div>
+    <!-- content -->
+
+    <div class="superbox-info">
+        <p class="m-b-20">{{Lightbox.image.shortDescription}}</p>
+        <a href="" class="btn btn-alt" title="">赞</a>
+        <a href="" class="btn btn-alt">评论</a>
     </div>
 
 </div>

@@ -1,58 +1,57 @@
 // declare top-level module which depends on filters,and services
-angular.element(document).ready(function () {
-
-    $(window).off('hashchange');
-    $(document).off('click', '#fullPage-nav a');
-    $('.section').off('click', '.toSlide');
-    $(document).off('click', '.fullPage-slidesNav a');
-    $('#fullpage').fullpage({
-        anchors: ['cyclePage'],
-        autoScrolling: false,
-        fitToSection: false,
-        css3: true,
-        //Navigation
-//                menu: false,
-//                anchors:['firstPage', 'secondPage'],
-//                navigation: false,
-//                navigationPosition: 'right',
-//                navigationTooltips: ['firstSlide', 'secondSlide'],
-//                showActiveTooltips: false,
-//                slidesNavigation: true,
-//                slidesNavPosition: 'bottom',
-//                //Accessibility
-//                keyboardScrolling: true,
-//                animateAnchor: true,
-//                recordHistory: true,
+//angular.element(document).ready(function () {
 //
-//                //Design
-                controlArrows: false
-//                verticalCentered: true,
-//                resize : false,
-//                sectionsColor : ['#ccc', '#fff'],
-//                paddingTop: '3em',
-//                paddingBottom: '10px',
-//                fixedElements: '#header, .footer',
-//                responsive: 0
-
-        //Custom selectors
-//                sectionSelector: '.section',
-//                slideSelector: '.slide',
+//    $(window).off('hashchange');
+//    $(document).off('click', '#fullPage-nav a');
+//    $('.section').off('click', '.toSlide');
+//    $(document).off('click', '.fullPage-slidesNav a');
+//    $('#fullpage').fullpage({
+//        anchors: ['cyclePage'],
+//        autoScrolling: false,
+//        fitToSection: false,
+//        css3: true,
+//        //Navigation
+////                menu: false,
+////                anchors:['firstPage', 'secondPage'],
+////                navigation: false,
+////                navigationPosition: 'right',
+////                navigationTooltips: ['firstSlide', 'secondSlide'],
+////                showActiveTooltips: false,
+////                slidesNavigation: true,
+////                slidesNavPosition: 'bottom',
+////                //Accessibility
+////                keyboardScrolling: true,
+////                animateAnchor: true,
+////                recordHistory: true,
+////
+////                //Design
+//                controlArrows: false
+////                verticalCentered: true,
+////                resize : false,
+////                sectionsColor : ['#ccc', '#fff'],
+////                paddingTop: '3em',
+////                paddingBottom: '10px',
+////                fixedElements: '#header, .footer',
+////                responsive: 0
 //
-//                //events
-//                onLeave: function(index, nextIndex, direction){},
-//                afterLoad: function(anchorLink, index){},
-//                afterRender: function(){},
-//                afterResize: function(){},
-//                afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
-//                onSlideLeave: function(anchorLink, index, slideIndex, direction){}
-    });
-
-});
+//        //Custom selectors
+////                sectionSelector: '.section',
+////                slideSelector: '.slide',
+////
+////                //events
+////                onLeave: function(index, nextIndex, direction){},
+////                afterLoad: function(anchorLink, index){},
+////                afterRender: function(){},
+////                afterResize: function(){},
+////                afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex){},
+////                onSlideLeave: function(anchorLink, index, slideIndex, direction){}
+//    });
+//
+//});
 var Cycle = angular.module('Cycle',
     [
         'ngRoute',
         'ngResource',
-		'ngResource',
         'ngAnimate',
         'ui.bootstrap',
         'bootstrapLightbox'
@@ -67,11 +66,16 @@ Cycle.config(['$routeProvider', '$locationProvider', '$httpProvider','LightboxPr
 //	$locationProvider.html5Mode(true).hashPrefix('!');
     // set a custom template
     LightboxProvider.templateUrl = '../sections/NewsModal.html';
+
+    //LightboxProvider.calculateImageDimensionLimits
+    //LightboxProvider.calculateModalDimensions
+
+
     $routeProvider.when('/', {
-        templateUrl: '../sections/Friends.html'
+        templateUrl: '../sections/QuickBoard.html'
     });
-    $routeProvider.when('/friends', {
-        templateUrl: '../sections/Friends.html'
+    $routeProvider.when('/qb', {
+        templateUrl: '../sections/QuickBoard.html'
     });
     $routeProvider.when('/infoStation', {
         templateUrl: '../sections/InfoStation.html'
@@ -94,11 +98,11 @@ Cycle.config(['$routeProvider', '$locationProvider', '$httpProvider','LightboxPr
 // this is run after angular is instantiated and bootstrapped
 Cycle.run(function ($rootScope, $location, $http, $timeout, AuthService, conf) {
 
-
+    //$rootScope.myTheme="";
     // *****
     // Initialize authentication
     // *****
-
+    $rootScope.ProjectName="前闻";
     $rootScope.myTheme="skin-blur-lights";
     $rootScope.myAnimate="animated fadeInDown";
     $rootScope.subAnimate = "animated rotateInUpRight";

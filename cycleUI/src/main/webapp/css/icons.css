@@ -56,6 +56,7 @@
 .sa-top-message { background-image: url(../img/icon/message.png); }
 .sa-top-updates { background-image: url(../img/icon/updates.png); }
 .sa-top-money { background-image: url(../img/icon/Dollars_yens_and_pounds_money_bags_24.png); }
+.sa-top-profile { background-image: url(../img/icon/Avatar_Inside_a_Circle_24.png); }
 
 /* Editor */
 [class*="editor-"] {
@@ -108,7 +109,7 @@
 
 /* Others */
 #menu-toggle { background-image: url(../img/icon/menu.png); }
-
+.sa-extra-share {background-image: url(../img/icon/Share_24.png); background-size: 24px 24px; height:25px;width:25px;}
 /* Form */
 .sa-plus {
     width: 13px;
