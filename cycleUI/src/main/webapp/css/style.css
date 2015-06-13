@@ -360,7 +360,7 @@ blockquote small {
     margin-left: 15%;
     margin-right:15%;
     min-height: 500px;
-    min-width:1024px;
+    /*min-width:1024px;*/
     position: relative;
 
 }
