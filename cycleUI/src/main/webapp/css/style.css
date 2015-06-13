@@ -226,10 +226,10 @@ blockquote small {
 
 /* Logo */
 .logo {
-    width: 233px;
+    /*padding-left: 45px;*/
     height: 50px;
-    text-align: center;
-    padding: 14px 0 12px 40px;
+    text-align: right;
+    padding: 14px 15px 12px 50px;
     font-size: 16px;
     margin-right: 9px !important;
     background: rgba(0, 0, 0, 0.23);
@@ -2134,7 +2134,7 @@ a.list-group-item.active > .badge,
     }
     
     .logo {
-        width: 100%;
+        /*width: 100%;*/
         margin: 0;
     }
     
@@ -2164,9 +2164,9 @@ a.list-group-item.active > .badge,
     }
     
     #sidebar {
-        top: -51px;
+        top: 50px;
         z-index: 9999;
-        position: absolute;
+        position: fixed;
         height: 100%;
         height: calc(100% + 51px);
         overflow-x: hidden;
@@ -2351,8 +2351,8 @@ a.list-group-item.active > .badge,
 }
 
 .news-main-pic{
-    width: 250px;
-    height:150px;
+    min-width: 75px;
+    min-height:75px;
 }
 .dropdown .menu-item a:hover{
     background: green;

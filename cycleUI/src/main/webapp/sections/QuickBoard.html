@@ -6,7 +6,7 @@
 <hr class="whiter"/>
 <div class="container" ng-class="$root.myAnimate">
     <div class="row">
-        <div class="col-md-9">
+        <div class="col-md-9 col-xs-12">
             <div class="listview list-container">
                 <header class="listview-header media">
                     <!--<input type="checkbox" class="pull-left list-parent-check" value="">-->
@@ -49,9 +49,9 @@
 
                 <div class="media" ng-repeat="record in records">
                     <!--<input type="checkbox" class="pull-left list-check" checked={{record.checked}}>-->
-                    <img class="news-main-pic pull-left" src={{record.picture}} alt=""/>
+                    <img class="news-main-pic pull-left col-md-3 col-xs-3" src={{record.picture}} alt=""/>
 
-                    <div class="media-body">
+                    <div class="media-body col-md-8 col-xs-8">
                         <h3><b>{{record.messageTitle}}</b></h3>
                         <div class="clearfix"></div>
                         <small>{{record.messageContent}}</small>
@@ -115,7 +115,7 @@
         </div>
 
         <!-- right navigation area for ads or other notifications -->
-        <div class="col-md-3">
+        <div class="col-md-3 col-xs-offset-0">
             <div class="tile">
                 <h2 class="tile-title">朋友的更新</h2>
 
