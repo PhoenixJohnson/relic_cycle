@@ -1,89 +1,108 @@
 <!DOCTYPE html>
-<!--[if IE 9 ]><html class="ie9"><![endif]-->
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-        <meta name="format-detection" content="telephone=no">
-        <meta charset="UTF-8">
+<!--[if IE 9 ]>
+<html class="ie9"><![endif]-->
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta charset="UTF-8">
 
-        <meta name="description" content="Violate Responsive Admin Template">
-        <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
+    <meta name="description" content="Violate Responsive Admin Template">
+    <meta name="keywords" content="Super Admin, Admin, Template, Bootstrap">
 
-        <title>消息圈 - 资讯由你而定</title>
-            
-        <!-- CSS -->
-        <link href="../css/bootstrap.min.css" rel="stylesheet">
-        <link href="../css/form.css" rel="stylesheet">
-        <link href="../css/style.css" rel="stylesheet">
-        <link href="../css/animate.min.css" rel="stylesheet">
-        <link href="../css/generics.css" rel="stylesheet">
-    </head>
-    <body class="skin-blur-blue animated fadeInDown">
-        <section id="login">
-            <header>
-                <h1 align="center">消息圈</h1>
-                <!--<p>属于你的信息集散点</p>-->
-            </header>
-        
-            <div class="clearfix"></div>
-            <div style="margin-left:37%;margin-top:5%">
-            <!-- Login -->
-            <form class="box tile animated active" id="box-login">
-                <h2 class="m-t-0 m-b-15">用户登录</h2>
-                <input type="text" class="login-control m-b-10" placeholder="请输入用户名或者邮箱地址">
-                <input type="password" class="login-control" placeholder="密码">
-                <div class="checkbox m-b-20">
-                    <label>
-                        <input type="checkbox">
-                        记住我
-                    </label>
-                </div>
-                <button type="submit" formaction="index.html" class="btn btn-sm m-r-5">登陆</button>
-                
-                <small>
-                    <a class="box-switcher" data-switch="box-register" href="">还没有账户？</a> /
-                    <a class="box-switcher" data-switch="box-reset" href="">忘记密码</a>
-                </small>
-            </form>
+    <title>消息圈 - 资讯由你而定</title>
 
-            <!-- Register -->
-            <form class="box animated tile" id="box-register">
-                <h2 class="m-t-0 m-b-15">Register</h2>
-                <input type="text" class="login-control m-b-10" placeholder="用户名">
-                <input type="text" class="login-control m-b-10" placeholder="年龄">
-                <input type="email" class="login-control m-b-10" placeholder="E-mail地址">
-                <input type="password" class="login-control m-b-10" placeholder="密码">
-                <input type="password" class="login-control m-b-20" placeholder="密码确认">
+    <!-- CSS -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/form.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <link href="../css/generics.css" rel="stylesheet">
 
-                <button class="btn btn-sm m-r-5">注册</button>
 
-                <small><a class="box-switcher" data-switch="box-login" href="">已经有注册账户？</a></small>
-            </form>
-            
-            <!-- Forgot Password -->
-            <form class="box animated tile" id="box-reset">
-                <h2 class="m-t-0 m-b-15">重置密码</h2>
-                <p>请出入注册时所填写的邮箱地址以还原重置密码</p>
-                <input type="email" class="login-control m-b-20" placeholder="E-mail地址">
+</head>
+<body class="skin-blur-blue animated fadeInDown">
+<section id="login">
+    <header>
+        <div class="col-lg-2 col-md-2 col-xs-2"></div>
+        <h1 class="col-lg-8 col-md-8 col-xs-8" id="pn"></h1>
 
-                <button class="btn btn-sm m-r-5">重置密码</button>
+        <div class="col-lg-2 col-md-2 col-xs-2"></div>
+        <!--<p>属于你的信息集散点</p>-->
+    </header>
 
-                <small><a class="box-switcher" data-switch="box-login" href="">已经有注册账户？</a></small>
-            </form>
+    <div class="clearfix"></div>
+    <div class="col-lg-2 col-md-2 col-xs-2"></div>
+    <div class="col-lg-8 col-md-8 col-xs-8">
+        <!-- Login -->
+        <form class="box tile animated active" id="box-login">
+            <h2 class="m-t-0 m-b-15">用户登录</h2>
+            <input type="text" class="login-control m-b-10" placeholder="请输入用户名或者邮箱地址">
+            <input type="password" class="login-control" placeholder="密码">
+
+            <div class="checkbox m-b-20">
+                <label>
+                    <input type="checkbox">
+                    记住我
+                </label>
             </div>
+            <button type="submit" formaction="index.html" class="btn btn-sm m-r-5">登陆</button>
 
-        </section>                      
-        
-        <!-- Javascript Libraries -->
-        <!-- jQuery -->
-        <script src="../js/jquery.min.js"></script> <!-- jQuery Library -->
-        
-        <!-- Bootstrap -->
-        <script src="../js/bootstrap.min.js"></script>
-        
-        <!--  Form Related -->
-        <script src="../js/icheck.js"></script> <!-- Custom Checkbox + Radio -->
-        
-        <!-- All JS functions -->
-        <script src="../js/functions.js"></script>
-    </body>
+            <small>
+                <a class="box-switcher" data-switch="box-register" href="">还没有账户？</a> /
+                <a class="box-switcher" data-switch="box-reset" href="">忘记密码</a>
+            </small>
+        </form>
+
+        <!-- Register -->
+        <form class="box animated tile" id="box-register">
+            <h2 class="m-t-0 m-b-15">Register</h2>
+            <input type="text" class="login-control m-b-10" placeholder="用户名">
+            <input type="text" class="login-control m-b-10" placeholder="年龄">
+            <input type="email" class="login-control m-b-10" placeholder="E-mail地址">
+            <input type="password" class="login-control m-b-10" placeholder="密码">
+            <input type="password" class="login-control m-b-20" placeholder="密码确认">
+
+            <button class="btn btn-sm m-r-5">注册</button>
+
+            <small><a class="box-switcher" data-switch="box-login" href="">已经有注册账户？</a></small>
+        </form>
+
+        <!-- Forgot Password -->
+        <form class="box animated tile" id="box-reset">
+            <h2 class="m-t-0 m-b-15">重置密码</h2>
+
+            <p>请出入注册时所填写的邮箱地址以还原重置密码</p>
+            <input type="email" class="login-control m-b-20" placeholder="E-mail地址">
+
+            <button class="btn btn-sm m-r-5">重置密码</button>
+
+            <small><a class="box-switcher" data-switch="box-login" href="">已经有注册账户？</a></small>
+        </form>
+    </div>
+    <div class="col-lg-2 col-md-2 col-xs-2"></div>
+</section>
+
+<!-- Javascript Libraries -->
+<!-- jQuery -->
+<script src="../js/jquery.min.js"></script>
+<!-- jQuery Library -->
+
+<!-- Bootstrap -->
+<script src="../js/bootstrap.min.js"></script>
+
+<!--  Form Related -->
+<script src="../js/icheck.js"></script>
+<!-- Custom Checkbox + Radio -->
+
+<script src="../app/common.js"></script>
+<script>
+
+    $(document).ready(function () {
+
+        $("#pn").text(projectName);
+
+
+    });
+</script>
+</body>
 </html>

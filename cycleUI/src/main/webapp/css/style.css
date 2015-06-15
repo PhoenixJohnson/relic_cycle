@@ -276,7 +276,7 @@ blockquote small {
     height: 49px\0/;
 }
 
-#top-menu #time {
+#time {
     font-size: 20px;
     padding-top: 10px;
     margin-right: 4px;
@@ -403,7 +403,6 @@ blockquote small {
     display: block;
     line-height: normal;
     text-align: left;
-    -webkit-backface-visibility: hidden;
 }
 
 .side-menu span.menu-item {
@@ -1129,6 +1128,7 @@ hr {
     background: black;
     box-shadow: none;
     /*position: relative;*/
+    text-align:center;
     margin-bottom: 15px;
     width: 150px;
     z-index: 0;
@@ -1843,7 +1843,82 @@ a.list-group-item.active > .badge,
         background: url(../img/sort.png) no-repeat 8px 11px;
     }
 }
+/* --------------------------------------------------------
+        Template Blur Skins for Desktop
+    -----------------------------------------------------------*/
+[class*="skin-blur-"] {
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
 
+.skin-blur-city{
+    background-image: url(../img/body/city.jpg);
+}
+
+.skin-blur-violate {
+    background-size: cover;
+    background: url(../img/body/violate.jpg) fixed;
+}
+
+.skin-blur-lights {
+    background: url(../img/body/lights.jpg) fixed;
+    background-size: cover;
+}
+
+.skin-blur-city {
+    background: url(../img/body/city.jpg) fixed;
+    background-size: cover;
+}
+
+.skin-blur-greenish {
+    background: url(../img/body/greenish.jpg) fixed;
+    background-size: cover;
+}
+
+.skin-blur-night {
+    background: url(../img/body/night.jpg) fixed;
+    background-size: cover;
+}
+
+.skin-blur-sunny {
+    background: url(../img/body/sunny.jpg) fixed;
+    background-size: cover;
+}
+
+.skin-blur-blue {
+    background: url(../img/body/blue.jpg) fixed;
+    background-size: cover;
+}
+
+.skin-blur-chrome {
+    background: url(../img/body/chrome.jpg) fixed;
+    background-size: cover;
+}
+
+.skin-blur-ocean {
+    background: url(../img/body/ocean.jpg) fixed;
+    background-size: cover;
+}
+
+.skin-blur-sunset {
+    background: url(../img/body/sunset.jpg) fixed;
+    background-size: cover;
+}
+
+.skin-blur-yellow {
+    background: url(../img/body/yellow.jpg) fixed;
+    background-size: cover;
+}
+
+.skin-blur-kiwi {
+    background: url(../img/body/kiwi.jpg) fixed;
+    background-size: cover;
+}
+
+.skin-blur-nexus {
+    background: url(../img/body/nexus.jpg) fixed;
+    background-size: cover;
+}
 @media (min-width: 1024px) {
     /* --------------------------------------------------------
         Template Blur Skins for Desktop
@@ -2045,57 +2120,57 @@ a.list-group-item.active > .badge,
     /* --------------------------------------------------------
         Template Skins for Mobile
     -----------------------------------------------------------*/
-    .skin-blur-violate {
-        background: #581528;
-    }
+    /*.skin-blur-violate {*/
+        /*background: #581528;*/
+    /*}*/
 
-    .skin-blur-lights {
-        background: #152d33;
-    }
+    /*.skin-blur-lights {*/
+        /*background: #152d33;*/
+    /*}*/
 
-    .skin-blur-city {
-        background: #321e39;
-    }
+    /*.skin-blur-city {*/
+        /*background: #321e39;*/
+    /*}*/
 
-    .skin-blur-greenish {
-        background: #233335;
-    }
+    /*.skin-blur-greenish {*/
+        /*background: #233335;*/
+    /*}*/
 
-    .skin-blur-night {
-        background: #0F3D52;
-    }
+    /*.skin-blur-night {*/
+        /*background: #0F3D52;*/
+    /*}*/
     
-    .skin-blur-sunny {
-        background: #44360B;
-    }
+    /*.skin-blur-sunny {*/
+        /*background: #44360B;*/
+    /*}*/
     
-    .skin-blur-blue {
-        background: #2B6474;
-    }
+    /*.skin-blur-blue {*/
+        /*background: #2B6474;*/
+    /*}*/
     
-    .skin-blur-chrome {
-        background: #40404E;
-    }
+    /*.skin-blur-chrome {*/
+        /*background: #40404E;*/
+    /*}*/
     
-    .skin-blur-ocean {
-        background: #0064B3;
-    }
+    /*.skin-blur-ocean {*/
+        /*background: #0064B3;*/
+    /*}*/
     
-    .skin-blur-sunset {
-        background: #883527;
-    }
+    /*.skin-blur-sunset {*/
+        /*background: #883527;*/
+    /*}*/
     
-    .skin-blur-yellow {
-        background: #915D25;
-    }
+    /*.skin-blur-yellow {*/
+        /*background: #915D25;*/
+    /*}*/
 
-    .skin-blur-kiwi {
-        background: #0f4731;
-    }
+    /*.skin-blur-kiwi {*/
+        /*background: #0f4731;*/
+    /*}*/
     
-    .skin-blur-nexus {
-        background: #8A033A;
-    }
+    /*.skin-blur-nexus {*/
+        /*background: #8A033A;*/
+    /*}*/
 
     /* Shortcut icons */
     .shortcut {
@@ -2160,11 +2235,12 @@ a.list-group-item.active > .badge,
     
     /* Sidebar + Content */
     #content {
-        margin-left: 0;
+        /*margin-left: 0;*/
     }
     
     #sidebar {
         top: 50px;
+        width:233px;
         z-index: 9999;
         position: fixed;
         height: 100%;
@@ -2237,7 +2313,7 @@ a.list-group-item.active > .badge,
     }
     
     .profile-menu {
-        display: block;
+        /*display: inline-block;*/
     }
     
     /* Messages */
@@ -2367,4 +2443,21 @@ a.list-group-item.active > .badge,
     color: white;
     text-shadow: 3px 3px 3px rgba(0, 0, 0, .8);
 
+}
+
+.margin-l-r-auto{
+    margin-left: auto;
+    margin-right:auto;
+}
+/*scrollbar reshape*/
+::-webkit-scrollbar{
+    width:5px;
+}
+::-webkit-scrollbar-track{
+    -webkit-box-shadow:inset 0 0 6px rgb(244, 238, 255);
+    border-radius:10px;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5);
 }

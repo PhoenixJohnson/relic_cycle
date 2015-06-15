@@ -66,73 +66,85 @@
     <p>为了您的安全和浏览的良好体验，请更新您的浏览器<br/>感谢您的参与...</p>
 </div>
 <![endif]-->
-<header id="header" class="media" >
+<header id="header" class="">
 
 
-    <div class="media-body navbar-fixed-top" style="background: rgba(16, 16, 16, 0.44);">
-        <div class="media" id="top-menu">
+    <nav class="navbar navbar-default navbar-fixed-top" style="background: rgba(16, 16, 16, 0.44);">
+            <div class="navbar-header">
+                <a href="" id="menu-toggle"></a>
+                <a class="logo pull-left" href="#/qb">{{$root.ProjectName}}</a>
+                <button class="navbar-toggle collapsed" aria-expanded="false" data-target="#navbar"
+                        data-toggle="collapse" type="button">
+                    <span class="sr-only">Toggle navigation</span>
+                    <i class="fa fa-arrows-v"></i>
 
-            <a href="" id="menu-toggle"></a>
-            <a class="logo pull-left" href="#/qb">{{$root.ProjectName}}</a>
-
-            <div class="pull-right tm-icon">
-                <a data-drawer="messages" class="drawer-toggle" href="">
-                    <i class="sa-top-message"></i>
-                    <i class="n-count animated">5</i>
-                    <span>消息</span>
-                </a>
+                </button>
             </div>
-            <div class="pull-right tm-icon">
-                <a data-drawer="notifications" class="drawer-toggle" href="">
-                    <i class="sa-top-updates"></i>
-                    <i class="n-count animated">9</i>
-                    <span>更新</span>
-                </a>
-            </div>
-            <div class="pull-right tm-icon">
-                <a data-drawer="reviews" class="drawer-toggle" href="">
-                    <i class="sa-top-money"></i>
-                    <i class="n-count animated">9</i>
-                    <span>钱包</span>
-                </a>
-            </div>
+            <div id="navbar" class="navbar-collapse collapse" aria-expanded="false">
+                <ul class="nav navbar-nav">
 
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" aria-expanded="false" role="button" data-toggle="dropdown" style="background:transparent;display:table-row;">
+                            <img class="profile-pic animated" src={{userPic}} alt="">
 
+                            <!--<div class="top-text-content">{{userName}}</div>-->
+                            <span class="caret"></span>
 
-            <div id="time" class="pull-right">
-                <span id="hours"></span>
-                :
-                <span id="min"></span>
-                :
-                <span id="sec"></span>
-            </div>
-
-
-        </div>
-        <div class="pull-left top-text-content">
-            {{userName}}
-        </div>
-        <div class="pull-left">
-            <div class="text-center s-widget dropdown" id="profile-menu">
-                <a href="" data-toggle="dropdown">
-                    <!--<i class="sa-top-profile"></i>-->
-                    <img class="profile-pic animated" src={{userPic}} alt="">
-                </a>
-
-                <ul class="dropdown-menu profile-menu">
-                    <li><a href="">详细资料</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i>
-                    </li>
-                    <li><a href="">私信</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i>
-                    </li>
-                    <li><a href="">设置</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i>
-                    </li>
-                    <li><a href="">登出</a> <i class="icon left">&#61903;</i><i class="icon right">&#61815;</i>
+                        </a>
+                        <ul class="dropdown-menu profile-menu">
+                            <li><a href="">详细资料</a> <i class="icon left">&#61903;</i><i class="icon right">
+                                &#61815;</i>
+                            </li>
+                            <li><a href="">私信</a> <i class="icon left">&#61903;</i><i class="icon right">
+                                &#61815;</i>
+                            </li>
+                            <li><a href="">设置</a> <i class="icon left">&#61903;</i><i class="icon right">
+                                &#61815;</i>
+                            </li>
+                            <li><a href="">登出</a> <i class="icon left">&#61903;</i><i class="icon right">
+                                &#61815;</i>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <div id="time" class="pull-right">
+                            <span id="hours"></span>
+                            :
+                            <span id="min"></span>
+                            :
+                            <span id="sec"></span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tm-icon">
+                            <a data-drawer="messages" class="drawer-toggle" href="">
+                                <i class="sa-top-message"></i>
+                                <i class="n-count animated">5</i>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tm-icon">
+                            <a data-drawer="notifications" class="drawer-toggle" href="">
+                                <i class="sa-top-updates"></i>
+                                <i class="n-count animated">9</i>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="tm-icon">
+                            <a data-drawer="reviews" class="drawer-toggle" href="">
+                                <i class="sa-top-money"></i>
+                                <i class="n-count animated">9</i>
+                            </a>
+                        </div>
+                    </li>
+
+                </ul>
             </div>
-        </div>
-    </div>
-    </div>
+    </nav>
 </header>
 
 
@@ -187,7 +199,8 @@
 <script src="../js/icheck.js"></script>
 <!-- Custom Checkbox + Radio -->
 <!-- Media -->
-<script src="../js/superbox.min.js"></script> <!-- Photo Gallery -->
+<script src="../js/superbox.min.js"></script>
+<!-- Photo Gallery -->
 
 <script src="../app/vendor/angular/angular.js"></script>
 <script src="../app/vendor/angular/angular-resource.js"></script>

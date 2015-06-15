@@ -87,6 +87,14 @@ Cycle.config(['$routeProvider', '$locationProvider', '$httpProvider','LightboxPr
         templateUrl: '../sections/Belongs.html'
     });
 
+    //$routeProvider.when('/login', {
+    //    templateUrl: '../pages/login.html',
+    //    scope:"root"
+    //});
+    //$routeProvider.when('/404', {
+    //    templateUrl: '../pages/404.html',
+    //    scope:"root"
+    //});
     $routeProvider.otherwise({
         redirectTo: '/'
     });
@@ -102,7 +110,7 @@ Cycle.run(function ($rootScope, $location, $http, $timeout, AuthService, conf) {
     // *****
     // Initialize authentication
     // *****
-    $rootScope.ProjectName="前闻";
+    $rootScope.ProjectName="未确定";
     $rootScope.myTheme="skin-blur-lights";
     $rootScope.myAnimate="animated fadeInDown";
     $rootScope.subAnimate = "animated rotateInUpRight";
