@@ -65,7 +65,7 @@ Cycle.config(['$routeProvider', '$locationProvider', '$httpProvider','LightboxPr
     //$locationProvider.html5Mode(true);
 //	$locationProvider.html5Mode(true).hashPrefix('!');
     // set a custom template
-    LightboxProvider.templateUrl = '../sections/NewsModal.html';
+    LightboxProvider.templateUrl = '../sections/modals/NewsModal.html';
 
     //LightboxProvider.calculateImageDimensionLimits
     //LightboxProvider.calculateModalDimensions

@@ -101,6 +101,7 @@ Cycle.controller('HomeController',function ($scope,$filter,$rootScope,Lightbox) 
             checked:false,
             picture:"../img/NewsPics/news.jpg",
             messageTitle:"提示1",
+            star:true,
             messageContent:"当点赞按钮和点踩按钮比例超过90%，并且总量达到50000以上时，原始作者愿意提供更多信息或者管理这个平台是，归属按钮出现，此信息变为信息站类型。同事赞和踩按钮消失",
             createdDate:"2017-9-5",
             messageType:"新闻",
@@ -114,6 +115,7 @@ Cycle.controller('HomeController',function ($scope,$filter,$rootScope,Lightbox) 
             checked:false,
             picture:"../img/NewsPics/news.jpg",
             messageTitle:"提示2",
+            star:false,
             messageContent:"当您的信息被人点赞+点踩总和大于10000以上时（赞的比例必须大于等于40%），热点按钮即被打开，该信息可能被直接推送至其他用户主页概率提高",
             createdDate:"2017-9-5",
             messageType:"新闻",
@@ -127,6 +129,7 @@ Cycle.controller('HomeController',function ($scope,$filter,$rootScope,Lightbox) 
             checked:true,
             picture:"../img/NewsPics/news.jpg",
             messageTitle:"提示3",
+            star:false,
             messageContent:"一人对同一条信息只能点一次赞或者一次踩，多点无效。",
             createdDate:"2017-9-5",
             messageType:"新闻",
@@ -140,6 +143,7 @@ Cycle.controller('HomeController',function ($scope,$filter,$rootScope,Lightbox) 
             checked:false,
             picture:"../img/NewsPics/news.jpg",
             messageTitle:"提示1",
+            star:false,
             messageContent:"当点赞按钮和点踩按钮比例超过90%，并且总量达到50000以上时，原始作者愿意提供更多信息或者管理这个平台是，归属按钮出现，此信息变为信息站类型。同事赞和踩按钮消失",
             createdDate:"2017-9-5",
             messageType:"新闻",
@@ -153,6 +157,7 @@ Cycle.controller('HomeController',function ($scope,$filter,$rootScope,Lightbox) 
             checked:false,
             picture:"../img/NewsPics/news.jpg",
             messageTitle:"提示2",
+            star:false,
             messageContent:"当您的信息被人点赞+点踩总和大于10000以上时（赞的比例必须大于等于40%），热点按钮即被打开，该信息可能被直接推送至其他用户主页概率提高",
             createdDate:"2017-9-5",
             messageType:"新闻",
@@ -166,84 +171,7 @@ Cycle.controller('HomeController',function ($scope,$filter,$rootScope,Lightbox) 
             checked:true,
             picture:"../img/NewsPics/news.jpg",
             messageTitle:"提示3",
-            messageContent:"一人对同一条信息只能点一次赞或者一次踩，多点无效。",
-            createdDate:"2017-9-5",
-            messageType:"新闻",
-            comments:Math.floor(Math.random() * (100000 - 50) + 50),
-            like: Math.floor(Math.random() * (5000 - 5) + 5),
-            disLike: Math.floor(Math.random() * (1000 - 50) + 50),
-            copyRight:"是"
-
-        },
-        {
-            checked:false,
-            picture:"../img/NewsPics/news.jpg",
-            messageTitle:"提示1",
-            messageContent:"当点赞按钮和点踩按钮比例超过90%，并且总量达到50000以上时，原始作者愿意提供更多信息或者管理这个平台是，归属按钮出现，此信息变为信息站类型。同事赞和踩按钮消失",
-            createdDate:"2017-9-5",
-            messageType:"新闻",
-            comments:Math.floor(Math.random() * (100000 - 50) + 50),
-            like: Math.floor(Math.random() * (5000 - 5) + 5),
-            disLike: Math.floor(Math.random() * (1000 - 50) + 50),
-            copyRight:"是"
-
-        },
-        {
-            checked:false,
-            picture:"../img/NewsPics/news.jpg",
-            messageTitle:"提示2",
-            messageContent:"当您的信息被人点赞+点踩总和大于10000以上时（赞的比例必须大于等于40%），热点按钮即被打开，该信息可能被直接推送至其他用户主页概率提高",
-            createdDate:"2017-9-5",
-            messageType:"新闻",
-            comments:Math.floor(Math.random() * (100000 - 50) + 50),
-            like: Math.floor(Math.random() * (5000 - 5) + 5),
-            disLike: Math.floor(Math.random() * (1000 - 50) + 50),
-            copyRight:"是"
-
-        },
-        {
-            checked:true,
-            picture:"../img/NewsPics/news.jpg",
-            messageTitle:"提示3",
-            messageContent:"一人对同一条信息只能点一次赞或者一次踩，多点无效。",
-            createdDate:"2017-9-5",
-            messageType:"新闻",
-            comments:Math.floor(Math.random() * (100000 - 50) + 50),
-            like: Math.floor(Math.random() * (5000 - 5) + 5),
-            disLike: Math.floor(Math.random() * (1000 - 50) + 50),
-            copyRight:"是"
-
-        },
-        {
-            checked:false,
-            picture:"../img/NewsPics/news.jpg",
-            messageTitle:"提示1",
-            messageContent:"当点赞按钮和点踩按钮比例超过90%，并且总量达到50000以上时，原始作者愿意提供更多信息或者管理这个平台是，归属按钮出现，此信息变为信息站类型。同事赞和踩按钮消失",
-            createdDate:"2017-9-5",
-            messageType:"新闻",
-            comments:Math.floor(Math.random() * (100000 - 50) + 50),
-            like: Math.floor(Math.random() * (5000 - 5) + 5),
-            disLike: Math.floor(Math.random() * (1000 - 50) + 50),
-            copyRight:"是"
-
-        },
-        {
-            checked:false,
-            picture:"../img/NewsPics/news.jpg",
-            messageTitle:"提示2",
-            messageContent:"当您的信息被人点赞+点踩总和大于10000以上时（赞的比例必须大于等于40%），热点按钮即被打开，该信息可能被直接推送至其他用户主页概率提高",
-            createdDate:"2017-9-5",
-            messageType:"新闻",
-            comments:Math.floor(Math.random() * (100000 - 50) + 50),
-            like: Math.floor(Math.random() * (5000 - 5) + 5),
-            disLike: Math.floor(Math.random() * (1000 - 50) + 50),
-            copyRight:"是"
-
-        },
-        {
-            checked:true,
-            picture:"../img/NewsPics/news.jpg",
-            messageTitle:"提示3",
+            star:false,
             messageContent:"一人对同一条信息只能点一次赞或者一次踩，多点无效。",
             createdDate:"2017-9-5",
             messageType:"新闻",
@@ -255,6 +183,7 @@ Cycle.controller('HomeController',function ($scope,$filter,$rootScope,Lightbox) 
         }
 
     ];
+
 
     $scope.infoStations=[];
 
@@ -270,6 +199,35 @@ Cycle.controller('HomeController',function ($scope,$filter,$rootScope,Lightbox) 
         });
     }
 
+    $scope.setStar = function(record){
+      record.star = !record.star;
+        //TODO save user's cache for archive it or not
+        //TODO backend send a ajax call to add or delete(logic delete) one record in user's like field
+    };
+    $scope.setLike = function(record){
+
+        if(record.likelock===undefined){
+            record.like++;
+            record.likelock="";
+        }
+        //TODO save user's cache for archive it or not
+        //TODO backend send a ajax call to add or delete(logic delete) one record in user's like field
+    };
+    $scope.setDislike = function(record){
+        console.log(record.dislike);
+
+        if(record.dislikelock===undefined){
+            record.disLike++;
+            record.dislikelock="";
+        }
+        //TODO save user's cache for archive it or not
+        //TODO backend send a ajax call to add or delete(logic delete) one record in user's like field
+    };
+    $scope.setComments = function(record){
+        record.comments++;
+        //TODO save user's cache for archive it or not
+        //TODO backend send a ajax call to add or delete(logic delete) one record in user's like field
+    };
     //$scope.changeWidgetPage = function(pageName){
     //    switch(pageName){
     //        case "infoStation":
@@ -284,25 +242,6 @@ Cycle.controller('HomeController',function ($scope,$filter,$rootScope,Lightbox) 
     //
     //};
 
-    $scope.pageControl = function(pageName){
-        switch(pageName){
-            case "infoStation":
-                $scope.pageName="信息站";
-                break;
-            case "friends":
-                $scope.pageName = "朋友圈";
-                break;
-            case "weiNews":
-                $scope.pageName = "微新闻";
-                break;
-            case "belongs":
-                $scope.pageName = "归属圈";
-                break;
-            default:
-                $scope.pageName = "";
-        }
-        //fullpageChange(pageName);
-    };
 
     $scope.ThemeChange = function(theme){
 

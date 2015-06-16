@@ -148,69 +148,57 @@
     display: none;
 }
 
-a.piro_next {
-    position: absolute;
-    right: 6px;
-    outline: none;
-    display: block;
-    margin: 0;
-    border: none;
-    cursor: pointer;
-    z-index: 150023;
-    font-size: 27px;
-    line-height: 100%;
-    top: -8px;
-    text-align: center;
+a.piro_next, a.piro_prev {
+    height:100%;
+    cursor:pointer;
+    display:block;
+    position:absolute;
+
+}
+.modal-body a.piro_prev{
+    width:50%;
+    left:0;
+    float:left;
+    /*content:"#61815";*/
+    filter:progid:DXImageTransform.Microsoft.Alpha(Opactiy=0);
+    opacity:0;
+    -webkit-transition:opacity 0.6s;
+    -moz-transition:opacity 0.6s;
+    -o-transition:opacity 0.6s;
+    transition:opacity 0.6s;
+    z-index:5000;
+}
+a.piro_prev:hover{
+    filter:progid:DXImageTransform.Microsoft.Alpha(Opactiy=100);
+    cursor:url(../img/icon/back@2x.png),auto;
+    opacity:1;
+
 }
 
-.piro_next_fake {
-    position: absolute;
-    right: 10px;
-    outline: none;
-    display: none;
-    margin: 0;
-    border: none;
-    cursor: auto;
-    z-index: 150020;
-    font-size: 27px;
-    line-height: 100%;
-    text-align: center;
-    top: -8px;
+.modal-body a.piro_next{
+    width:50%;
+    right:0;
+    float:right;
+    /*content:"#61815";*/
+
+    filter:progid:DXImageTransform.Microsoft.Alpha(Opactiy=0);
+    opacity:0;
+    -webkit-transition:opacity 0.6s;
+    -moz-transition:opacity 0.6s;
+    -o-transition:opacity 0.6s;
+    transition:opacity 0.6s;
+    z-index:5000;
+}
+a.piro_next:hover{
+    filter:progid:DXImageTransform.Microsoft.Alpha(Opactiy=100);
+    cursor:url(../img/icon/forwad@2x.png),auto;
+    opacity:1;
+
 }
 
-.piro_prev_fake {
-    position: absolute;
-    right: 37px;
-    outline: none;
-    display: none;
-    margin: 0;
-    border: none;
-    cursor: auto;
-    z-index: 150020;
-    font-size: 27px;
-    line-height: 100%;
-    text-align: center;
-    top: -8px;
-}
 
 .pirobox_gall {
     position: relative;
 }
 
-a.piro_prev {
-    position: absolute;
-    width: 28px;
-    right: 33px;
-    height: 28px;
-    outline: none;
-    display: block;
-    margin: 0;
-    border: none;
-    cursor: pointer;
-    z-index: 150024;
-    font-size: 27px;
-    line-height: 100%;
-    text-align: center;
-    top: -8px;
-}
 

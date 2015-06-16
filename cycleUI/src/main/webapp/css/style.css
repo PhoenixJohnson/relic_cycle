@@ -1367,6 +1367,7 @@ hr {
 .nav-tabs {
     background: rgba(0,0,0,0.35);
     border-bottom-color: rgba(0,0,0,0.0);
+    margin:auto;
 }
 
 .tab-content {
@@ -2427,18 +2428,20 @@ a.list-group-item.active > .badge,
 }
 
 .news-main-pic{
-    min-width: 75px;
-    min-height:75px;
+    min-width: 100px;
+    min-height:100px;
+    max-width:150px;
+    max-height:150px;
 }
 .dropdown .menu-item a:hover{
     background: green;
 }
 .CHeader {
 
-    font-size: 35px;
+    font-size: 25px;
     line-height: 35px;
     font-weight: 300;
-    margin: 10px 0;
+    margin: 10px 20px;
     text-align: center;
     color: white;
     text-shadow: 3px 3px 3px rgba(0, 0, 0, .8);

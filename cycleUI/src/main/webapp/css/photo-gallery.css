@@ -11,8 +11,11 @@
 }
 
 .superbox-img {
+    float:left;
 	max-width:100%;
-	width:100%;
+	width:33%;
+    position:relative;
+    padding:10px;
 	cursor:pointer;
 }
 
@@ -65,22 +68,22 @@
 }
 @media only screen and (min-width: 320px) {
 	.superbox-list {
-		width:50%;
+		width:100%;
 	}
 }
 @media only screen and (min-width: 486px) {
 	.superbox-list {
-		width:25%;
+		width:100%;
 	}
 }
 @media only screen and (min-width: 768px) {
 	.superbox-list {
-		width:16.66666667%;
+		width:50%;
 	}
 }
 @media only screen and (min-width: 1025px) {
 	.superbox-list {
-	    width:12.48%;
+	    width:50%;
             
 	}
 }

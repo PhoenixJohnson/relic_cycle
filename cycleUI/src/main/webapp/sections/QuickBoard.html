@@ -12,7 +12,7 @@
                     <!--<input type="checkbox" class="pull-left list-parent-check" value="">-->
 
                     <ul class="list-inline pull-right m-t-5 m-b-0">
-                        <button class="pagin-value btn-alt">分类</button>
+
                         <li>
                             <a href="" title="上一页" class="tooltips">
                                 <i class="sa-list-back"></i>
@@ -26,15 +26,10 @@
                     </ul>
 
                     <ul class="list-inline list-mass-actions pull-left">
-                        <li>
-                            <a data-toggle="modal" href="#compose-message" title="发布"
-                               class="tooltips">
-                                <i class="sa-list-add"></i>
-                            </a>
-                        </li>
+
                         <li>
                             <a href="#" title="刷新" class="tooltips">
-                                <i class="sa-list-refresh"></i>
+                                <i class="fa fa-refresh fa-2x"></i>
                             </a>
                         </li>
 
@@ -49,10 +44,10 @@
 
                 <div class="media" ng-repeat="record in records">
                     <!--<input type="checkbox" class="pull-left list-check" checked={{record.checked}}>-->
-                    <img class="news-main-pic pull-left col-md-3 col-xs-3" src={{record.picture}} alt=""/>
+                    <img class="news-main-pic pull-left col-lg-3 col-md-3 col-xs-3" src={{record.picture}} alt=""/>
 
                     <div class="media-body col-md-8 col-xs-8">
-                        <h3><b>{{record.messageTitle}}</b></h3>
+                        <h5><b>{{record.messageTitle}}</b></h5>
                         <div class="clearfix"></div>
                         <small>{{record.messageContent}}</small>
                         <br>
@@ -70,14 +65,17 @@
                         <div class="block-area">
 
                         </div>
-                        <div class="block attrs btn btn-alt btn-sm">
-                            赞: {{record.like}}
+                        <div class="block attrs btn btn-alt btn-sm" tooltip="赞" ng-click="setLike(record)">
+                            <i class="fa fa-thumbs-o-up"></i>: {{record.like}}
                         </div>
-                        <div class="block attrs btn btn-alt btn-sm">
-                            踩: {{record.disLike}}
+                        <div class="block attrs btn btn-alt btn-sm" tooltip="踩" ng-click="setDislike(record)">
+                            <i class="fa fa-thumbs-o-down"></i>: {{record.disLike}}
                         </div>
-                        <div class="block attrs btn btn-alt btn-sm">
-                            评论({{record.comments}})
+                        <div class="block attrs btn btn-alt btn-sm" tooltip="评论" ng-click="setComments(record)">
+                            <i class="fa fa-comment-o"></i>({{record.comments}})
+                        </div>
+                        <div class="block attrs btn btn-alt btn-sm" tooltip="收藏" ng-click="setStar(record)">
+                            <i ng-class="'fa '+(record.star===true?'fa-star':'fa-star-o')"></i>
                         </div>
 
                     </div>
