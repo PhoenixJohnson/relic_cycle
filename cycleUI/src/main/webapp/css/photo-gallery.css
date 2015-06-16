@@ -13,7 +13,7 @@
 .superbox-img {
     float:left;
 	max-width:100%;
-	width:33%;
+	width:25%;
     position:relative;
     padding:10px;
 	cursor:pointer;
@@ -78,12 +78,12 @@
 }
 @media only screen and (min-width: 768px) {
 	.superbox-list {
-		width:50%;
+		width:100%;
 	}
 }
 @media only screen and (min-width: 1025px) {
 	.superbox-list {
-	    width:50%;
+	    width:100%;
             
 	}
 }

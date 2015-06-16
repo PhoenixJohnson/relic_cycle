@@ -3,6 +3,42 @@ Cycle.controller('NewsController', function ($scope, Lightbox) {
 
     $scope.NewsList = [];
     $scope.news = [];
+    $scope.NewsList.push({
+        newsId: "001",
+        publishTime: "2015/5/25 22:58",
+        //main pic
+        url:[],
+        orgPics:[],
+        thumbPic: [
+            {
+                url: "../img/photo-gallery/superbox-thumb-" + 1 + ".jpg"
+            },
+            {
+                url: "../img/photo-gallery/superbox-thumb-" + 2 + ".jpg"
+            },
+            {
+                url: "../img/photo-gallery/superbox-thumb-" + 3 + ".jpg"
+            },
+            {
+                url: "../img/photo-gallery/superbox-thumb-" + 4 + ".jpg"
+            },
+            {
+                url: "../img/photo-gallery/superbox-thumb-" + 5 + ".jpg"
+            },
+            {
+                url: "../img/photo-gallery/superbox-thumb-" + 6 + ".jpg"
+            },
+            {
+                url: "../img/photo-gallery/superbox-thumb-" + 7 + ".jpg"
+            },
+            {
+                url: "../img/photo-gallery/superbox-thumb-" + 8 + ".jpg"
+            }
+        ],
+        title: "一点点描述信息 NO.",
+        shortDescription: "新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内" +
+        "新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容"
+    });
 
     for (var i = 1; i <= 24; i++) {
         $scope.NewsList.push({
@@ -75,47 +111,6 @@ Cycle.controller('NewsController', function ($scope, Lightbox) {
         });
 
     }
-    $scope.NewsList.push({
-        newsId: "001" + i,
-        publishTime: "2015/5/25 22:58",
-        //main pic
-        url:[],
-        orgPics:[],
-        thumbPic: [
-            {
-                url: "../img/photo-gallery/superbox-thumb-" + 1 + ".jpg"
-            },
-            {
-                url: "../img/photo-gallery/superbox-thumb-" + 2 + ".jpg"
-            },
-            {
-                url: "../img/photo-gallery/superbox-thumb-" + 3 + ".jpg"
-            },
-            {
-                url: "../img/photo-gallery/superbox-thumb-" + 4 + ".jpg"
-            },
-            {
-                url: "../img/photo-gallery/superbox-thumb-" + 5 + ".jpg"
-            },
-            {
-                url: "../img/photo-gallery/superbox-thumb-" + 6 + ".jpg"
-            },
-            {
-                url: "../img/photo-gallery/superbox-thumb-" + 7 + ".jpg"
-            },
-            {
-                url: "../img/photo-gallery/superbox-thumb-" + 8 + ".jpg"
-            }
-        ],
-        title: "一点点描述信息 NO." + i,
-        shortDescription: "新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内" +
-        "新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容" +
-        "新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容" +
-        "新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容" +
-        "新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容" +
-        "新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容" +
-        "新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容新闻简要内容容新闻简要内容"
-    });
 
     $scope.openLightboxModal = function (news, index) {
         Lightbox.openModal(news.orgPics, index);
