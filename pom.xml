@@ -12,6 +12,7 @@
         <module>cycleUI</module>
         <module>cycleService</module>
         <module>Rmodel</module>
+        <module>SiteDog</module>
     </modules>
 
 

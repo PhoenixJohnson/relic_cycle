@@ -86,6 +86,11 @@ Cycle.config(['$routeProvider', '$locationProvider', '$httpProvider','LightboxPr
     $routeProvider.when('/belongs', {
         templateUrl: '../sections/Belongs.html'
     });
+    $routeProvider.when('/login', {
+        templateUrl: '../pages/login.html',
+        controller: 'AuthCtrl'
+
+    });
 
     //$routeProvider.when('/login', {
     //    templateUrl: '../pages/login.html',
