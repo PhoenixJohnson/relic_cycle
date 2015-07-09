@@ -7,11 +7,14 @@ import com.relic.app.sitedog.security.CurrentUser;
 import com.relic.app.sitedog.security.UserAuthentication;
 import com.relic.app.sitedog.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
+import org.springframework.session.web.http.HeaderHttpSessionStrategy;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,6 +29,7 @@ import javax.servlet.http.HttpServletResponse;
 public class UserController {
 
     private UserService userService;
+
 
     @Autowired
     public UserController(UserService userService) {

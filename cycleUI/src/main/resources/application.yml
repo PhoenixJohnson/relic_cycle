@@ -1,0 +1,12 @@
+security:
+  user:
+      password: password
+
+zuul:
+  routes:
+    users:
+      path: /users/**
+      url: http://127.0.0.1:8080/api/users
+    login:
+      path: /login
+      url: http://127.0.0.1:8080/api

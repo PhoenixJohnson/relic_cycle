@@ -52,6 +52,7 @@ var Cycle = angular.module('Cycle',
     [
         'ngRoute',
         'ngResource',
+        'ngCookies',
         'ngAnimate',
         'ui.bootstrap',
         'bootstrapLightbox'
@@ -59,9 +60,9 @@ var Cycle = angular.module('Cycle',
     ]);
 
 // bootstrap angular
-Cycle.config(['$routeProvider', '$locationProvider', '$httpProvider','LightboxProvider', function ($routeProvider, $locationProvider, $httpProvider,LightboxProvider) {
+Cycle.config(['$routeProvider', '$locationProvider', '$httpProvider', 'LightboxProvider', function ($routeProvider, $locationProvider, $httpProvider, LightboxProvider) {
 
-	//$httpProvider.responseInterceptors.push('AuthInterceptor');
+    //$httpProvider.responseInterceptors.push('AuthInterceptor');
     //$locationProvider.html5Mode(true);
 //	$locationProvider.html5Mode(true).hashPrefix('!');
     // set a custom template
@@ -104,7 +105,7 @@ Cycle.config(['$routeProvider', '$locationProvider', '$httpProvider','LightboxPr
         redirectTo: '/'
     });
 
-
+    $httpProvider.defaults.headers.common["X-Requested-With"] = 'XMLHttpRequest';
 
 }]);
 
@@ -115,9 +116,10 @@ Cycle.run(function ($rootScope, $location, $http, $timeout, AuthService, conf) {
     // *****
     // Initialize authentication
     // *****
-    $rootScope.ProjectName="未确定";
-    $rootScope.myTheme="skin-blur-lights";
-    $rootScope.myAnimate="animated fadeInDown";
+    $rootScope.authenticated = false;
+    $rootScope.ProjectName = "未确定";
+    $rootScope.myTheme = "skin-blur-lights";
+    $rootScope.myAnimate = "animated fadeInDown";
     $rootScope.subAnimate = "animated rotateInUpRight";
     $rootScope.authService = AuthService;
     $rootScope.postBoardNotifier = new NotificationManager($rootScope);

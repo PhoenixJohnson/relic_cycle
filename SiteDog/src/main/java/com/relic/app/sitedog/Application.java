@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
 import javax.annotation.PostConstruct;
 
@@ -15,6 +16,7 @@ import javax.annotation.PostConstruct;
  * Created by Jason on 6/12/15.
  */
 @SpringBootApplication
+@EnableRedisHttpSession
 public class Application {
 
     @Autowired
