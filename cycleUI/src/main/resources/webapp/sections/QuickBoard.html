@@ -44,7 +44,7 @@
 
                 <div class="media row" ng-repeat="record in records">
                     <!--<input type="checkbox" class="pull-left list-check" checked={{record.checked}}>-->
-                    <img class="news-main-pic pull-left col-sm-3 col-xs-12" src={{record.picture}} alt=""/>
+                    <img class="news-main-pic pull-left col-sm-3 col-xs-12" src="{{record.picture}}" alt=""/>
 
                     <div class="media-body col-sm-8 col-xs-12">
                         <h5><b>{{record.messageTitle}}</b></h5>
@@ -113,7 +113,7 @@
         </div>
 
         <!-- right navigation area for ads or other notifications -->
-        <div class="col-xs-12 col-sm-12 col-md-3">
+        <div class="col-xs-12 col-sm-12 col-md-3" ng-show="$root.authenticated">
             <div>
                 <h2 class="tile-title">朋友的更新</h2>
 

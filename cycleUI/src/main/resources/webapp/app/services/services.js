@@ -69,21 +69,30 @@ Cycle.factory('AuthService',
 //} ]);
 
 
-Cycle.factory('GetItem', ['$resource', 'PRMconf', function ($resource, config) {
-    return $resource('', {}, {
-        'query': {
-            url: config.RESTAPIBASEURL + 'report/getItem',
-            method: 'POST',
-            //params:{
-            //    filter:'@filter'
-            //},
-            //transformResponse: function (data) {return data},
-            isArray: false,
-            cache: false
-        }
-    });
-}]);
+Cycle.factory('UserAction', ['$http', '$rootScope', 'conf', function ($http, $rootScope, config) {
+    return {
+        signup: function () {
 
+            var req = {
+                url: 'signup',
+                method: 'POST',
+                data: {'username': 'phoenix', 'password': '121212'}
+            };
+
+            $http(req)
+                .success(function (result, status, headers) {
+                    if (status === 200) {
+                        $rootScope.authenticated = true;
+                    }
+                    console.log(result);
+                    console.log(status);
+                    $rootScope.XAuthToken = headers()['x-auth-token'];
+                    console.log($rootScope.XAuthToken);
+                });
+
+        }
+    }
+}]);
 
 Cycle.factory('AuthInterceptor', ['$q', function ($q) {
     return {

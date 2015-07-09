@@ -10,3 +10,6 @@ zuul:
     login:
       path: /login
       url: http://127.0.0.1:8080/api
+    signup:
+      path: /signup
+      url: http://127.0.0.1:8080/api

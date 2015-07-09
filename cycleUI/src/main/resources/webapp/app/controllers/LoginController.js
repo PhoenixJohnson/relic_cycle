@@ -32,7 +32,7 @@ Cycle.controller('AuthCtrl', function ($rootScope, $scope, $http, $location, $co
                 }
                 console.log(result);
                 console.log(status);
-                console.log(headers());
+                $rootScope.XAuthToken = headers()['x-auth-token'];
                 $location.path('#/');
                 $scope.xsrf = $csrf;
                 console.log($scope.xsrf);

@@ -63,7 +63,7 @@ var Cycle = angular.module('Cycle',
 Cycle.config(['$routeProvider', '$locationProvider', '$httpProvider', 'LightboxProvider', function ($routeProvider, $locationProvider, $httpProvider, LightboxProvider) {
 
     //$httpProvider.responseInterceptors.push('AuthInterceptor');
-    //$locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(true);
 //	$locationProvider.html5Mode(true).hashPrefix('!');
     // set a custom template
     LightboxProvider.templateUrl = '../sections/modals/NewsModal.html';

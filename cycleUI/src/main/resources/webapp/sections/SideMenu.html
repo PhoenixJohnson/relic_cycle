@@ -102,11 +102,11 @@
     <!-- Side Menu -->
     <ul class="list-unstyled side-menu">
         <li>
-            <a class="sa-side-home" href="#/qb">
+            <a class="sa-side-home" href="/qb">
                 <span class="menu-item">消息圈</span>
             </a>
         </li>
-        <li class="dropdown">
+        <li class="dropdown" ng-show="$root.authenticated">
             <a class="sa-side-add" href="">
                 <span class="menu-item">发布</span>
             </a>
@@ -124,17 +124,17 @@
             </a>
         </li>
         <li>
-            <a class="sa-side-news" href="#/weiNews" ng-click="pageControl('weiNews')">
+            <a class="sa-side-news" href="/weiNews" ng-click="pageControl('weiNews')">
                 <span class="menu-item">微新闻</span>
             </a>
         </li>
         <li>
-            <a class="sa-side-infostation" href="#/infoStation" ng-click="pageControl('infoStation')">
+            <a class="sa-side-infostation" href="/infoStation" ng-click="pageControl('infoStation')">
                 <span class="menu-item">信息站</span>
             </a>
         </li>
-        <li>
-            <a class="sa-side-belongs" href="#/belongs" ng-click="pageControl('belongs')">
+        <li ng-show="$root.authenticated">
+            <a class="sa-side-belongs" href="/belongs" ng-click="pageControl('belongs')">
                 <span class="menu-item">归属圈</span>
             </a>
         </li>
@@ -213,7 +213,7 @@
                 <span class="menu-item">样例</span>
             </a>
             <ul class="list-unstyled menu-item">
-                <li><a href="#/login">登陆界面</a></li>
+                <li><a href="/login">登陆界面</a></li>
                 <li><a href="../pages/404.html">404 页面</a></li>
             </ul>
         </li>

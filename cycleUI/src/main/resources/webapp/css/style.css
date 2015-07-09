@@ -2314,7 +2314,7 @@ a.list-group-item.active > .badge,
     }
     
     .profile-menu {
-        /*display: inline-block;*/
+        display: inline-block;
     }
     
     /* Messages */
