@@ -13,6 +13,7 @@
         <module>cycleService</module>
         <module>Rmodel</module>
         <module>SiteDog</module>
+        <module>dal</module>
     </modules>
     <dependencies>
 
