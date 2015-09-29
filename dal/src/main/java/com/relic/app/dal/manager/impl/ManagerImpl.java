@@ -11,10 +11,12 @@ import java.util.List;
  * Created by vizewang on 2015/9/14.
  */
 public class ManagerImpl<T> implements Manager<T> {
-    Datastore datastore = null;
+    private Datastore datastore = null;
+    private Class<T> defaultClaz;
 
     public ManagerImpl(Class<T> tClass) {
         datastore = new DAOImpl().createDatastore(tClass);
+        defaultClaz = tClass;
     }
 
     public Key<T> insert(T t) {
@@ -26,14 +28,14 @@ public class ManagerImpl<T> implements Manager<T> {
     }
 
     public void delete() {
-//
+        datastore.getCollection(defaultClaz).drop();
     }
 
     public void update() {
-
+//TODO
     }
 
-    public void read() {
-
+    public List<T> read() {
+        return datastore.find(defaultClaz).asList();
     }
 }

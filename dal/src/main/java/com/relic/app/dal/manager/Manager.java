@@ -12,5 +12,5 @@ public interface Manager<T> {
     Iterable<Key<T>> insertList(List<T> tList);
     void delete();
     void update();
-    void read();
+    List<T> read();
 }
