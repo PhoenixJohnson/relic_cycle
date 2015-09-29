@@ -9,8 +9,8 @@ import java.util.Properties;
 public class DALConfigBean {
     private static DALConfigBean dalConfigBean = new DALConfigBean();
     private String host;
-    private  String port;
-    private  String username;
+    private String port;
+    private String username;
     private String password;
 
     public static DALConfigBean getInstance() {
