@@ -11,7 +11,7 @@ public class DALConfigBeanTest {
 
     @Test
     public void testGetHost() throws Exception {
-//        System.out.println(DALConfigBean.getInstance().getHost());
+        System.out.println(DALConfigBean.getInstance().getHost());
     }
 
     @Test
