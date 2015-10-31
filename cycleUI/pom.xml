@@ -7,7 +7,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>cycleUI</artifactId>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>cycleUI Maven Webapp</name>
     <url>http://maven.apache.org</url>
     <properties>
@@ -86,7 +86,7 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.16.4</version>
-            <scope>provided</scope>
+            <!--<scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
