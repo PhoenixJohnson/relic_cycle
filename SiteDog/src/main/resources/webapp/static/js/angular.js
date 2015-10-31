@@ -10983,10 +10983,10 @@
                 promiseWarning(fullExp);
                 if (!("$$v" in obj)) {
                     (function (promise) {
-                            promise.then(function (val) {
-                                promise.$$v = val;
-                            });
-                        })(obj);
+                        promise.then(function (val) {
+                            promise.$$v = val;
+                        });
+                    })(obj);
                 }
                 if (obj.$$v === undefined) {
                     obj.$$v = {};
