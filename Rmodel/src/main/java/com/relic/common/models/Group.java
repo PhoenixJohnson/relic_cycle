@@ -1,4 +1,4 @@
-package com.relic.app.indoor.models;
+package com.relic.common.models;
 
 /**
  * Created by Phoenix on 15/6/29.
