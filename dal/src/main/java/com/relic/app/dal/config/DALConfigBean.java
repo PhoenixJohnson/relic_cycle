@@ -9,10 +9,10 @@ import java.util.Properties;
 public class DALConfigBean {
     private static DALConfigBean dalConfigBean = new DALConfigBean();
     private String host;
-    private String port;
+    private int port;
     private String username;
     private String password;
-
+private String databaseName;
     public static DALConfigBean getInstance() {
         return dalConfigBean;
     }
@@ -24,9 +24,10 @@ public class DALConfigBean {
             in = new BufferedInputStream(new FileInputStream(DALConfigBean.class.getResource("/config.properties").getPath()));
             prop.load(in);
             host = prop.getProperty("HOST").trim();
-            port = prop.getProperty("PORT").trim();
+            port = Integer.parseInt(prop.getProperty("PORT").trim());
             username = prop.getProperty("USERNAME").trim();
             password = prop.getProperty("PASSWORD").trim();
+            databaseName=prop.getProperty("DATABASE").trim();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -38,7 +39,7 @@ public class DALConfigBean {
         return host;
     }
 
-    public String getPort() {
+    public int getPort() {
         return port;
     }
 
@@ -48,6 +49,10 @@ public class DALConfigBean {
 
     public String getPassword() {
         return password;
+    }
+
+    public String getDatabaseName() {
+        return databaseName;
     }
 
     public static void main(String[] args) {
