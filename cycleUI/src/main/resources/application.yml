@@ -6,10 +6,10 @@ zuul:
   routes:
     users:
       path: /users/**
-      url: http://127.0.0.1:8080/api/users
+      url: http://127.0.0.1:8999/api/users
     login:
       path: /login
-      url: http://127.0.0.1:8080/api
+      url: http://127.0.0.1:8999/api
     signup:
       path: /signup
-      url: http://127.0.0.1:8080/api
+      url: http://127.0.0.1:8999/api

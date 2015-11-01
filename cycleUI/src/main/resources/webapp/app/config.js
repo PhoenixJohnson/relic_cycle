@@ -7,7 +7,7 @@ console.log("hostname:" + hostName + "    portnumber   " + port);
 Cycle.constant('conf',
     {
 
-        RESTAPIBASEURL: 'http://' + hostName + '/jdtalkweb/rest/',
+        RESTAPIBASEURL: 'http://' + hostName + '/rest/',
         BRANDSHIT_PAGE_SIZE: 10,
         PROJECT_NAME: "Relic",
         CUSTOMIZEFIELD:'CustomizeField'
