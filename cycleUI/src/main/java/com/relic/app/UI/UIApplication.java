@@ -27,7 +27,7 @@ public class UIApplication {
         SpringApplication springApplication =
                 new SpringApplication(Application.class);
         springApplication.addListeners(
-                new ApplicationPidListener("cycleUI.pid"));
+                new ApplicationPidListener("/run/jenkins/cycleUI.pid"));
         springApplication.run(UIApplication.class, args);
     }
 
