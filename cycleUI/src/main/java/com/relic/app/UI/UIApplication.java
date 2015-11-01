@@ -1,7 +1,9 @@
 package com.relic.app.UI;
 
 
+import javafx.application.Application;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.actuate.system.ApplicationPidListener;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.context.annotation.ComponentScan;
@@ -22,7 +24,11 @@ public class UIApplication {
 
 
     public static void main(String[] args) {
-        SpringApplication.run(UIApplication.class, args);
+        SpringApplication springApplication =
+                new SpringApplication(Application.class);
+        springApplication.addListeners(
+                new ApplicationPidListener("cycleUI.pid"));
+        springApplication.run(UIApplication.class, args);
     }
 
 
