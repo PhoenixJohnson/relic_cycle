@@ -6,6 +6,7 @@ import com.relic.app.sitedog.domain.User;
 import com.relic.app.sitedog.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.actuate.system.ApplicationPidListener;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
@@ -25,7 +26,11 @@ public class Application {
     private PasswordEncoder passwordEncoder;
 
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+        SpringApplication springApplication =
+                new SpringApplication(Application.class);
+        springApplication.addListeners(
+                new ApplicationPidListener("/var/lib/jenkins/jobs/RelicCycle/workspace/relicRun/SiteDog.pid"));
+        springApplication.run(args);
     }
 
     @PostConstruct
