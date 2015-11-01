@@ -27,7 +27,7 @@ public class UIApplication {
         SpringApplication springApplication =
                 new SpringApplication(UIApplication.class);
         springApplication.addListeners(
-                new ApplicationPidListener("/relicRun/cycleUI.pid"));
+                new ApplicationPidListener("/var/lib/jenkins/jobs/RelicCycle/workspace/relicRun/cycleUI.pid"));
         springApplication.run(args);
     }
 
