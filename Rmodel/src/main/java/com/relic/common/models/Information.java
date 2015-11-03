@@ -1,8 +1,10 @@
 package com.relic.common.models;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.relic.com.relic.enumbers.InfoLevel;
+import com.relic.com.relic.enumbers.InfoState;
+import com.relic.com.relic.enumbers.InfoType;
+import com.relic.com.relic.enumbers.TagType;
+import lombok.*;
 import org.bson.types.ObjectId;
 
 import javax.persistence.Entity;
@@ -18,6 +20,8 @@ import java.util.List;
  */
 @Entity
 @Data
+@Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor(staticName = "of")
 public class Information {
