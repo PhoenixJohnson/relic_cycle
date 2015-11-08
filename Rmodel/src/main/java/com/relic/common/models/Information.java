@@ -10,10 +10,7 @@ import org.bson.types.ObjectId;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.math.BigDecimal;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by Phoenix on 15/6/29.
@@ -26,8 +23,10 @@ import java.util.List;
 @AllArgsConstructor(staticName = "of")
 public class Information {
 
-    @Id
+
     private ObjectId _id;
+    @Id
+    private String masterId;
     private InfoType infoType;
     private String title;
     private String shortDescription;
@@ -69,6 +68,11 @@ public class Information {
     private InfoState infoState;
     private String countryEnum;
 
+    public Information(ObjectId id, InfoType type, String masterId) {
+        this._id = id;
+        this.masterId = masterId;
+        this.infoType = type;
+    }
 
     @Override
     public String toString() {

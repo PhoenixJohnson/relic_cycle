@@ -14,6 +14,7 @@
         <module>Rmodel</module>
         <module>SiteDog</module>
         <module>dal</module>
+        <module>cycleWebService</module>
     </modules>
     <dependencies>
 
