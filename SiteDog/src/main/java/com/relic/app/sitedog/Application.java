@@ -29,7 +29,7 @@ public class Application {
         SpringApplication springApplication =
                 new SpringApplication(Application.class);
         springApplication.addListeners(
-                new ApplicationPidListener("/var/lib/jenkins/jobs/RelicCycle/workspace/relicRun/SiteDog.pid"));
+                new ApplicationPidListener("/relicRun/SiteDog.pid"));
         springApplication.run(args);
     }
 
