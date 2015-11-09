@@ -8,8 +8,6 @@
     <modelVersion>4.0.0</modelVersion>
     <artifactId>cycleUI</artifactId>
     <packaging>jar</packaging>
-    <name>cycleUI Maven Webapp</name>
-    <url>http://maven.apache.org</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <start-class>com.relic.app.UI.UIApplication</start-class>

@@ -35,13 +35,13 @@ public class Application {
 
     @PostConstruct
     public void init() {
-        System.out.println("Initializing data");
-        User jason = User.of(1L, "jason", passwordEncoder.encode("password"), "jason@jason.com", Role.ADMIN);
-        User john = User.of(2L, "john", passwordEncoder.encode("password"), "john@john.com", Role.USER);
-        User phoenix = User.of(3L, "phoenix", passwordEncoder.encode("password"), "yunjiang@jiang.com", Role.ADMIN);
-        userRepository.save(jason);
-        userRepository.save(john);
-        userRepository.save(phoenix);
+//        System.out.println("Initializing data");
+//        User jason = User.of(1L, "jason", passwordEncoder.encode("password"), "jason@jason.com", Role.ADMIN);
+//        User john = User.of(2L, "john", passwordEncoder.encode("password"), "john@john.com", Role.USER);
+//        User phoenix = User.of(3L, "phoenix", passwordEncoder.encode("password"), "yunjiang@jiang.com", Role.ADMIN);
+//        userRepository.save(jason);
+//        userRepository.save(john);
+//        userRepository.save(phoenix);
     }
 
 }
